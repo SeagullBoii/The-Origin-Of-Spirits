@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    "345",
+    " 78"
+  ],
+  "key": {
+    "1": {
+      "item": "originofspirits:meteorite_pebble"
+    },
+    "2": {
+      "item": "originofspirits:tempest_feather"
+    },
+    "3": {
+      "item": "originofspirits:meteorite_pebble"
+    },
+    "4": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "5": {
+      "item": "originofspirits:tempest_feather"
+    },
+    "7": {
+      "item": "originofspirits:meteorite_pebble"
+    },
+    "8": {
+      "item": "originofspirits:tempest_feather"
+    }
+  },
+  "result": {
+    "item": "originofspirits:tempest_bow",
+    "count": 1
+  }
+}

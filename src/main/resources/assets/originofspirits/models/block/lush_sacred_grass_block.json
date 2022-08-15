@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "originofspirits:blocks/sacred_soil",
+    "top": "originofspirits:blocks/lush_sacred_grass",
+    "side": "originofspirits:blocks/lush_sacred_grass_side",
+    "overlay": "originofspirits:blocks/lush_sacred_grass_side",
+    "particle": "originofspirits:blocks/sacred_soil"
+  }
+}

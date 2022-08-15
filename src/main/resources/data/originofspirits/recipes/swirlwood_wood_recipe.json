@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:swirlwood_log"
+    },
+    "1": {
+      "item": "originofspirits:swirlwood_log"
+    },
+    "2": {
+      "item": "originofspirits:swirlwood_log"
+    },
+    "3": {
+      "item": "originofspirits:swirlwood_log"
+    }
+  },
+  "result": {
+    "item": "originofspirits:swirlwood_wood",
+    "count": 4
+  }
+}

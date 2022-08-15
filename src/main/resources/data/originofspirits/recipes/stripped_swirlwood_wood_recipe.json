@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:stripped_swirlwood"
+    },
+    "1": {
+      "item": "originofspirits:stripped_swirlwood"
+    },
+    "2": {
+      "item": "originofspirits:stripped_swirlwood"
+    },
+    "3": {
+      "item": "originofspirits:stripped_swirlwood"
+    }
+  },
+  "result": {
+    "item": "originofspirits:stripepd_swirlwoodwood",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "originofspirits:custom/leafcoralfanside",
+  "textures": {
+    "all": "originofspirits:blocks/leafcoral1",
+    "particle": "originofspirits:blocks/leafcoral1",
+    "0": "originofspirits:blocks/leafcoral1",
+    "1": "originofspirits:blocks/leafcoral2",
+    "missing": "originofspirits:blocks/"
+  }
+}

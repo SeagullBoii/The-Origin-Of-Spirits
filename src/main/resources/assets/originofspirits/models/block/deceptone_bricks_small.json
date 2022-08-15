@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/deceptone_bricks_small",
+    "particle": "originofspirits:blocks/deceptone_bricks_small"
+  }
+}

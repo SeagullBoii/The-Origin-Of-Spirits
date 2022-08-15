@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "originofspirits:items/beans_in_a_pot"
+  }
+}

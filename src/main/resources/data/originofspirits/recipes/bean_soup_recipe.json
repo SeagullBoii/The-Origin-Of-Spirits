@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "originofspirits:beans_in_a_pot"
+  },
+  "result": {
+    "item": "originofspirits:bean_soup"
+  }
+}

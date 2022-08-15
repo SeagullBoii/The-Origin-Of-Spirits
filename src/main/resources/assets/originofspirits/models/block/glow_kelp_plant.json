@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/glowkelp_plant",
+    "particle": "originofspirits:blocks/glowkelp_plant"
+  }
+}

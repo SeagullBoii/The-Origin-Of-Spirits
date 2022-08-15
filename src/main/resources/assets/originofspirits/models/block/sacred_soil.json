@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/sacred_soil",
+    "particle": "originofspirits:blocks/sacred_soil"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/talltrumpetcoralmiddle",
+    "particle": "originofspirits:blocks/talltrumpetcoralmiddle"
+  }
+}

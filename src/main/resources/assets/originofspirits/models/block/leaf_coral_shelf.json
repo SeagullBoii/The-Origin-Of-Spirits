@@ -1,0 +1,9 @@
+{
+  "parent": "originofspirits:custom/leafcoralshelf2",
+  "textures": {
+    "all": "originofspirits:blocks/leafcoral1",
+    "particle": "originofspirits:blocks/leafcoral1",
+    "0": "originofspirits:blocks/leafcoral1",
+    "1": "originofspirits:blocks/leafcoral2"
+  }
+}

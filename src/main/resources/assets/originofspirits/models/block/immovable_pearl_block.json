@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "originofspirits:blocks/immovable_pearl_bottom",
+    "up": "originofspirits:blocks/immovable_pearl_top",
+    "north": "originofspirits:blocks/immovable_pearl_side",
+    "east": "originofspirits:blocks/immovable_pearl_side",
+    "south": "originofspirits:blocks/immovable_pearl_side",
+    "west": "originofspirits:blocks/immovable_pearl_side",
+    "particle": "originofspirits:blocks/immovable_pearl_bottom"
+  }
+}

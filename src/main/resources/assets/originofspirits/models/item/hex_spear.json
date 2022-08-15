@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/hex_spear",
+  "textures": {
+    "0": "originofspirits:blocks/cursed_spear",
+    "particle": "originofspirits:items/"
+  }
+}

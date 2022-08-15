@@ -1,0 +1,8 @@
+{
+  "parent": "originofspirits:custom/eye_cannon_scope_charged",
+  "textures": {
+    "0": "originofspirits:items/eye_canon",
+    "1": "originofspirits:items/eye_canon_charged",
+    "particle": "originofspirits:items/eye_canon"
+  }
+}

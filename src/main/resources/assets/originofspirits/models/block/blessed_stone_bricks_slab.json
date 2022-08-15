@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "originofspirits:blocks/blessed_stone_bricks",
+    "top": "originofspirits:blocks/blessed_stone_bricks",
+    "side": "originofspirits:blocks/blessed_stone_bricks"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1",
+    "2"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:tempest_runner_beak"
+    },
+    "1": {
+      "item": "originofspirits:tempest_feather"
+    },
+    "2": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "originofspirits:tempest_runner_dagger",
+    "count": 1
+  }
+}

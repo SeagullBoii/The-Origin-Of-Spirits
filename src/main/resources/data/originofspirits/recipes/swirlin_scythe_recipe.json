@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "1": {
+      "tag": "forge:swirlin"
+    },
+    "2": {
+      "tag": "forge:swirlin"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "6": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "originofspirits:swirlin_scythe",
+    "count": 1
+  }
+}

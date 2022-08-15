@@ -1,0 +1,27 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "originofspirits:block/clam_block"
+    },
+    "facing=east": {
+      "model": "originofspirits:block/clam_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "originofspirits:block/clam_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "originofspirits:block/clam_block",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "originofspirits:block/clam_block",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "originofspirits:block/clam_block",
+      "x": 90
+    }
+  }
+}

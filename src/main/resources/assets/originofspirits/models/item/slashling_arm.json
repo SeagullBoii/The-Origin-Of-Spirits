@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/slashling_arm",
+  "textures": {
+    "0": "originofspirits:blocks/slashling_arm",
+    "particle": "originofspirits:items/slashling_arm"
+  }
+}

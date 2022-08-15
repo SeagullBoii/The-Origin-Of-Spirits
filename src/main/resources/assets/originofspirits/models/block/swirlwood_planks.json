@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/swirlwood_planks",
+    "particle": "originofspirits:blocks/swirlwood_planks"
+  }
+}

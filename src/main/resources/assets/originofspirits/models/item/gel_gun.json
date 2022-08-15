@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/gel_gun",
+  "textures": {
+    "0": "originofspirits:blocks/gel_gun",
+    "particle": "originofspirits:items/gel_gun"
+  }
+}

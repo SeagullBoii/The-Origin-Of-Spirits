@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "originofspirits:deceptone_bricks_small"
+  },
+  "result": "originofspirits:deceptone_bricks_small_slab"
+}

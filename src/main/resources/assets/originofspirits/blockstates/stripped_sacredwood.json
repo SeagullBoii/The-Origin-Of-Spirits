@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "originofspirits:block/stripped_sacredwood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "originofspirits:block/stripped_sacredwood"
+    },
+    "axis=z": {
+      "model": "originofspirits:block/stripped_sacredwood",
+      "x": 90
+    }
+  }
+}

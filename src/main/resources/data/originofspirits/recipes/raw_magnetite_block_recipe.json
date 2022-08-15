@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "1": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "2": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "3": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "4": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "5": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "6": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "7": {
+      "item": "originofspirits:raw_magnetite"
+    },
+    "8": {
+      "item": "originofspirits:raw_magnetite"
+    }
+  },
+  "result": {
+    "item": "originofspirits:raw_magnetite_block",
+    "count": 1
+  }
+}

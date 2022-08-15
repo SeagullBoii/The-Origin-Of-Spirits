@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "2": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "3": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "5": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "6": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "7": {
+      "item": "originofspirits:magnetite_ingot"
+    },
+    "8": {
+      "item": "originofspirits:magnetite_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:magnet",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "originofspirits:block/swirlin_stump"
+    },
+    "stage=1": {
+      "model": "originofspirits:block/swirlin_stump_top"
+    },
+    "stage=2": {
+      "model": "originofspirits:block/swirlin_stump_top_fruit"
+    }
+  }
+}

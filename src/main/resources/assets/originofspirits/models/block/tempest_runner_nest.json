@@ -1,0 +1,8 @@
+{
+  "parent": "originofspirits:custom/tempest_runner_nest",
+  "textures": {
+    "all": "originofspirits:blocks/tempest_runner_nest",
+    "particle": "originofspirits:blocks/tempest_runner_nest",
+    "0": "originofspirits:blocks/tempest_runner_nest"
+  }
+}

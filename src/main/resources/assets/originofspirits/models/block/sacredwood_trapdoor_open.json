@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_orientable_trapdoor_open",
+  "textures": {
+    "texture": "originofspirits:blocks/sacredwood_trapdoor",
+    "particle": "originofspirits:blocks/sacredwood_trapdoor"
+  }
+}

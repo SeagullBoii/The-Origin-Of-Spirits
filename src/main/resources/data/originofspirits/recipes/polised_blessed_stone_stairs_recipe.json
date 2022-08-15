@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "originofspirits:polished_blessed_stone"
+  },
+  "result": "originofspirits:polised_blessed_stone_stairs"
+}

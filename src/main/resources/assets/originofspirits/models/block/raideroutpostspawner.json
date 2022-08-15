@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "originofspirits:blocks/algae",
+    "top": "originofspirits:blocks/talltrumpetcoralmiddle",
+    "side": "originofspirits:blocks/green_alcyoneum",
+    "overlay": "originofspirits:blocks/talltrumpetcoraltop",
+    "particle": "originofspirits:blocks/algae"
+  }
+}

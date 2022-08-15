@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/rain_cloud_block",
+    "particle": "originofspirits:blocks/rain_cloud_block"
+  }
+}

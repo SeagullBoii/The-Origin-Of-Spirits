@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "originofspirits:blocks/swirlwood_door_top",
+    "up": "originofspirits:blocks/swirlwood_trapdoor",
+    "north": "originofspirits:blocks/stripped_swrilwood",
+    "east": "originofspirits:blocks/stripped_swrilwood",
+    "south": "originofspirits:blocks/stripped_swrilwood",
+    "west": "originofspirits:blocks/stripped_swrilwood",
+    "particle": "originofspirits:blocks/swirlwood_door_top"
+  }
+}

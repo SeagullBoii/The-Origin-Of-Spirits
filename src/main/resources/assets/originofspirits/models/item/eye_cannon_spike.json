@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/eye_cannon_spike",
+  "textures": {
+    "0": "originofspirits:items/eye_canon",
+    "particle": "originofspirits:items/eye_canon"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "1": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "2": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "3": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "4": {
+      "item": "minecraft:string"
+    },
+    "5": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "6": {
+      "item": "originofspirits:abyssal_stone"
+    },
+    "7": {
+      "item": "originofspirits:gellatenous_heart"
+    },
+    "8": {
+      "item": "originofspirits:abyssal_stone"
+    }
+  },
+  "result": {
+    "item": "originofspirits:abyssal_ring",
+    "count": 1
+  }
+}

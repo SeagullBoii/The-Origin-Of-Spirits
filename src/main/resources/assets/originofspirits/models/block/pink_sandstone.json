@@ -1,0 +1,10 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "originofspirits:blocks/pink_sandstone",
+    "top": "originofspirits:blocks/pink_sandstone_top",
+    "side": "originofspirits:blocks/pink_sandstone_side",
+    "overlay": "originofspirits:blocks/pink_sandstone_side",
+    "particle": "originofspirits:blocks/pink_sandstone"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:sacret_violet"
+    }
+  },
+  "result": {
+    "item": "minecraft:magenta_dye",
+    "count": 1
+  }
+}

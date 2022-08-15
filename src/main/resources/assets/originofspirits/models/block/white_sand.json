@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/white_sand",
+    "particle": "originofspirits:blocks/white_sand"
+  }
+}

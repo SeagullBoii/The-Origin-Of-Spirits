@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 12",
+    " 45",
+    "6  "
+  ],
+  "key": {
+    "1": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "2": {
+      "item": "originofspirits:hexayosh_horn"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "5": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "6": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "originofspirits:hexed_spear",
+    "count": 1
+  }
+}

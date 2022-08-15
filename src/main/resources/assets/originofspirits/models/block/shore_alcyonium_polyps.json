@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/green_alcyoneum_bush",
+    "particle": "originofspirits:blocks/green_alcyoneum_bush"
+  }
+}

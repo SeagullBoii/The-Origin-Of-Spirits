@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "originofspirits:block/polished_deceptone_slab_top"
+    },
+    "type=bottom": {
+      "model": "originofspirits:block/polished_deceptone_slab"
+    },
+    "type=double": {
+      "model": "originofspirits:block/polished_deceptone"
+    }
+  }
+}

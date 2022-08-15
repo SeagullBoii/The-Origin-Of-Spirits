@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "originofspirits:items/graduate_ender_eye_head_pickaxe"
+  }
+}

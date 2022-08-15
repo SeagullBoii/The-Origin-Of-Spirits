@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "originofspirits:block/the_sky_realms_portal_ew"
+    },
+    "axis=x": {
+      "model": "originofspirits:block/the_sky_realms_portal_ns"
+    }
+  }
+}

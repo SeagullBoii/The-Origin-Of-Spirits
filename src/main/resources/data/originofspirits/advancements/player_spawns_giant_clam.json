@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:immovable_pearl_block"
+    },
+    "title": {
+      "translate": "advancements.player_spawns_giant_clam.title"
+    },
+    "description": {
+      "translate": "advancements.player_spawns_giant_clam.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_spawns_giant_clam": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "originofspirits:colorful_trench"
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "originofspirits:block/swirlwood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "originofspirits:block/swirlwood_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "eggs=0": {
+      "model": "originofspirits:block/tempest_runner_nest"
+    },
+        "eggs=1": {
+      "model": "originofspirits:block/tempest_runner_nest_a"
+    },
+        "eggs=2": {
+      "model": "originofspirits:block/tempest_runner_nest_b"
+    },
+        "eggs=3": {
+      "model": "originofspirits:block/tempest_runner_nest_c"
+    },
+        "eggs=4": {
+      "model": "originofspirits:block/tempest_runner_nest_d"
+    },
+        "eggs=5": {
+      "model": "originofspirits:block/tempest_runner_nest_e"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:pink_sand"
+    },
+    "title": {
+      "translate": "advancements.player_enters_glass_desert.title"
+    },
+    "description": {
+      "translate": "advancements.player_enters_glass_desert.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_enters_glass_desert": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "originofspirits:glass_dessert"
+      }
+    }
+  },
+  "parent": "originofspirits:player_enters_sky_realms"
+}

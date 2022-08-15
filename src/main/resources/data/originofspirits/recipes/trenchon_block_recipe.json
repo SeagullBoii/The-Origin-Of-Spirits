@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:trenchon_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:trenchon_block",
+    "count": 1
+  }
+}

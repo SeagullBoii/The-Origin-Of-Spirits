@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "originofspirits:blocks/swirlwood_door_bottom",
+    "top": "originofspirits:blocks/swirlwood_door_top"
+  }
+}

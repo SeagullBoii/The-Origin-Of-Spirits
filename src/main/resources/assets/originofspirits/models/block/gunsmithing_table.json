@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "originofspirits:blocks/gunsmithing_table_bottom",
+    "up": "originofspirits:blocks/gunsmithing_table_top",
+    "north": "originofspirits:blocks/gunsmithing_table_front",
+    "east": "originofspirits:blocks/gunsmithing_table_empty",
+    "south": "originofspirits:blocks/gunsmithing_table_empty",
+    "west": "originofspirits:blocks/gunsmithing_table_right",
+    "particle": "originofspirits:blocks/gunsmithing_table_bottom"
+  }
+}

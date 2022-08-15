@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "3 5"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "2": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "3": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "5": {
+      "item": "originofspirits:cursed_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:cursed_steel_armor_boots",
+    "count": 1
+  }
+}

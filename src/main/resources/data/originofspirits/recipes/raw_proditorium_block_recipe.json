@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "1": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "2": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "3": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "4": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "5": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "6": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "7": {
+      "item": "originofspirits:raw_proditorium"
+    },
+    "8": {
+      "item": "originofspirits:raw_proditorium"
+    }
+  },
+  "result": {
+    "item": "originofspirits:raw_proditorium_block",
+    "count": 1
+  }
+}

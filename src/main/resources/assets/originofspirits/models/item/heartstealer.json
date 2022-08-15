@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/lifestealer",
+  "textures": {
+    "1": "originofspirits:blocks/lifestealer_full",
+    "particle": "originofspirits:items/lifestealer_full"
+  }
+}

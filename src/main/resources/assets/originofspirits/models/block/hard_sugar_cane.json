@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/hard_cane",
+    "particle": "originofspirits:blocks/hard_cane"
+  }
+}

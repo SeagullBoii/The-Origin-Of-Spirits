@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "originofspirits:block/beans_plant"
+    },
+    "age=1": {
+      "model": "originofspirits:block/beans_plant"
+    },
+    "age=2": {
+      "model": "originofspirits:block/beans_block_stage1"
+    },
+    "age=3": {
+      "model": "originofspirits:block/beans_block_stage1"
+    },
+    "age=4": {
+      "model": "originofspirits:block/beans_block_stage2"
+    },
+    "age=5": {
+      "model": "originofspirits:block/beans_block_stage2"
+    },
+    "age=6": {
+      "model": "originofspirits:block/beans_block_stage3"
+    },
+    "age=7": {
+      "model": "originofspirits:block/beans_block_stage4"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/crop",
+  "textures": {
+    "crop": "originofspirits:blocks/sweet_potato_stage_2",
+    "particle": "originofspirits:blocks/sweet_potato_stage_2"
+  }
+}

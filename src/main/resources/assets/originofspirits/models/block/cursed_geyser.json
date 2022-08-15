@@ -1,0 +1,9 @@
+{
+  "parent": "originofspirits:custom/cursed_geyser",
+  "textures": {
+    "all": "originofspirits:blocks/cursed_lava_still",
+    "particle": "originofspirits:blocks/deceptone",
+    "0": "originofspirits:blocks/cursed_lava_still",
+    "1": "originofspirits:blocks/deceptone"
+  }
+}

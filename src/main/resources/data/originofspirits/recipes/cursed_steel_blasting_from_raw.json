@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:blasting",
+    "ingredient": {
+        "item": "originofspirits:raw_cursed_steel"
+    },
+    "result": "originofspirits:cursed_steel_ingot",
+    "experience": 0.5,
+    "cookingtime": 100
+}

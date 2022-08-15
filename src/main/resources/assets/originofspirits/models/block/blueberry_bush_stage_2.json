@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/blueberry_bush_stage2",
+    "particle": "originofspirits:blocks/blueberry_bush_stage2"
+  }
+}

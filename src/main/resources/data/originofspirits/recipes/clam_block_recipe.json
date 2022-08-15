@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:clam_shell"
+    },
+    "1": {
+      "item": "originofspirits:clam_shell"
+    },
+    "2": {
+      "item": "originofspirits:clam_shell"
+    },
+    "3": {
+      "item": "originofspirits:clam_shell"
+    }
+  },
+  "result": {
+    "item": "originofspirits:clam_block",
+    "count": 1
+  }
+}

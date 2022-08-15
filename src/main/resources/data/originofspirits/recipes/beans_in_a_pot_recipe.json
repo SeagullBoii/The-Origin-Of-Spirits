@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:beans"
+    },
+    "1": {
+      "item": "originofspirits:beans"
+    },
+    "2": {
+      "item": "originofspirits:beans"
+    },
+    "3": {
+      "item": "originofspirits:beans"
+    },
+    "4": {
+      "item": "originofspirits:beans"
+    },
+    "5": {
+      "item": "originofspirits:beans"
+    },
+    "7": {
+      "item": "originofspirits:cooking_pot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:beans_in_a_pot",
+    "count": 1
+  }
+}

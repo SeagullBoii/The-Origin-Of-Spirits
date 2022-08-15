@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/lush_sacred_grass_plant",
+    "particle": "originofspirits:blocks/lush_sacred_grass_plant"
+  }
+}

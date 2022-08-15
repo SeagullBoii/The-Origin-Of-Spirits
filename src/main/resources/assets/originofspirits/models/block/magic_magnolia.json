@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/magic_magnolia",
+    "particle": "originofspirits:blocks/magic_magnolia"
+  }
+}

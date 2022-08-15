@@ -1,0 +1,8 @@
+{
+  "parent": "originofspirits:custom/deepsea_algae",
+  "textures": {
+    "all": "originofspirits:blocks/algae",
+    "particle": "originofspirits:blocks/algae",
+    "1": "originofspirits:blocks/algae"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "originofspirits:custom/duckweed",
+  "textures": {
+    "all": "originofspirits:blocks/duckweed",
+    "particle": "originofspirits:blocks/duckweed",
+    "0": "originofspirits:blocks/duckweed"
+  }
+}

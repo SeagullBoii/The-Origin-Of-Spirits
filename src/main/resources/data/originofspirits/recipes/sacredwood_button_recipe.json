@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "originofspirits:sacredwood_planks"
+    }
+  ],
+  "result": {
+    "item": "originofspirits:sacredwood_button",
+    "count": 1
+  }
+}

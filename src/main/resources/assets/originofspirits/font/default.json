@@ -1,0 +1,11 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "originofspirits:items/quiver.png",
+            "ascent": 16,
+            "height": 16,
+            "chars": ["\uF880"]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "originofspirits:block/polished_deceptone",
+    "bottom": "originofspirits:block/polished_deceptone",
+    "top": "originofspirits:block/polished_deceptone"
+  }
+}

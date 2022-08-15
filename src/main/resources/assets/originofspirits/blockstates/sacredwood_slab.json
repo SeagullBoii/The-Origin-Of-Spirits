@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "originofspirits:block/sacredwood_slab"
+    },
+    "type=top": {
+      "model": "originofspirits:block/sacredwood_slab_top"
+    },
+    "type=double": {
+      "model": "originofspirits:block/sacredwood_slab_full"
+    }
+  }
+}

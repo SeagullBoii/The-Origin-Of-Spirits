@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "item": "originofspirits:cursed_steel_ore"
+    },
+    "result": "originofspirits:cursed_steel_ingot",
+    "experience": 0.5,
+    "cookingtime": 200
+}

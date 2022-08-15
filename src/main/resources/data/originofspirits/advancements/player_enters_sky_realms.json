@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:cloud_block"
+    },
+    "title": {
+      "translate": "advancements.player_enters_sky_realms.title"
+    },
+    "description": {
+      "translate": "advancements.player_enters_sky_realms.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_enters_sky_realms": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "originofspirits:the_sky_realms"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  },
+  "parent": "originofspirits:welcome_to_the_origin_of_spirits"
+}

@@ -1,0 +1,46 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.giant_clam",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "mouth_bottom",
+					"pivot": [0.1, 10.8, 17.1],
+					"cubes": [
+						{"origin": [-16, 0, -15], "size": [32, 11, 32], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "mouth_top",
+					"parent": "mouth_bottom",
+					"pivot": [0.1, 10.8, 17.1]
+				},
+				{
+					"name": "cube_r1",
+					"parent": "mouth_top",
+					"pivot": [0, 9.6073, 16.7544],
+					"rotation": [-22.50005, 0, 0],
+					"cubes": [
+						{"origin": [-16, 10.6073, -15.4456], "size": [32, 11, 32], "uv": [0, 48]}
+					]
+				},
+				{
+					"name": "clam",
+					"parent": "mouth_bottom",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-4, 9, -3], "size": [8, 8, 8], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

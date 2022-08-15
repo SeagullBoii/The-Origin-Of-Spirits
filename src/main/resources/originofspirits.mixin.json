@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.seagullboi.originofspirits.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "minVersion": "0.7",
+  "mixins": [
+  ],
+  "client": [
+
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "refmap": "originofspirits.mixin-refmap.json"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "originofspirits:block/blessed_stone_bricks_small_slab"
+    },
+    "type=top": {
+      "model": "originofspirits:block/blessed_stone_bricks_small_slab_top"
+    },
+    "type=double": {
+      "model": "originofspirits:block/blessed_stone_bricks_small_slab_full"
+    }
+  }
+}

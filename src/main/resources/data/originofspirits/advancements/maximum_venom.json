@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:advancement_icon_item",
+         "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "advancements.maximum_venom.title"
+    },
+    "description": {
+      "translate": "advancements.maximum_venom.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "maximum_venom": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "originofspirits:the_hidden_depths"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/cursed_flamethrower",
+  "textures": {
+    "0": "originofspirits:blocks/cursed_flame_thrower",
+    "particle": "originofspirits:items/cursed_flame_thrower"
+  }
+}

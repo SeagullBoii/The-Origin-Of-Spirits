@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/blessed_stone_bricks",
+    "particle": "originofspirits:blocks/blessed_stone_bricks"
+  }
+}

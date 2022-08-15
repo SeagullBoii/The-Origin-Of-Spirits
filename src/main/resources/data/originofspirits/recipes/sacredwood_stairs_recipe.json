@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0  ",
+    "34 ",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:sacredwood_planks"
+    },
+    "3": {
+      "item": "originofspirits:sacredwood_planks"
+    },
+    "4": {
+      "item": "originofspirits:sacredwood_planks"
+    },
+    "6": {
+      "item": "originofspirits:sacredwood_planks"
+    },
+    "7": {
+      "item": "originofspirits:sacredwood_planks"
+    },
+    "8": {
+      "item": "originofspirits:sacredwood_planks"
+    }
+  },
+  "result": {
+    "item": "originofspirits:sacredwood_stairs",
+    "count": 4
+  }
+}

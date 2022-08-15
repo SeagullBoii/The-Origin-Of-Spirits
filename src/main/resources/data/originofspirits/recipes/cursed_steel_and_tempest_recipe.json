@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
+    }
+  ],
+  "result": {
+    "item": "originofspirits:cursed_steel_and_tempest",
+    "count": 1
+  }
+}

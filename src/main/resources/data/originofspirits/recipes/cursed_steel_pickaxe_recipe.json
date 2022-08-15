@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    " 4 ",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "1": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "2": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "4": {
+      "item": "minecraft:stick"
+    },
+    "7": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "originofspirits:cursed_steel_pickaxe",
+    "count": 1
+  }
+}

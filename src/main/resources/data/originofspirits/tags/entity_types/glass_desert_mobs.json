@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "item",
+    "item_frame",
+    "originofspirits:crystalback_turtle",
+    "originofspirits:skenelope",
+    "originofspirits:meteorite_golem",
+    "originofspirits:tempest_runner",
+    "experience_bottle",
+    "leash_knot",
+    "originofspirits:caikle",
+    "experience_orb",
+    "fireball"
+  ]
+}

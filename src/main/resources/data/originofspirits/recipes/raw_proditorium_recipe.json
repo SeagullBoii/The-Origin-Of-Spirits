@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "originofspirits:proditorium_ore"
+  },
+  "result": {
+    "item": "originofspirits:raw_proditorium"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "67 "
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:cursed_steel_block"
+    },
+    "2": {
+      "item": "originofspirits:cursed_steel_and_tempest"
+    },
+    "3": {
+      "item": "originofspirits:gel_gun"
+    },
+    "4": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "5": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "6": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "7": {
+      "item": "originofspirits:cursed_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:cursed_flamethrower",
+    "count": 1
+  }
+}

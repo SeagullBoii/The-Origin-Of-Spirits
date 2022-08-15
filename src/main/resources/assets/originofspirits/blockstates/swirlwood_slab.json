@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "originofspirits:block/swirlwood_slab"
+    },
+    "type=top": {
+      "model": "originofspirits:block/swirlwood_slab_top"
+    },
+    "type=double": {
+      "model": "originofspirits:block/swirlwood_slab_full"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "entity=null": {
+      "model": "originofspirits:block/abyssal_spawner_null"
+    },
+    "entity=jellyfish": {
+      "model": "originofspirits:block/abyssal_spawner_jellyfish"
+    },
+    "entity=box_jellyfish": {
+      "model": "originofspirits:block/abyssal_spawner_box_jellyfish"
+    },
+    "entity=electric_surgeonfish": {
+      "model": "originofspirits:block/abyssal_spawner_electric_surgeonfish"
+    },
+    "entity=electric_eel": {
+      "model": "originofspirits:block/abyssal_spawner_electric_eel"
+    }
+  }
+}

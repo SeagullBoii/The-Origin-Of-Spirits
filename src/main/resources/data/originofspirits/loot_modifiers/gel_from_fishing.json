@@ -1,0 +1,20 @@
+{
+  "conditions": [
+    {
+  "condition": "minecraft:location_check",
+  "predicate": {
+  "biome": "originofspirits:abyss"
+    }
+    },
+    {
+      "conditions": "forge:loot_table_id",
+      "loot_table_id" : "minecraft:gameplay/fishing/junk"
+
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.2
+    }
+  ],
+  "addition": "originofspirits:gel"
+}

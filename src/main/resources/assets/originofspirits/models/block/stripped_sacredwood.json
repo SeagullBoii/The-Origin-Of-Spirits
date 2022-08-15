@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/stripped_sacredwood",
+    "particle": "originofspirits:blocks/stripped_sacredwood"
+  }
+}

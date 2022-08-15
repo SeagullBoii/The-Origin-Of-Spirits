@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "originofspirits:block/deepsea_algae_wall_2"
+    },
+    "facing=east": {
+      "model": "originofspirits:block/deepsea_algae_wall_2",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "originofspirits:block/deepsea_algae_wall_2",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "originofspirits:block/deepsea_algae_wall_2",
+      "y": 270
+    }
+  }
+}

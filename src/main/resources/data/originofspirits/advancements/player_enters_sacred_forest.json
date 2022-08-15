@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:sacredwood_leaves"
+    },
+    "title": {
+      "translate": "advancements.player_enters_sacred_forest.title"
+    },
+    "description": {
+      "translate": "advancements.player_enters_sacred_forest.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_enters_sacred_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "originofspirits:sacred_forest"
+      }
+    }
+  },
+  "parent": "originofspirits:player_enters_sky_realms"
+}

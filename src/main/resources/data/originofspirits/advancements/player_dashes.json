@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:advancement_icon_item",
+       "nbt": "{CustomModelData:3}"
+    },
+    "title": {
+      "translate": "advancements.player_dashes.title"
+    },
+    "description": {
+      "translate": "advancements.player_dashes.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_dashes": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "originofspirits:welcome_to_the_origin_of_spirits"
+}

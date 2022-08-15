@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/trenchon_ore",
+    "particle": "originofspirits:blocks/trenchon_ore"
+  }
+}

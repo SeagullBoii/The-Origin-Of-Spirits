@@ -1,0 +1,378 @@
+{
+  "electrical_shock": {
+    "category": "neutral",
+    "subtitle": "subtitles.electrical_shock",
+    "sounds": [
+      {
+        "name": "originofspirits:electrical_shock",
+        "stream": false
+      }
+    ]
+  },
+  "electric_shock_explosion": {
+    "category": "hostile",
+    "subtitle": "subtitles.electric_shock_explosion",
+    "sounds": [
+      {
+        "name": "originofspirits:electric_shock_explosion",
+        "stream": false
+      }
+    ]
+  },
+  "clam_snap": {
+    "category": "hostile",
+    "subtitle": "subtitles.clam_snap",
+    "sounds": [
+      {
+        "name": "originofspirits:clam_snap",
+        "stream": false
+      }
+    ]
+  },
+  "clam_snap_middle": {
+    "category": "hostile",
+    "subtitle": "subtitles.clam_snap_middle",
+    "sounds": [
+      {
+        "name": "originofspirits:clam_snap_b",
+        "stream": false
+      }
+    ]
+  },
+  "metorite_break": {
+    "category": "block",
+    "subtitle": "subtitles.metorite_break",
+    "sounds": [
+      {
+        "name": "originofspirits:meteorite_break1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:meteorite_break2",
+        "stream": false
+      }
+    ]
+  },
+  "meteorite_hit": {
+    "category": "block",
+    "subtitle": "subtitles.meteorite_hit",
+    "sounds": [
+      {
+        "name": "originofspirits:meteorite_hit1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:meteorite_hit2",
+        "stream": false
+      }
+    ]
+  },
+  "meteorite_place": {
+    "category": "block",
+    "subtitle": "subtitles.meteorite_place",
+    "sounds": [
+      {
+        "name": "originofspirits:meteorite_hit2",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:meteorite_hit1",
+        "stream": false
+      }
+    ]
+  },
+  "meteorite_walk": {
+    "category": "block",
+    "subtitle": "subtitles.meteorite_walk",
+    "sounds": [
+      {
+        "name": "originofspirits:meteorite_step1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:meteorite_step2",
+        "stream": false
+      }
+    ]
+  },
+  "skenelope_ambient": {
+    "category": "voice",
+    "subtitle": "subtitles.skenelope_ambient",
+    "sounds": [
+      {
+        "name": "originofspirits:deer_ambient1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:deer_ambient2",
+        "stream": false
+      }
+    ]
+  },
+  "skenelope_hurt": {
+    "category": "voice",
+    "subtitle": "subtitles.skenelope_hurt",
+    "sounds": [
+      {
+        "name": "originofspirits:deer_hurt1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:deer_hurt2",
+        "stream": false
+      }
+    ]
+  },
+  "skenelope_death": {
+    "category": "voice",
+    "subtitle": "subtitles.skenelope_death",
+    "sounds": [
+      {
+        "name": "originofspirits:deet_death",
+        "stream": false
+      }
+    ]
+  },
+  "archie_the_abyss": {
+    "category": "ambient",
+    "subtitle": "subtitles.archie_the_abyss",
+    "sounds": [
+      {
+        "name": "originofspirits:abyss_ambient_song",
+        "stream": false
+      }
+    ]
+  },
+  "flamethrower": {
+    "category": "hostile",
+    "subtitle": "subtitles.flamethrower",
+    "sounds": [
+      {
+        "name": "originofspirits:flamethrower0",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:flamethrower1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:flamethrower3",
+        "stream": false
+      }
+    ]
+  },
+  "wisp_explode": {
+    "category": "hostile",
+    "subtitle": "subtitles.wisp_explode",
+    "sounds": [
+      {
+        "name": "originofspirits:wisp_explode",
+        "stream": false
+      }
+    ]
+  },
+  "wisp_idle": {
+    "category": "hostile",
+    "subtitle": "subtitles.wisp_idle",
+    "sounds": [
+      {
+        "name": "originofspirits:wisp_idle",
+        "stream": false
+      }
+    ]
+  },
+  "wisp_hurt": {
+    "category": "hostile",
+    "subtitle": "subtitles.wisp_hurt",
+    "sounds": [
+      {
+        "name": "originofspirits:wisp_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "wisp_death": {
+    "category": "hostile",
+    "subtitle": "subtitles.wisp_death",
+    "sounds": [
+      {
+        "name": "originofspirits:wisp_death",
+        "stream": false
+      }
+    ]
+  },
+  "hexayosh_charge": {
+    "category": "voice",
+    "subtitle": "subtitles.hexayosh_charge",
+    "sounds": [
+      {
+        "name": "originofspirits:hexayosh_charge",
+        "stream": false
+      }
+    ]
+  },
+  "hexayosh_ambient": {
+    "category": "voice",
+    "subtitle": "subtitles.hexayosh_ambient",
+    "sounds": [
+      {
+        "name": "originofspirits:hexanosh_ambient",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:hexanosh_ambient1",
+        "stream": false
+      }
+    ]
+  },
+  "hexayosh_death": {
+    "category": "voice",
+    "subtitle": "subtitles.hexayosh_death",
+    "sounds": [
+      {
+        "name": "originofspirits:hexayosh_death",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:hexayosh_death1",
+        "stream": false
+      }
+    ]
+  },
+  "hexayosh_hurt": {
+    "category": "voice",
+    "subtitle": "subtitles.hexayosh_hurt",
+    "sounds": [
+      {
+        "name": "originofspirits:hexayosh_hurt",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:hexayosh_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "blessed_symphony": {
+    "category": "music",
+    "subtitle": "subtitles.blessed_symphony",
+    "sounds": [
+      {
+        "name": "originofspirits:blessed_march",
+        "stream": true
+      }
+    ]
+  },
+  "gauntlet_shoot": {
+    "category": "player",
+    "subtitle": "subtitles.gauntlet_shoot",
+    "sounds": [
+      {
+        "name": "originofspirits:gauntlet_swing",
+        "stream": false
+      }
+    ]
+  },
+  "yoyo_swing": {
+    "category": "player",
+    "subtitle": "subtitles.yoyo_swing",
+    "sounds": [
+      {
+        "name": "originofspirits:yoyo2",
+        "stream": false
+      }
+    ]
+  },
+  "magic_staff_use": {
+    "category": "player",
+    "subtitle": "subtitles.magic_staff_use",
+    "sounds": [
+      {
+        "name": "originofspirits:magic_staff_use",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:magic_staff_use_1",
+        "stream": false
+      }
+    ]
+  },
+  "frog_death": {
+    "category": "voice",
+    "subtitle": "subtitles.frog_death",
+    "sounds": [
+      {
+        "name": "originofspirits:frog_death",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_death1_1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_death2_1",
+        "stream": false
+      }
+    ]
+  },
+  "frog_hurt": {
+    "category": "voice",
+    "subtitle": "subtitles.frog_hurt",
+    "sounds": [
+      {
+        "name": "originofspirits:frog_hurt",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_hurt1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_hurt2",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_hurt3",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_hurt4",
+        "stream": false
+      }
+    ]
+  },
+  "frog_ambient": {
+    "category": "voice",
+    "subtitle": "subtitles.frog_ambient",
+    "sounds": [
+      {
+        "name": "originofspirits:frog_ambient",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient2",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient3",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient4",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient5",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:frog_ambient6",
+        "stream": false
+      }
+    ]
+  }
+}

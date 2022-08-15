@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "1": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "2": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "3": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "4": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "5": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "6": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "7": {
+      "item": "originofspirits:crystalized_glass_shard"
+    },
+    "8": {
+      "item": "originofspirits:crystalized_glass_shard"
+    }
+  },
+  "result": {
+    "item": "originofspirits:tempest_crystal",
+    "count": 1
+  }
+}

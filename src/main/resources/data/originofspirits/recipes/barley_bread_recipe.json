@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:barley_stack"
+    },
+    "1": {
+      "item": "originofspirits:barley_stack"
+    },
+    "2": {
+      "item": "originofspirits:barley_stack"
+    }
+  },
+  "result": {
+    "item": "originofspirits:barley_bread",
+    "count": 1
+  }
+}

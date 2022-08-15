@@ -1,0 +1,7 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "originofspirits:blocks/swirlwood_planks",
+    "particle": "originofspirits:blocks/swirlwood_planks"
+  }
+}

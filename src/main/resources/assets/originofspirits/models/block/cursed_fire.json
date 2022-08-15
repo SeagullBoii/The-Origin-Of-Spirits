@@ -1,0 +1,8 @@
+{
+  "parent": "originofspirits:custom/fire",
+  "textures": {
+    "all": "originofspirits:blocks/cursed_fire",
+    "particle": "originofspirits:blocks/cursed_fire",
+    "0": "originofspirits:blocks/cursed_fire"
+  }
+}

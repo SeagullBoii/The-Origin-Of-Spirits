@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "2": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "3": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "4": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "5": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "6": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "7": {
+      "item": "originofspirits:cursed_steel_ingot"
+    },
+    "8": {
+      "item": "originofspirits:cursed_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:cursed_steel_armor_chestplate",
+    "count": 1
+  }
+}

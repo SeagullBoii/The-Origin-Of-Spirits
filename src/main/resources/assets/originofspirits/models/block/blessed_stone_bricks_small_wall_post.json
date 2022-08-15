@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_post",
+  "textures": {
+    "wall": "originofspirits:blocks/blessed_stone_small_bricks",
+    "particle": "originofspirits:blocks/blessed_stone_small_bricks"
+  }
+}

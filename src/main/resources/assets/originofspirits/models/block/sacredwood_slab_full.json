@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "originofspirits:blocks/sacredwood_planks",
+    "top": "originofspirits:blocks/sacredwood_planks",
+    "side": "originofspirits:blocks/sacredwood_planks"
+  }
+}

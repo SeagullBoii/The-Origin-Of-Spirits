@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "originofspirits:blocks/stripped_sacredwood_top",
+    "up": "originofspirits:blocks/stripped_sacredwood_top",
+    "north": "originofspirits:blocks/stripped_sacredwood",
+    "east": "originofspirits:blocks/stripped_sacredwood",
+    "south": "originofspirits:blocks/stripped_sacredwood",
+    "west": "originofspirits:blocks/stripped_sacredwood",
+    "particle": "originofspirits:blocks/stripped_sacredwood_top"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:swirlin_yoyo"
+    },
+    "title": {
+      "translate": "advancements.player_crafts_yoyo.title"
+    },
+    "description": {
+      "translate": "advancements.player_crafts_yoyo.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "player_crafts_yoyo": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "originofspirits:swirlin_yoyo",
+            "count": {
+              "min": 1,
+              "max": 100
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "originofspirits:player_eats_swirling"
+}

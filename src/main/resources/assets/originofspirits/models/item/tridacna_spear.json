@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/tridacna_spear",
+  "textures": {
+    "0": "originofspirits:blocks/tridacna_spear",
+    "particle": "originofspirits:items/tridacna_spear"
+  }
+}

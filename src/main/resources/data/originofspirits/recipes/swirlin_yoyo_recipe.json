@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "1": {
+      "item": "minecraft:string"
+    },
+    "2": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "3": {
+      "tag": "forge:swirlin"
+    },
+    "4": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "5": {
+      "tag": "forge:swirlin"
+    },
+    "6": {
+      "item": "originofspirits:proditorium_ingot"
+    },
+    "7": {
+      "item": "minecraft:string"
+    },
+    "8": {
+      "item": "originofspirits:proditorium_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:swirlin_yoyo",
+    "count": 1
+  }
+}

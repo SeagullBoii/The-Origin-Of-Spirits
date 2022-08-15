@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "originofspirits:blocks/deceptone_bricks",
+    "particle": "originofspirits:blocks/deceptone_bricks"
+  }
+}

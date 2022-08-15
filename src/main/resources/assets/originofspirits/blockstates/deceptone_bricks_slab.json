@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "originofspirits:block/deceptone_bricks_slab"
+    },
+    "type=top": {
+      "model": "originofspirits:block/deceptone_bricks_slab_top"
+    },
+    "type=double": {
+      "model": "originofspirits:block/deceptone_bricks_slab_full"
+    }
+  }
+}

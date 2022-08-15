@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/clam_snapper",
+  "textures": {
+    "0": "originofspirits:blocks/clam_snapper",
+    "particle": "originofspirits:items/clam_snapper"
+  }
+}

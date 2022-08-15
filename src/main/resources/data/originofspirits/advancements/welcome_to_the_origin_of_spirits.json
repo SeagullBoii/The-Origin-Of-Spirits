@@ -1,0 +1,24 @@
+{
+  "display": {
+    "background": "originofspirits:textures/advancements/advancement_backgroun.png",
+    "icon": {
+      "item": "originofspirits:advancement_icon_item",
+       "nbt": "{CustomModelData:2}"
+    },
+    "title": {
+      "translate": "advancements.welcome_to_the_origin_of_spirits.title"
+    },
+    "description": {
+      "translate": "advancements.welcome_to_the_origin_of_spirits.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "welcome_to_the_origin_of_spirits": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

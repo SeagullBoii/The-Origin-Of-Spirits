@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0",
+    "1"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:baked_potato"
+    },
+    "1": {
+      "item": "originofspirits:carton_cup"
+    }
+  },
+  "result": {
+    "item": "originofspirits:fries",
+    "count": 1
+  }
+}

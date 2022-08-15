@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "originofspirits:blocks/deceptone_bricks",
+    "top": "originofspirits:blocks/deceptone_bricks",
+    "side": "originofspirits:blocks/deceptone_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:blocks/proditorium_ore",
+    "particle": "originofspirits:blocks/proditorium_ore"
+  }
+}

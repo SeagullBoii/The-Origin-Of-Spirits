@@ -1,0 +1,9 @@
+{
+  "parent": "originofspirits:custom/buddhas_hand_plant_0",
+  "textures": {
+    "all": "originofspirits:blocks/buddhashand_plant",
+    "particle": "originofspirits:blocks/buddhashand_plant",
+    "0": "originofspirits:blocks/buddhashand_plant",
+    "1": "originofspirits:blocks/buddhashand_stage_0"
+  }
+}

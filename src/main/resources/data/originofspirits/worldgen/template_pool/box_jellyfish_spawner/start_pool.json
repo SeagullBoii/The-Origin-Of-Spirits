@@ -1,0 +1,15 @@
+{
+  "name": "originofspirits:box_jellyfish_spawner/start_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "originofspirits:box_jellyfish_spawner",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

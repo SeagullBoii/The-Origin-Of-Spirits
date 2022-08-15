@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/swirlin_fists",
+  "textures": {
+    "0": "originofspirits:blocks/swirlin_fists",
+    "particle": "originofspirits:items/swirlin_fists"
+  }
+}

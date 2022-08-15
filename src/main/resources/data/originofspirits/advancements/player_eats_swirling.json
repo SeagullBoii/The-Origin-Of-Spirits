@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:swirlin"
+    },
+    "title": {
+      "translate": "advancements.player_eats_swirling.title"
+    },
+    "description": {
+      "translate": "advancements.player_eats_swirling.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "player_eats_swirling": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "item": "originofspirits:swirlin"
+        }
+      }
+    }
+  },
+  "parent": "originofspirits:player_enters_glass_desert"
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "originofspirits:items/trousersnake"
+  },
+  "overrides": [
+    {"predicate": {"custom_model_data": 1},"model": "originofspirits:item/giant_clam"},
+    {"predicate": {"custom_model_data": 2},"model": "originofspirits:item/giant_clam_slam"},
+	{"predicate": {"custom_model_data": 3},"model": "originofspirits:item/pearl_corner_clam"},
+	{"predicate": {"custom_model_data": 4},"model": "originofspirits:item/clam_fang"},
+	{"predicate": {"custom_model_data": 5},"model": "originofspirits:item/giant_clam_hurt"},
+    {"predicate": {"custom_model_data": 6},"model": "originofspirits:item/giant_clam_slam_hurt"}
+  ]
+}

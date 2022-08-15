@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:immovable_shard"
+    },
+    "1": {
+      "item": "originofspirits:immovable_shard"
+    },
+    "2": {
+      "item": "originofspirits:immovable_shard"
+    },
+    "3": {
+      "item": "originofspirits:pearl"
+    },
+    "4": {
+      "item": "originofspirits:pearl"
+    },
+    "5": {
+      "item": "originofspirits:pearl"
+    },
+    "6": {
+      "item": "originofspirits:immovable_shard"
+    },
+    "7": {
+      "item": "originofspirits:immovable_shard"
+    },
+    "8": {
+      "item": "originofspirits:immovable_shard"
+    }
+  },
+  "result": {
+    "item": "originofspirits:immovable_pearl_block",
+    "count": 1
+  }
+}

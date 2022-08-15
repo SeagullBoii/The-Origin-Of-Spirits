@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:black_sand"
+    },
+    "title": {
+      "translate": "advancements.the_hidden_depths.title"
+    },
+    "description": {
+      "translate": "advancements.the_hidden_depths.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "the_hidden_depths": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "originofspirits:abyss"
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "originofspirits:welcome_to_the_origin_of_spirits"
+}

@@ -1,0 +1,1512 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "cursed_flamethrower",
+  "elements": [
+    {
+      "name": "cursed_flame_thrower_0",
+      "from": [
+        13.5,
+        0,
+        5.5
+      ],
+      "to": [
+        14,
+        0.5,
+        6
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            3,
+            13.5,
+            4
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            3,
+            14,
+            4
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            3,
+            14,
+            4
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            3,
+            14,
+            4
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            3,
+            14,
+            4
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            4,
+            14,
+            3
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_1",
+      "from": [
+        2,
+        0,
+        6
+      ],
+      "to": [
+        7.5,
+        0.5,
+        9
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            7.5,
+            4,
+            2,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            7,
+            4,
+            7.5,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            2,
+            9,
+            7.5,
+            10
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            2,
+            4,
+            2.5,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            2,
+            4,
+            7.5,
+            10
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            2,
+            10,
+            7.5,
+            4
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_2",
+      "from": [
+        14,
+        0,
+        6
+      ],
+      "to": [
+        14.5,
+        0.5,
+        9.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            14.5,
+            4,
+            14,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            4,
+            14.5,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            14,
+            10,
+            14.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            14,
+            4,
+            14.5,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            14,
+            4,
+            14.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            14,
+            11,
+            14.5,
+            4
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_3",
+      "from": [
+        1.5,
+        0,
+        6.5
+      ],
+      "to": [
+        2,
+        0.5,
+        10.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            5,
+            1.5,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            1.5,
+            5,
+            2,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            1.5,
+            12,
+            2,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            1.5,
+            5,
+            2,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            1.5,
+            5,
+            2,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            1.5,
+            13,
+            2,
+            5
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_4",
+      "from": [
+        7.5,
+        0,
+        6.5
+      ],
+      "to": [
+        8,
+        0.5,
+        9
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            5,
+            7.5,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            7.5,
+            5,
+            8,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            7.5,
+            9,
+            8,
+            10
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            7.5,
+            5,
+            8,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            7.5,
+            5,
+            8,
+            10
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            7.5,
+            10,
+            8,
+            5
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_5",
+      "from": [
+        11.5,
+        0,
+        6.5
+      ],
+      "to": [
+        12.5,
+        0.5,
+        10
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            12.5,
+            5,
+            11.5,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            12,
+            5,
+            12.5,
+            12
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            11.5,
+            11,
+            12.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            11.5,
+            5,
+            12,
+            12
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            11.5,
+            5,
+            12.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            11.5,
+            12,
+            12.5,
+            5
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_6",
+      "from": [
+        13.5,
+        0,
+        6.5
+      ],
+      "to": [
+        14,
+        0.5,
+        9.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            5,
+            13.5,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            13.5,
+            5,
+            14,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            13.5,
+            10,
+            14,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            13.5,
+            5,
+            14,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            13.5,
+            5,
+            14,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            13.5,
+            11,
+            14,
+            5
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_7",
+      "from": [
+        14.5,
+        0,
+        6.5
+      ],
+      "to": [
+        15,
+        0.5,
+        9
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            5,
+            14.5,
+            6
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14.5,
+            5,
+            15,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            14.5,
+            9,
+            15,
+            10
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            14.5,
+            5,
+            15,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            14.5,
+            5,
+            15,
+            10
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            14.5,
+            10,
+            15,
+            5
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_8",
+      "from": [
+        8,
+        0,
+        7
+      ],
+      "to": [
+        11.5,
+        0.5,
+        9.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            11.5,
+            6,
+            8,
+            7
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            11,
+            6,
+            11.5,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            8,
+            10,
+            11.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            8,
+            6,
+            8.5,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8,
+            6,
+            11.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8,
+            11,
+            11.5,
+            6
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_9",
+      "from": [
+        1,
+        0,
+        7.5
+      ],
+      "to": [
+        1.5,
+        0.5,
+        10.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            1.5,
+            7,
+            1,
+            8
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            1,
+            7,
+            1.5,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            1,
+            12,
+            1.5,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            1,
+            7,
+            1.5,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            1,
+            7,
+            1.5,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            1,
+            13,
+            1.5,
+            7
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_10",
+      "from": [
+        0.5,
+        0,
+        8
+      ],
+      "to": [
+        1,
+        0.5,
+        10.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            1,
+            8,
+            0.5,
+            9
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            0.5,
+            8,
+            1,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            0.5,
+            12,
+            1,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            0.5,
+            8,
+            1,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            0.5,
+            8,
+            1,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            0.5,
+            13,
+            1,
+            8
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_11",
+      "from": [
+        12.5,
+        0,
+        8.5
+      ],
+      "to": [
+        13.5,
+        0.5,
+        10
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            13.5,
+            9,
+            12.5,
+            10
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            13,
+            9,
+            13.5,
+            12
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12.5,
+            11,
+            13.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12.5,
+            9,
+            13,
+            12
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12.5,
+            9,
+            13.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12.5,
+            12,
+            13.5,
+            9
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_12",
+      "from": [
+        2.5,
+        0,
+        9
+      ],
+      "to": [
+        4.5,
+        0.5,
+        9.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            4.5,
+            10,
+            2.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            10,
+            4.5,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            2.5,
+            10,
+            4.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            2.5,
+            10,
+            3,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            2.5,
+            10,
+            4.5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            2.5,
+            11,
+            4.5,
+            10
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_13",
+      "from": [
+        5,
+        0,
+        9
+      ],
+      "to": [
+        5.5,
+        0.5,
+        10
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            5.5,
+            10,
+            5,
+            11
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            5,
+            10,
+            5.5,
+            12
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            5,
+            11,
+            5.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            5,
+            10,
+            5.5,
+            12
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            5,
+            10,
+            5.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            5,
+            12,
+            5.5,
+            10
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_14",
+      "from": [
+        3,
+        0,
+        9.5
+      ],
+      "to": [
+        3.5,
+        0.5,
+        10
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            3.5,
+            11,
+            3,
+            12
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            3,
+            11,
+            3.5,
+            12
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            3,
+            11,
+            3.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            3,
+            11,
+            3.5,
+            12
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            3,
+            11,
+            3.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            3,
+            12,
+            3.5,
+            11
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_15",
+      "from": [
+        8.5,
+        0,
+        9.5
+      ],
+      "to": [
+        11.5,
+        0.5,
+        10
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            11.5,
+            11,
+            8.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            11,
+            11,
+            11.5,
+            12
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            8.5,
+            11,
+            11.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            8.5,
+            11,
+            9,
+            12
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8.5,
+            11,
+            11.5,
+            12
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8.5,
+            12,
+            11.5,
+            11
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "cursed_flame_thrower_16",
+      "from": [
+        3.5,
+        0,
+        10
+      ],
+      "to": [
+        5,
+        0.5,
+        10.5
+      ],
+      "rotation": {
+        "angle": 0,
+        "axis": "y",
+        "origin": [
+          7.86765,
+          0.25,
+          8.55882
+        ]
+      },
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            12,
+            3.5,
+            13
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4.5,
+            12,
+            5,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            3.5,
+            12,
+            5,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            3.5,
+            12,
+            4,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            3.5,
+            12,
+            5,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            3.5,
+            13,
+            5,
+            12
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "gui_light": "front",
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        90,
+        0,
+        -90
+      ],
+      "translation": [
+        12,
+        0,
+        -3.75
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        90,
+        0,
+        90
+      ],
+      "translation": [
+        -11.75,
+        0,
+        -3.5
+      ],
+      "scale": [
+        1.5,
+        1.5,
+        1.5
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        -85,
+        -180,
+        90
+      ],
+      "translation": [
+        5.75,
+        5.25,
+        3.25
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        85,
+        0,
+        90
+      ],
+      "translation": [
+        -9.5,
+        5.25,
+        3.25
+      ]
+    },
+    "ground": {
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        8
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90,
+        24,
+        0
+      ],
+      "scale": [
+        1.2,
+        1,
+        1.2
+      ]
+    },
+    "head": {
+      "translation": [
+        0,
+        14.25,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        -145,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        -9.25
+      ],
+      "scale": [
+        1.5,
+        1.2,
+        1.5
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "cursed_flame_thrower",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "nbt": "{}",
+      "armAnimationEnabled": false,
+      "children": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
+    }
+  ]
+}

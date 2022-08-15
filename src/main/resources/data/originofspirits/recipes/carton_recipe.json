@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:hard_sugar_cane"
+    },
+    "1": {
+      "item": "originofspirits:hard_sugar_cane"
+    },
+    "2": {
+      "item": "originofspirits:hard_sugar_cane"
+    },
+    "3": {
+      "item": "originofspirits:hard_sugar_cane"
+    }
+  },
+  "result": {
+    "item": "originofspirits:carton",
+    "count": 4
+  }
+}

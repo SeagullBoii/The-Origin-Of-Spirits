@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "originofspirits:block/sacred_grass_tall"
+    },
+    "half=lower": {
+      "model": "originofspirits:block/sacred_grass_tall_bottom"
+    }
+  }
+}

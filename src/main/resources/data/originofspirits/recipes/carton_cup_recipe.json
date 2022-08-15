@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0 2",
+    " 4 "
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:carton"
+    },
+    "2": {
+      "item": "originofspirits:carton"
+    },
+    "4": {
+      "item": "originofspirits:carton"
+    }
+  },
+  "result": {
+    "item": "originofspirits:carton_cup",
+    "count": 1
+  }
+}

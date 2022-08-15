@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "000",
+    "000",
+    "000"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:gel_chunk"
+    }
+  },
+  "result": {
+    "item": "originofspirits:gel",
+    "count": 1
+  }
+}

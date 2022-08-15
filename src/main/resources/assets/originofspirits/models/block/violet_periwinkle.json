@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "originofspirits:blocks/violet_periwinkle",
+    "particle": "originofspirits:blocks/violet_periwinkle"
+  }
+}

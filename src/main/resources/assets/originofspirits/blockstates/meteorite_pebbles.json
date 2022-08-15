@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "size=0": {
+      "model": "originofspirits:block/meteorite_pebble_small"
+    },
+    "size=1": {
+      "model": "originofspirits:block/meteorite_pebble_medium"
+    },
+    "size=2": {
+      "model": "originofspirits:block/meteorite_pebble_big"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "originofspirits:blocks/blessed_stone_tiles",
+    "particle": "originofspirits:blocks/blessed_stone_tiles"
+  }
+}

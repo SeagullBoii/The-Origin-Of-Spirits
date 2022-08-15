@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_wall_side_tall",
+  "textures": {
+    "wall": "originofspirits:blocks/deceptone_bricks",
+    "particle": "originofspirits:blocks/deceptone_bricks"
+  }
+}

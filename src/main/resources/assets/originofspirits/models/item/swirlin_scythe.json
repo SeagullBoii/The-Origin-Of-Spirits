@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/swirlin_scythe",
+  "textures": {
+    "0": "originofspirits:blocks/swirlin_scythe",
+    "particle": "originofspirits:items/swirlin_scythe"
+  }
+}

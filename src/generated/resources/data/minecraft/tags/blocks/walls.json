@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "originofspirits:blessed_stone_wall",
+    "originofspirits:blessed_stone_bricks_wall",
+    "originofspirits:blessed_stone_bricks_small_wall",
+    "originofspirits:blessed_stone_tiles_wall",
+    "originofspirits:polished_blessed_stone_wall",
+    "originofspirits:deceptone_wall",
+    "originofspirits:deceptone_bricks_wall",
+    "originofspirits:deceptone_bricks_small_wall",
+    "originofspirits:polished_deceptone_wall"
+  ]
+}

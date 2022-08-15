@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    "23"
+  ],
+  "key": {
+    "0": {
+      "item": "originofspirits:sacredwood_log"
+    },
+    "1": {
+      "item": "originofspirits:sacredwood_log"
+    },
+    "2": {
+      "item": "originofspirits:sacredwood_log"
+    },
+    "3": {
+      "item": "originofspirits:sacredwood_log"
+    }
+  },
+  "result": {
+    "item": "originofspirits:sacredwood_wood",
+    "count": 4
+  }
+}

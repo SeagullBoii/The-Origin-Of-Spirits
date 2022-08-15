@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "originofspirits:blueberries"
+    },
+    {
+      "item": "originofspirits:blueberries"
+    },
+    {
+      "item": "originofspirits:blueberries"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "originofspirits:blueberry_pie",
+    "count": 1
+  }
+}

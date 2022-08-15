@@ -1,0 +1,1274 @@
+{
+  "credit": "Made with Blockbench",
+  "parent": "catcher_knucklesduster",
+  "elements": [
+    {
+      "name": "catcher_knuckleduster_0",
+      "from": [
+        3,
+        0,
+        1
+      ],
+      "to": [
+        4,
+        1,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            4,
+            1,
+            3,
+            2
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            3,
+            1,
+            4,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            3,
+            12,
+            4,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            3,
+            1,
+            4,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            3,
+            1,
+            4,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            3,
+            13,
+            4,
+            1
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_1",
+      "from": [
+        7,
+        0,
+        1
+      ],
+      "to": [
+        8,
+        1,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            1,
+            7,
+            2
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            7,
+            1,
+            8,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            7,
+            10,
+            8,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            7,
+            1,
+            8,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            7,
+            1,
+            8,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            7,
+            11,
+            8,
+            1
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_2",
+      "from": [
+        9,
+        0,
+        1
+      ],
+      "to": [
+        10,
+        1,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            10,
+            1,
+            9,
+            2
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            9,
+            1,
+            10,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            9,
+            10,
+            10,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            9,
+            1,
+            10,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            9,
+            1,
+            10,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            9,
+            11,
+            10,
+            1
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_3",
+      "from": [
+        13,
+        0,
+        1
+      ],
+      "to": [
+        14,
+        1,
+        13
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            1,
+            13,
+            2
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            13,
+            1,
+            14,
+            13
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            13,
+            12,
+            14,
+            13
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            13,
+            1,
+            14,
+            13
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            13,
+            1,
+            14,
+            13
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            13,
+            13,
+            14,
+            1
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_4",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        3,
+        1,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            3,
+            2,
+            2,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            2,
+            2,
+            3,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            2,
+            9,
+            3,
+            10
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            2,
+            2,
+            3,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            2,
+            2,
+            3,
+            10
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            2,
+            10,
+            3,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_5",
+      "from": [
+        4,
+        0,
+        2
+      ],
+      "to": [
+        5,
+        1,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            5,
+            2,
+            4,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            4,
+            2,
+            5,
+            14
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            4,
+            13,
+            5,
+            14
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            4,
+            2,
+            5,
+            14
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            4,
+            2,
+            5,
+            14
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            4,
+            14,
+            5,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_6",
+      "from": [
+        6,
+        0,
+        2
+      ],
+      "to": [
+        7,
+        1,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            7,
+            2,
+            6,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            6,
+            2,
+            7,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            6,
+            15,
+            7,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            6,
+            2,
+            7,
+            16
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            6,
+            2,
+            7,
+            16
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            6,
+            16,
+            7,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_7",
+      "from": [
+        8,
+        0,
+        2
+      ],
+      "to": [
+        9,
+        1,
+        11
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            9,
+            2,
+            8,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            8,
+            2,
+            9,
+            11
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            8,
+            10,
+            9,
+            11
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            8,
+            2,
+            9,
+            11
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            8,
+            2,
+            9,
+            11
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            8,
+            11,
+            9,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_8",
+      "from": [
+        10,
+        0,
+        2
+      ],
+      "to": [
+        11,
+        1,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            11,
+            2,
+            10,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            10,
+            2,
+            11,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            10,
+            15,
+            11,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            10,
+            2,
+            11,
+            16
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            10,
+            2,
+            11,
+            16
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            10,
+            16,
+            11,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_9",
+      "from": [
+        12,
+        0,
+        2
+      ],
+      "to": [
+        13,
+        1,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            13,
+            2,
+            12,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            12,
+            2,
+            13,
+            14
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            12,
+            13,
+            13,
+            14
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            12,
+            2,
+            13,
+            14
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            12,
+            2,
+            13,
+            14
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            12,
+            14,
+            13,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_10",
+      "from": [
+        14,
+        0,
+        2
+      ],
+      "to": [
+        15,
+        1,
+        10
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            2,
+            14,
+            3
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            14,
+            2,
+            15,
+            10
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            14,
+            9,
+            15,
+            10
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            14,
+            2,
+            15,
+            10
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            14,
+            2,
+            15,
+            10
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            14,
+            10,
+            15,
+            2
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_11",
+      "from": [
+        5,
+        0,
+        3
+      ],
+      "to": [
+        6,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            6,
+            3,
+            5,
+            4
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            5,
+            3,
+            6,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            5,
+            14,
+            6,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            5,
+            3,
+            6,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            5,
+            3,
+            6,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            5,
+            15,
+            6,
+            3
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_12",
+      "from": [
+        11,
+        0,
+        3
+      ],
+      "to": [
+        12,
+        1,
+        15
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            12,
+            3,
+            11,
+            4
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            11,
+            3,
+            12,
+            15
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            11,
+            14,
+            12,
+            15
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            11,
+            3,
+            12,
+            15
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            11,
+            3,
+            12,
+            15
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            11,
+            15,
+            12,
+            3
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_13",
+      "from": [
+        1,
+        0,
+        4
+      ],
+      "to": [
+        2,
+        1,
+        9
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            4,
+            1,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            1,
+            4,
+            2,
+            9
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            1,
+            8,
+            2,
+            9
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            1,
+            4,
+            2,
+            9
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            1,
+            4,
+            2,
+            9
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            1,
+            9,
+            2,
+            4
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_14",
+      "from": [
+        15,
+        0,
+        4
+      ],
+      "to": [
+        16,
+        1,
+        9
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            16,
+            4,
+            15,
+            5
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            15,
+            4,
+            16,
+            9
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            15,
+            8,
+            16,
+            9
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            15,
+            4,
+            16,
+            9
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            15,
+            4,
+            16,
+            9
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            15,
+            9,
+            16,
+            4
+          ],
+          "texture": "#0"
+        }
+      }
+    },
+    {
+      "name": "catcher_knuckleduster_15",
+      "from": [
+        7,
+        0,
+        13
+      ],
+      "to": [
+        10,
+        1,
+        16
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            10,
+            13,
+            7,
+            14
+          ],
+          "texture": "#0"
+        },
+        "east": {
+          "uv": [
+            9,
+            13,
+            10,
+            16
+          ],
+          "rotation": 90,
+          "texture": "#0"
+        },
+        "south": {
+          "uv": [
+            7,
+            15,
+            10,
+            16
+          ],
+          "texture": "#0"
+        },
+        "west": {
+          "uv": [
+            7,
+            13,
+            8,
+            16
+          ],
+          "rotation": 270,
+          "texture": "#0"
+        },
+        "up": {
+          "uv": [
+            7,
+            13,
+            10,
+            16
+          ],
+          "texture": "#0"
+        },
+        "down": {
+          "uv": [
+            7,
+            16,
+            10,
+            13
+          ],
+          "texture": "#0"
+        }
+      }
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "translation": [
+        0,
+        6.5,
+        0.25
+      ],
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "thirdperson_lefthand": {
+      "translation": [
+        0,
+        6.5,
+        0.25
+      ],
+      "scale": [
+        0.5,
+        1,
+        0.5
+      ]
+    },
+    "firstperson_righthand": {
+      "translation": [
+        1.13,
+        8.95,
+        2.88
+      ],
+      "scale": [
+        0.68,
+        1,
+        0.68
+      ]
+    },
+    "firstperson_lefthand": {
+      "translation": [
+        1.13,
+        8.95,
+        2.88
+      ],
+      "scale": [
+        0.68,
+        1,
+        0.68
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        0.5,
+        0
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    },
+    "gui": {
+      "rotation": [
+        90,
+        0,
+        0
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "head": {
+      "rotation": [
+        0,
+        180,
+        0
+      ],
+      "translation": [
+        0.5,
+        14.5,
+        0.25
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        -90,
+        -180,
+        0
+      ],
+      "translation": [
+        0.25,
+        0,
+        -6.25
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    }
+  },
+  "groups": [
+    {
+      "name": "catcher_knuckleduster",
+      "origin": [
+        8,
+        8,
+        8
+      ],
+      "color": 0,
+      "children": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    }
+  ]
+}

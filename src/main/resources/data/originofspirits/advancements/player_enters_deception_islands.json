@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "originofspirits:cursed_fire"
+    },
+    "title": {
+      "translate": "advancements.player_enters_deception_islands.title"
+    },
+    "description": {
+      "translate": "advancements.player_enters_deception_islands.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "player_enters_deception_islands": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "biome": "originofspirits:deceptive_islands"
+      }
+    }
+  },
+  "parent": "originofspirits:player_enters_sky_realms"
+}

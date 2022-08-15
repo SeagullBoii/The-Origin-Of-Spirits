@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/ladle",
+  "textures": {
+    "0": "originofspirits:blocks/ladle",
+    "particle": "originofspirits:items/ladle"
+  }
+}

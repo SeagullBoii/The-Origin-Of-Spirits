@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "originofspirits:block/blueberry_bush_stage_0"
+    },
+    "age=1": {
+      "model": "originofspirits:block/blueberry_bush_stage_1"
+    },
+    "age=2": {
+      "model": "originofspirits:block/blueberry_bush_stage_2"
+    },
+    "age=3": {
+      "model": "originofspirits:block/blueberry_bush_stage_3"
+    }
+  }
+}

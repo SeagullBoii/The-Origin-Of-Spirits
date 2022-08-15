@@ -1,0 +1,15 @@
+{
+  "parent": "originofspirits:custom/eye_cannon",
+  "textures": {
+    "0": "originofspirits:blocks/eye_canon",
+    "particle": "originofspirits:items/eye_canon"
+  },
+     "overrides": [
+       {"predicate": {"weapon_mod" : 0, "charged" : 0}, "model": "originofspirits:item/eye_cannon"},
+       {"predicate": {"weapon_mod" : 0, "charged" : 1}, "model": "originofspirits:item/eye_cannon_charged"},
+      {"predicate": {"weapon_mod" : 1, "charged" :  0}, "model": "originofspirits:item/eye_cannon_scope"},
+      {"predicate": {"weapon_mod" : 1, "charged" :  1}, "model": "originofspirits:item/eye_cannon_scope_charged"},
+      {"predicate": {"weapon_mod" : 2, "charged" :  0}, "model": "originofspirits:item/eye_cannon_spike"},
+      {"predicate": {"weapon_mod" : 2, "charged" :  1}, "model": "originofspirits:item/eye_cannon_spike_charged"}
+     ]
+}

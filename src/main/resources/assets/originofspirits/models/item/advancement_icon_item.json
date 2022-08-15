@@ -1,0 +1,12 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "originofspirits:items/trousersnake"
+     },
+ 
+ "overrides": [
+ {"predicate": {"custom_model_data":1}, "model": "originofspirits:item/venomadvicon"},
+ {"predicate": {"custom_model_data":2}, "model": "originofspirits:item/originofspiritsadvicon"},
+ {"predicate": {"custom_model_data":3}, "model": "originofspirits:item/dashadvicon"}
+ ]
+}

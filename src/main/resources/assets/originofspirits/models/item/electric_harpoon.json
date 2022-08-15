@@ -1,0 +1,7 @@
+{
+  "parent": "originofspirits:custom/electrowhip2",
+  "textures": {
+    "4": "originofspirits:blocks/electrowhip",
+    "particle": "originofspirits:items/electricwhip"
+  }
+}

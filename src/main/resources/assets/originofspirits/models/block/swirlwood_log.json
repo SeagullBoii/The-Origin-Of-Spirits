@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "originofspirits:blocks/swirlwood_log_top",
+    "up": "originofspirits:blocks/swirlwood_log_top",
+    "north": "originofspirits:blocks/swirlwood_log",
+    "east": "originofspirits:blocks/swirlwood_log",
+    "south": "originofspirits:blocks/swirlwood_log",
+    "west": "originofspirits:blocks/swirlwood_log",
+    "particle": "originofspirits:blocks/swirlwood_log_top"
+  }
+}

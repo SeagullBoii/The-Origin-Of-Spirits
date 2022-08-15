@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:swirlwood_log"
+    }
+  ],
+  "result": {
+    "item": "originofspirits:swirlwood_planks",
+    "count": 4
+  }
+}

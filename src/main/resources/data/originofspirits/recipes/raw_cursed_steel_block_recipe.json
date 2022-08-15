@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    },
+    {
+      "item": "originofspirits:raw_cursed_steel"
+    }
+  ],
+  "result": {
+    "item": "originofspirits:raw_cursed_steel_block",
+    "count": 1
+  }
+}

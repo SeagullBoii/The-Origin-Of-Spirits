@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    " 7 "
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:fire_charge"
+    },
+    "1": {
+      "item": "minecraft:fire_charge"
+    },
+    "2": {
+      "item": "minecraft:fire_charge"
+    },
+    "3": {
+      "item": "originofspirits:magic_magnolia"
+    },
+    "4": {
+      "item": "originofspirits:wooden_staff"
+    },
+    "5": {
+      "item": "originofspirits:magic_magnolia"
+    },
+    "7": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "originofspirits:fire_scepter",
+    "count": 1
+  }
+}
