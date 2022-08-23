@@ -105,6 +105,7 @@ import java.util.Random;
                 System.out.println(this.isFullyCharged());
                 shootAt(stack, worldIn, entityIn, 1, 0);
                 this.setCharged(false);
+                dmgExtra = 0;
             }
         }
 
@@ -136,9 +137,7 @@ import java.util.Random;
                         if (!entity.world.isRemote && entity.world.getServer() != null) {
                             entity.world.getServer().getCommandManager().handleCommand(entity.getCommandSource().withFeedbackDisabled().withPermissionLevel(4),
                                     "attribute @s minecraft:generic.movement_speed modifier remove 91AEAA56-320B-4498-450B-2F7F68079505");
-
                         }
-
                     }
                 }
             } else {
@@ -161,7 +160,7 @@ import java.util.Random;
             projectile.setOwner(entity);
             projectile.setSilent(true);
 
-            projectile.setPosition(entity.getPosX(), entity.getPosY() + 1.3, entity.getPosZ());
+            projectile.setPosition(entity.getPosX(), entity.getPosY() + 1.5, entity.getPosZ());
             if (((EyeCanonItem) stack.getItem()).isFullyCharged()) {
                 projectile.setExplodes(true);
             } else if (((EyeCanonItem) stack.getItem()).isMarksman()) {
@@ -234,6 +233,7 @@ import java.util.Random;
             list.add(new StringTextComponent(""));
             list.add(new StringTextComponent("\u00A7b[2 Mana Cost]"));
             list.add(new StringTextComponent("\u00A7c" + "Must Be Charged"));
+            list.add(new StringTextComponent("Level: \u00A7bDiamond"));
 
             //Weapon Mod
             if (itemstack.getOrCreateTag().getInt("weapon_mod") <= 0) {

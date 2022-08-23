@@ -24,12 +24,18 @@ public class TOOSRecipeProvider extends RecipeProvider implements IConditionBuil
 
         @Override
         protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-
         }
 
     @Override
     public String getName() {
         return "TOOS Recipes";
+    }
+
+    private static void basicBullet(Consumer<IFinishedRecipe> recipeConsumer, IItemProvider bullet, IItemProvider nugget, IItemProvider ingot, int count) {
+        ShapedRecipeBuilder.shapedRecipe((bullet), 8).key('n', nugget).key('i', ingot)
+                .patternLine("n")
+                .patternLine("i")
+                .addCriterion("has_ingot", hasItem(ingot)).build(recipeConsumer);
     }
 
     private static ResourceLocation modId(String path) {

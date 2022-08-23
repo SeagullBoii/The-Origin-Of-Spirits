@@ -1,7 +1,6 @@
 package net.seagullboi.originofspirits.entity;
 
 import net.seagullboi.originofspirits.api.IVerticalMount;
-import net.seagullboi.originofspirits.item.BarleyStackItem;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
@@ -26,6 +25,7 @@ import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import javax.annotation.Nullable;
 import java.util.EnumSet;
@@ -47,7 +47,7 @@ public class CabadorEntity extends FlyingAnimalEntity implements IRideable, IFly
         this.goalSelector.addGoal(0, new CabadorEntity.MoveRandomGoal());
         this.goalSelector.addGoal(1, new LookRandomlyGoal(this));
         this.goalSelector.addGoal(1, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.fromItems(BarleyStackItem.block), false));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.fromItems(TOOSItems.BARLEY_STACK.get()), false));
         this.goalSelector.addGoal(4, new LookAtGoal(this, PlayerEntity.class, 8.0F));
     }
 
@@ -214,7 +214,7 @@ public class CabadorEntity extends FlyingAnimalEntity implements IRideable, IFly
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == BarleyStackItem.block;
+        return stack.getItem() == TOOSItems.BARLEY_STACK.get();
     }
 
     @Override

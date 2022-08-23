@@ -10,12 +10,20 @@ public class TOOSItemGroup {
         public ItemStack createIcon() {
             return new ItemStack(net.seagullboi.originofspirits.registry.TOOSBlocks.BLESSED_STONE_BRICKS.get().asItem());
         }
+        @Override
+        public boolean hasScrollbar() {
+            return true;
+        }
     };
 
     public static final ItemGroup PLANT_GROUP = new ItemGroup("taborigin_of_spirits_plants") {
         @Override
         public ItemStack createIcon() {
             return new ItemStack(TOOSBlocks.ALCYONEUM_POLYPS.get());
+        }
+        @Override
+        public boolean hasScrollbar() {
+            return true;
         }
     };
 

@@ -1,6 +1,12 @@
 package net.seagullboi.originofspirits.registry;
 
+import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import net.minecraft.entity.merchant.villager.VillagerTrades;
+import net.minecraft.item.Items;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.minecraft.entity.merchant.villager.VillagerProfession;
 import net.minecraft.util.SoundEvents;
@@ -34,4 +40,5 @@ public class ModVillagers {
         POINT_OF_INTEREST_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);
     }
+
 }

@@ -39,6 +39,7 @@ public class TOOSEntityTypes {
 
     //Projectiles
     public static final RegistryObject<EntityType<CursedLaserProjectile>> CURSED_LASER = ENTITY_TYPES.register("cursed_laser", () -> EntityType.Builder.<CursedLaserProjectile>create(CursedLaserProjectile::new, EntityClassification.MISC).size(0.8f, 0.8f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "cursed_laser").toString()));
+    public static final RegistryObject<EntityType<BulletEntity>> BULLET = ENTITY_TYPES.register("bullet", () -> EntityType.Builder.<BulletEntity>create(BulletEntity::new, EntityClassification.MISC).size(0.8f, 0.8f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "bullet").toString()));
     public static final RegistryObject<EntityType<CluffCloudProjectile>> CLUFF_CLOUD = ENTITY_TYPES.register("cluff_cloud", () -> EntityType.Builder.<CluffCloudProjectile>create(CluffCloudProjectile::new, EntityClassification.MISC).size(0.8f, 0.8f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "cluff_cloud").toString()));
 
     public static void register(IEventBus eventBus) {

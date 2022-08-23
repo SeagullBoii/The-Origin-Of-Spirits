@@ -1,6 +1,8 @@
 package net.seagullboi.originofspirits;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
 import net.minecraft.client.renderer.Atlases;
@@ -31,6 +33,7 @@ import net.seagullboi.originofspirits.datagen.*;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockStateProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSItemModelProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
+import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.network.TOOSNetwork;
 import net.seagullboi.originofspirits.registry.*;
 import org.apache.logging.log4j.LogManager;
@@ -67,10 +70,11 @@ public class OriginOfSpirits {
         TOOSContainers.register(eventBus);
         TOOSEntityTypes.register(eventBus);
         ModStructures.register(eventBus);
-
+        TOOSSoundEvents.register(eventBus);
+        ModVillagers.register(eventBus);
 
         //Register ourselves for server and other game events we are interested in
-        // MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
+        MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
     }
 
@@ -94,6 +98,11 @@ public class OriginOfSpirits {
             WoodType.register(ModWoodTypes.SACREDWOOD);
             WoodType.register(ModWoodTypes.SWIRLWOOD);
 
+            ModVillagers.registerPOIs();
+            TOOSVillagerTrades.registerTrades();
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(TOOSBlocks.MAGIC_MAGNOLIA.getId(), TOOSBlocks.POTTED_MAGIC_MAGNOLIA);
+
             ModStructures.setupStructures();
         });
     }
@@ -101,15 +110,16 @@ public class OriginOfSpirits {
     private void gatherData(final GatherDataEvent event) {
         DataGenerator dataGenerator = event.getGenerator();
         final ExistingFileHelper efh = event.getExistingFileHelper();
-        if (event.includeServer()) {
-            dataGenerator.addProvider(new TOOSBlockStateProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSBlockItemModelProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSItemModelProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSLootTableProvider(dataGenerator));
-            dataGenerator.addProvider(new TOOSRecipeProvider(dataGenerator));
-            dataGenerator.addProvider(new TOOSBlockTagsProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSLangProvider(dataGenerator, "en_us_test"));
-        }
+        TOOSBlockTagsProvider blockTags = new TOOSBlockTagsProvider(dataGenerator, efh);
+
+        dataGenerator.addProvider(new TOOSBlockStateProvider(dataGenerator, efh));
+        dataGenerator.addProvider(new TOOSBlockItemModelProvider(dataGenerator, efh));
+        dataGenerator.addProvider(new TOOSItemModelProvider(dataGenerator, efh));
+        dataGenerator.addProvider(new TOOSLootTableProvider(dataGenerator));
+        dataGenerator.addProvider(new TOOSRecipeProvider(dataGenerator));
+        dataGenerator.addProvider(blockTags);
+       // dataGenerator.addProvider(new TOOSItemTags(dataGenerator, blockTags, efh));
+        dataGenerator.addProvider(new TOOSLangProvider(dataGenerator, "en_us_test"));
     }
 
     private void init(FMLCommonSetupEvent event) {

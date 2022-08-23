@@ -109,15 +109,30 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        // location of the maven that hosts JEI files
+        url = "https://maven.jaackson.me"
+    }
+    maven {
+        name = "CurseForge"
+        url = "https://www.cursemaven.com"
+    }
+    maven {
+        name = "GeckoLib"
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
+    maven {
         name = "Progwml6 maven"
         url = "https://dvs1.progwml6.com/files/maven/"
     }
     maven {
-        // location of a maven mirror for JEI files, as a fallback
-        name = "ModMaven"
-        url = "https://modmaven.k-4u.nl"
+        url 'https://maven.blamejared.com'
     }
+    maven {
+        url "https://maven.shedaniel.me/"
+    }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+    mavenCentral()
 }
 
 dependencies {
@@ -136,8 +151,74 @@ dependencies {
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.150")
 
+    //Patchouli
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-51:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-51")
+
+    //Mixin
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    //Damage Indicators
+    implementation fg.deobf("curse.maven:damage-indicator-mod-for-forge-557596:3680500")
+    //Critical Lib
+    implementation fg.deobf("curse.maven:forge-criticalib-560696:3644558")
+
+    // Rubidium
+    //implementation fg.deobf("curse.maven:rubidium-574856:3769736")
+    // Oculus
+    //implementation fg.deobf("curse.maven:oculus-581495:3821219")
+
+    /*
+    //FTB Chunks
+    implementation fg.deobf("curse.maven:ftb-chunks-forge-314906:3603374")
+    //Architectury API
+    mplementation fg.deobf("curse.maven:architectury-forge-419699:3705903")
+    //FTB Library
+    implementation fg.deobf("curse.maven:ftb-library-forge-404465:3553840")
+    //FTB Teams
+    implementation fg.deobf("curse.maven:ftb-teams-forge-404468:3535953")
+    */
+
+    //End's Phantasm
+    //implementation fg.deobf("curse.maven:phantasm-565254:3613232")
+
+    //Tetra
+    /*implementation fg.deobf("curse.maven:tetra-289712:3585032")*/
+    //Mutil (For Tetra)
+    /*implementation fg.deobf("curse.maven:mutil-351914:3456505")*/
+
+    //Huge Structure Blocks
+    /*implementation fg.deobf("curse.maven:huge-structure-blocks-474114:3318279")*/
+    //WorldEdit
+    //implementation fg.deobf("curse.maven:worldedit-225608:3283693")
+
+    //Enchantment Descriptions
+    /*implementation fg.deobf("curse.maven:enchantment-descriptions-250419:3358861")*/
+    //Bookshelf (for EnchDesc)
+    /*implementation fg.deobf("net.darkhax.bookshelf:Bookshelf-1.16.5:10.0.1")*/
+
+    //Mob battle
+    implementation fg.deobf("curse.maven:mob-battle-mod-268746:3408702")
+
+    //Grapple Hooks
+    //implementation fg.deobf("curse.maven:grappling-hook-mod-238911:3564285")
+
+    //Cloth Config
+    //implementation fg.deobf("me.shedaniel.cloth:cloth-config-forge:4.14.54")
+
+    //Mod Menu
+    //implementation fg.deobf("curse.maven:modmenu-308702:3479748")
+
+    //Dummy Mod
+    implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:3473005")
+
+    //Obfuscate
+    implementation fg.deobf("curse.maven:obfuscate-289380:3740120")
+
+
     // Apply for https://github.com/McModLauncher/modlauncher/issues/91
     implementation 'cpw.mods:modlauncher:8.1.3'
+
 
 }
 

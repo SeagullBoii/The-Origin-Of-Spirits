@@ -72,7 +72,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "originofspirits:barley",
+          "name": "originofspirits:barley_seeds",
           "weight": 1,
           "conditions": [
             {

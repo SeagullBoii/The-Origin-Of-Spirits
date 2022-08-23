@@ -30,6 +30,6 @@ public class GunsmithingTableScreen extends ContainerScreen<GunsmithingTableCont
         this.minecraft.getTextureManager().bindTexture(GUI);
         int i = this.guiLeft;
         int j = this.guiTop;
-        this.blit(matrixStack, i, j, 0, 0, this.xSize, this.ySize);
+        this.blit(matrixStack, i, j, 0, -2, this.xSize, this.ySize);
     }
 }

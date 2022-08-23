@@ -21,19 +21,15 @@ public class ItemAnimClient {
 				return entity.getActiveItemStack() != itemstack ? 0.0F : (float) (itemstack.getUseDuration() - entity.getItemInUseCount()) / 20.0F;
 			}
 		});
-		ItemModelsProperties.registerProperty((TempestBowItem.block), new ResourceLocation("pulling"),
-				(itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack ? 1.0F : 0.0F);
+		ItemModelsProperties.registerProperty((TempestBowItem.block), new ResourceLocation("pulling"), (itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack ? 1.0F : 0.0F);
 
 		//EyeCannon
-		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("charged"),
-				(itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack && ((itemstack.getUseDuration() - entity.getItemInUseCount()) >= 30)  ? 1.0F : 0.0F);
-		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("weapon_mod"),
-				(itemstack, world, entity) -> {
-			if (entity != null) {
-				return itemstack.getOrCreateTag().getInt("weapon_mod");
-			} else {
-				return  0;
-			}
-		});
+		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("charged"), (itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack && ((itemstack.getUseDuration() - entity.getItemInUseCount()) >= 30)  ? 1.0F : 0.0F);
+		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
+		//Redstone Handgun
+		ItemModelsProperties.registerProperty((TOOSItems.REDSTONE_HANDGUN.get()), new ResourceLocation("overheat"), (itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack && (itemstack.getOrCreateTag().getBoolean("overheat"))  ? 1.0F : 0.0F);
+		ItemModelsProperties.registerProperty((TOOSItems.REDSTONE_HANDGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
+		//Shotgun
+		ItemModelsProperties.registerProperty((TOOSItems.SHOTGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
 	}
 }

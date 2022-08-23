@@ -8,8 +8,8 @@ import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraft.item.ItemStack;
 
 import net.seagullboi.originofspirits.item.BeerItem;
-import net.seagullboi.originofspirits.item.BarleyStackItem;
 import net.seagullboi.originofspirits.item.AlcoholBottleItem;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 @OriginofspiritsModElements.ModElement.Tag
 public class BeerRecipeBrewingRecipe extends OriginofspiritsModElements.ModElement {
@@ -30,7 +30,7 @@ public class BeerRecipeBrewingRecipe extends OriginofspiritsModElements.ModEleme
 
 		@Override
 		public boolean isIngredient(ItemStack ingredient) {
-			return ingredient.getItem() == BarleyStackItem.block;
+			return ingredient.getItem() == TOOSItems.BARLEY_STACK.get();
 		}
 
 		@Override
