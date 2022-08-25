@@ -34,4 +34,6 @@ public class ModVillagers {
         POINT_OF_INTEREST_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);
     }
+
 }
+

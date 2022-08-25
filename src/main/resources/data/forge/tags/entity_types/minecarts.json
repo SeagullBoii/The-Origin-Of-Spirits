@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "command_block_minecart",
+    "tnt_minecart",
+    "chest_minecart",
+    "minecart",
+    "hopper_minecart",
+    "spawner_minecart",
+    "zombie",
+    "furnace_minecart"
+  ]
+}

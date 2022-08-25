@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "## ",
+        "Rii",
+        "i  "
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:diamond"
+        },
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "i": {
+            "item": "minecraft:iron_ingot"
+        }
+    },
+    "result": {
+        "item": "originofspirits:redstone_handgun",
+        "count": 1
+    }
+}

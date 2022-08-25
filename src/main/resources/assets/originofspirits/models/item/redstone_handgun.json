@@ -1,0 +1,12 @@
+{
+  "parent": "originofspirits:item/redstone_handgun_base",
+  "textures": {
+		"0": "originofspirits:items/redstone_handgun",
+		"particle": "originofspirits:items/redstone_handgun"
+  },
+     "overrides": [
+       {"predicate": {"weapon_mod" : 1}, "model": "originofspirits:item/redstone_handgun_auto"},
+	   {"predicate": {"weapon_mod" : 1, "overheat" : 1}, "model": "originofspirits:item/redstone_handgun_auto_overheat"},
+	   {"predicate": {"weapon_mod" : 2}, "model": "originofspirits:item/redstone_handgun_knocker"}
+     ]
+}

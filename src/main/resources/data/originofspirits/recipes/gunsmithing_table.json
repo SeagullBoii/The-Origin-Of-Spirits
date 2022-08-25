@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "iii",
+    "OTO",
+    "iTi"
+  ],
+  "key": {
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "O": {
+      "item": "originofspirits:iron_bullet"
+    },
+    "T": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "result": {
+    "item": "originofspirits:gunsmithing_table",
+    "count": 1
+  }
+}

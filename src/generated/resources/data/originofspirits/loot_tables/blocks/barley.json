@@ -5,33 +5,6 @@
       "rolls": 1.0,
       "entries": [
         {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "conditions": [
-                {
-                  "condition": "minecraft:block_state_property",
-                  "block": "originofspirits:barley",
-                  "properties": {
-                    "age": "7"
-                  }
-                }
-              ],
-              "name": "originofspirits:barley_stack"
-            },
-            {
-              "type": "minecraft:item",
-              "name": "originofspirits:barley"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "rolls": 1.0,
-      "entries": [
-        {
           "type": "minecraft:item",
           "functions": [
             {
@@ -44,7 +17,34 @@
               }
             }
           ],
-          "name": "originofspirits:barley"
+          "name": "originofspirits:barley_seeds"
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:block_state_property",
+          "block": "originofspirits:barley",
+          "properties": {
+            "age": "7"
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "originofspirits:barley_seeds"
+        }
+      ]
+    },
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "originofspirits:barley_stack"
         }
       ],
       "conditions": [

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "originofspirits:trenchon_block",
+    "originofspirits:magnetite_block",
+    "originofspirits:cursed_steel_block"
+  ]
+}

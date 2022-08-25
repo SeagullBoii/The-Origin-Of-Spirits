@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:stripped_jungle_log",
+    "minecraft:oak_log",
+    "minecraft:stripped_dark_oak_log",
+    "originofspirits:stripped_sacredwood_log",
+    "minecraft:stripped_oak_log",
+    "minecraft:stripped_spruce_log",
+    "originofspirits:sacredwood_log",
+    "minecraft:birch_log",
+    "originofspirits:swirlwood_wood",
+    "originofspirits:swirlwood_log",
+    "originofspirits:stripped_sacredwood",
+    "minecraft:dark_oak_log",
+    "minecraft:stripped_birch_log",
+    "minecraft:jungle_log",
+    "minecraft:spruce_log",
+    "originofspirits:stripped_swirlwood",
+    "minecraft:acacia_log",
+    "originofspirits:sacredwood_wood",
+    "minecraft:stripped_acacia_log"
+  ]
+}

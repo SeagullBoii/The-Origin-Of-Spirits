@@ -14,6 +14,8 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.Heightmap;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -31,6 +33,7 @@ import net.seagullboi.originofspirits.datagen.*;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockStateProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSItemModelProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
+import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.network.TOOSNetwork;
 import net.seagullboi.originofspirits.registry.*;
 import org.apache.logging.log4j.LogManager;
@@ -67,13 +70,14 @@ public class OriginOfSpirits {
         TOOSContainers.register(eventBus);
         TOOSEntityTypes.register(eventBus);
         ModStructures.register(eventBus);
-
+        TOOSSoundEvents.register(eventBus);
 
         //Register ourselves for server and other game events we are interested in
-        // MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
+        MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
     }
 
+    @OnlyIn(Dist.CLIENT)
     private void doClientStuff(final FMLClientSetupEvent event) {
         Atlases.addWoodType(ModWoodTypes.SACREDWOOD);
         Atlases.addWoodType(ModWoodTypes.SWIRLWOOD);
@@ -85,6 +89,7 @@ public class OriginOfSpirits {
                     GunsmithingTableScreen::new);
         });
     }
+
     private void setup(final FMLCommonSetupEvent event) {
         TOOSNetwork.initializeNetwork();
         event.enqueueWork(() -> {

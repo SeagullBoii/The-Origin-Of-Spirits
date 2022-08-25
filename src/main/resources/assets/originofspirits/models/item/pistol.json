@@ -1,0 +1,177 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "pistol",
+	"textures": {
+		"0": "originofspirits:items/pistol",
+		"particle": "originofspirits:items/pistol"
+	},
+	"elements": [
+		{
+			"name": "pistol_0",
+			"from": [0, 0, 3],
+			"to": [3, 1, 5],
+			"faces": {
+				"north": {"uv": [3, 3, 0, 4], "texture": "#0"},
+				"east": {"uv": [2, 3, 3, 5], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 4, 3, 5], "texture": "#0"},
+				"west": {"uv": [0, 3, 1, 5], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 3, 3, 5], "texture": "#0"},
+				"down": {"uv": [0, 5, 3, 3], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_1",
+			"from": [3, 0, 4],
+			"to": [15, 1, 8],
+			"faces": {
+				"north": {"uv": [15, 4, 3, 5], "texture": "#0"},
+				"east": {"uv": [14, 4, 15, 8], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3, 7, 15, 8], "texture": "#0"},
+				"west": {"uv": [3, 4, 4, 8], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3, 4, 15, 8], "texture": "#0"},
+				"down": {"uv": [3, 8, 15, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_2",
+			"from": [15, 0, 4],
+			"to": [16, 1, 7],
+			"faces": {
+				"north": {"uv": [16, 4, 15, 5], "texture": "#0"},
+				"east": {"uv": [15, 4, 16, 7], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [15, 6, 16, 7], "texture": "#0"},
+				"west": {"uv": [15, 4, 16, 7], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [15, 4, 16, 7], "texture": "#0"},
+				"down": {"uv": [15, 7, 16, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_3",
+			"from": [1, 0, 5],
+			"to": [3, 1, 13],
+			"faces": {
+				"north": {"uv": [3, 5, 1, 6], "texture": "#0"},
+				"east": {"uv": [2, 5, 3, 13], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [1, 12, 3, 13], "texture": "#0"},
+				"west": {"uv": [1, 5, 2, 13], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [1, 5, 3, 13], "texture": "#0"},
+				"down": {"uv": [1, 13, 3, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_4",
+			"from": [3, 0, 8],
+			"to": [5, 1, 10],
+			"faces": {
+				"north": {"uv": [5, 8, 3, 9], "texture": "#0"},
+				"east": {"uv": [4, 8, 5, 10], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3, 9, 5, 10], "texture": "#0"},
+				"west": {"uv": [3, 8, 4, 10], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3, 8, 5, 10], "texture": "#0"},
+				"down": {"uv": [3, 10, 5, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_5",
+			"from": [8, 0, 8],
+			"to": [14, 1, 9],
+			"faces": {
+				"north": {"uv": [14, 8, 8, 9], "texture": "#0"},
+				"east": {"uv": [13, 8, 14, 9], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [8, 8, 14, 9], "texture": "#0"},
+				"west": {"uv": [8, 8, 9, 9], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [8, 8, 14, 9], "texture": "#0"},
+				"down": {"uv": [8, 9, 14, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_6",
+			"from": [0, 0, 9],
+			"to": [1, 1, 12],
+			"faces": {
+				"north": {"uv": [1, 9, 0, 10], "texture": "#0"},
+				"east": {"uv": [0, 9, 1, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 11, 1, 12], "texture": "#0"},
+				"west": {"uv": [0, 9, 1, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 9, 1, 12], "texture": "#0"},
+				"down": {"uv": [0, 12, 1, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_7",
+			"from": [5, 0, 9],
+			"to": [8, 1, 10],
+			"faces": {
+				"north": {"uv": [8, 9, 5, 10], "texture": "#0"},
+				"east": {"uv": [7, 9, 8, 10], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [5, 9, 8, 10], "texture": "#0"},
+				"west": {"uv": [5, 9, 6, 10], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [5, 9, 8, 10], "texture": "#0"},
+				"down": {"uv": [5, 10, 8, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "pistol_8",
+			"from": [3, 0, 10],
+			"to": [4, 1, 13],
+			"faces": {
+				"north": {"uv": [4, 10, 3, 11], "texture": "#0"},
+				"east": {"uv": [3, 10, 4, 13], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3, 12, 4, 13], "texture": "#0"},
+				"west": {"uv": [3, 10, 4, 13], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3, 10, 4, 13], "texture": "#0"},
+				"down": {"uv": [3, 13, 4, 10], "texture": "#0"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [95, 0, -90],
+			"translation": [4.75, -0.5, -3.25],
+			"scale": [0.65, 0.65, 0.66]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [95, 0, 90],
+			"translation": [-4.75, -0.25, -3.25],
+			"scale": [0.65, 0.65, 0.65]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 0, -90],
+			"translation": [1.65, 4.2, 2.13],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 0, 90],
+			"translation": [-5.75, 4.2, 2.13],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 1, 4.75],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [90, 0, 0],
+			"translation": [0, 0.5, 0],
+			"scale": [0.9, 1, 0.9]
+		},
+		"head": {
+			"translation": [0, 14.75, 0]
+		},
+		"fixed": {
+			"rotation": [90, 0, -180],
+			"translation": [0, 0, -8]
+		}
+	},
+	"groups": [
+		{
+			"name": "pistol",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": true,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+		}
+	]
+}

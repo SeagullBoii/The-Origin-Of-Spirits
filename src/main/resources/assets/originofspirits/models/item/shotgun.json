@@ -1,0 +1,11 @@
+{
+  "parent": "originofspirits:item/shotgun_base",
+  "textures": {
+    "0": "originofspirits:items/shotgun_base",
+    "1": "originofspirits:items/shotgun_barrel",
+    "particle": "originofspirits:items/shotgun_base"
+  },
+     "overrides": [
+       {"predicate": {"weapon_mod" : 1}, "model": "originofspirits:item/sawed_off_shotgun"}
+     ]
+}

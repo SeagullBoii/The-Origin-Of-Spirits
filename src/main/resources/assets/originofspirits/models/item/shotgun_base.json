@@ -1,0 +1,277 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "shotgun",
+	"textures": {
+		"0": "originofspirits:items/shotgun_base",
+		"1": "originofspirits:items/shotgun_barrel",
+		"particle": "originofspirits:items/shotgun_base"
+	},
+	"elements": [
+		{
+			"name": "shotgun_base_0",
+			"from": [6, 0, 4],
+			"to": [13, 1, 9],
+			"faces": {
+				"north": {"uv": [13, 4, 6, 5], "texture": "#0"},
+				"east": {"uv": [12, 4, 13, 9], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6, 8, 13, 9], "texture": "#0"},
+				"west": {"uv": [6, 4, 7, 9], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6, 4, 13, 9], "texture": "#0"},
+				"down": {"uv": [6, 9, 13, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_1",
+			"from": [13, 0, 4],
+			"to": [16, 1, 8],
+			"faces": {
+				"north": {"uv": [16, 4, 13, 5], "texture": "#0"},
+				"east": {"uv": [15, 4, 16, 8], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [13, 7, 16, 8], "texture": "#0"},
+				"west": {"uv": [13, 4, 14, 8], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [13, 4, 16, 8], "texture": "#0"},
+				"down": {"uv": [13, 8, 16, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_2",
+			"from": [5, 0, 5],
+			"to": [6, 1, 11],
+			"faces": {
+				"north": {"uv": [6, 5, 5, 6], "texture": "#0"},
+				"east": {"uv": [5, 5, 6, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [5, 10, 6, 11], "texture": "#0"},
+				"west": {"uv": [5, 5, 6, 11], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [5, 5, 6, 11], "texture": "#0"},
+				"down": {"uv": [5, 11, 6, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_3",
+			"from": [3, 0, 6],
+			"to": [5, 1, 11],
+			"faces": {
+				"north": {"uv": [5, 6, 3, 7], "texture": "#0"},
+				"east": {"uv": [4, 6, 5, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3, 10, 5, 11], "texture": "#0"},
+				"west": {"uv": [3, 6, 4, 11], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3, 6, 5, 11], "texture": "#0"},
+				"down": {"uv": [3, 11, 5, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_4",
+			"from": [2, 0, 7],
+			"to": [3, 1, 12],
+			"faces": {
+				"north": {"uv": [3, 7, 2, 8], "texture": "#0"},
+				"east": {"uv": [2, 7, 3, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [2, 11, 3, 12], "texture": "#0"},
+				"west": {"uv": [2, 7, 3, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [2, 7, 3, 12], "texture": "#0"},
+				"down": {"uv": [2, 12, 3, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_5",
+			"from": [1, 0, 8],
+			"to": [2, 1, 12],
+			"faces": {
+				"north": {"uv": [2, 8, 1, 9], "texture": "#0"},
+				"east": {"uv": [1, 8, 2, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [1, 11, 2, 12], "texture": "#0"},
+				"west": {"uv": [1, 8, 2, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [1, 8, 2, 12], "texture": "#0"},
+				"down": {"uv": [1, 12, 2, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_6",
+			"from": [14, 0, 8],
+			"to": [16, 1, 9],
+			"faces": {
+				"north": {"uv": [16, 8, 14, 9], "texture": "#0"},
+				"east": {"uv": [15, 8, 16, 9], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [14, 8, 16, 9], "texture": "#0"},
+				"west": {"uv": [14, 8, 15, 9], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [14, 8, 16, 9], "texture": "#0"},
+				"down": {"uv": [14, 9, 16, 8], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_7",
+			"from": [0, 0, 9],
+			"to": [1, 1, 11],
+			"faces": {
+				"north": {"uv": [1, 9, 0, 10], "texture": "#0"},
+				"east": {"uv": [0, 9, 1, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [0, 10, 1, 11], "texture": "#0"},
+				"west": {"uv": [0, 9, 1, 11], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [0, 9, 1, 11], "texture": "#0"},
+				"down": {"uv": [0, 11, 1, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_8",
+			"from": [6, 0, 9],
+			"to": [7, 1, 11],
+			"faces": {
+				"north": {"uv": [7, 9, 6, 10], "texture": "#0"},
+				"east": {"uv": [6, 9, 7, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [6, 10, 7, 11], "texture": "#0"},
+				"west": {"uv": [6, 9, 7, 11], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [6, 9, 7, 11], "texture": "#0"},
+				"down": {"uv": [6, 11, 7, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_9",
+			"from": [8, 0, 9],
+			"to": [9, 1, 10],
+			"faces": {
+				"north": {"uv": [9, 9, 8, 10], "texture": "#0"},
+				"east": {"uv": [8, 9, 9, 10], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"west": {"uv": [8, 9, 9, 10], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [8, 9, 9, 10], "texture": "#0"},
+				"down": {"uv": [8, 10, 9, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_10",
+			"from": [7, 0, 10],
+			"to": [8, 1, 11],
+			"faces": {
+				"north": {"uv": [8, 10, 7, 11], "texture": "#0"},
+				"east": {"uv": [7, 10, 8, 11], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [7, 10, 8, 11], "texture": "#0"},
+				"west": {"uv": [7, 10, 8, 11], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [7, 10, 8, 11], "texture": "#0"},
+				"down": {"uv": [7, 11, 8, 10], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_base_11",
+			"from": [3, 0, 11],
+			"to": [4, 1, 12],
+			"faces": {
+				"north": {"uv": [4, 11, 3, 12], "texture": "#0"},
+				"east": {"uv": [3, 11, 4, 12], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [3, 11, 4, 12], "texture": "#0"},
+				"west": {"uv": [3, 11, 4, 12], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [3, 11, 4, 12], "texture": "#0"},
+				"down": {"uv": [3, 12, 4, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "shotgun_barrel_0",
+			"from": [16, 0, 4],
+			"to": [24, 1, 9],
+			"faces": {
+				"north": {"uv": [8, 4, 0, 5], "texture": "#1"},
+				"east": {"uv": [7, 4, 8, 9], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [0, 8, 8, 9], "texture": "#1"},
+				"west": {"uv": [0, 4, 1, 9], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [0, 4, 8, 9], "texture": "#1"},
+				"down": {"uv": [0, 9, 8, 4], "texture": "#1"}
+			}
+		},
+		{
+			"name": "shotgun_barrel_1",
+			"from": [24, 0, 4],
+			"to": [25, 1, 8],
+			"faces": {
+				"north": {"uv": [9, 4, 8, 5], "texture": "#1"},
+				"east": {"uv": [8, 4, 9, 8], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [8, 7, 9, 8], "texture": "#1"},
+				"west": {"uv": [8, 4, 9, 8], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [8, 4, 9, 8], "texture": "#1"},
+				"down": {"uv": [8, 8, 9, 4], "texture": "#1"}
+			}
+		},
+		{
+			"name": "shotgun_barrel_2",
+			"from": [25, 0, 5],
+			"to": [26, 1, 8],
+			"faces": {
+				"north": {"uv": [10, 5, 9, 6], "texture": "#1"},
+				"east": {"uv": [9, 5, 10, 8], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [9, 7, 10, 8], "texture": "#1"},
+				"west": {"uv": [9, 5, 10, 8], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [9, 5, 10, 8], "texture": "#1"},
+				"down": {"uv": [9, 8, 10, 5], "texture": "#1"}
+			}
+		},
+		{
+			"name": "shotgun_barrel_3",
+			"from": [19, 0, 9],
+			"to": [23, 1, 10],
+			"faces": {
+				"north": {"uv": [7, 9, 3, 10], "texture": "#1"},
+				"east": {"uv": [6, 9, 7, 10], "rotation": 90, "texture": "#1"},
+				"south": {"uv": [3, 9, 7, 10], "texture": "#1"},
+				"west": {"uv": [3, 9, 4, 10], "rotation": 270, "texture": "#1"},
+				"up": {"uv": [3, 9, 7, 10], "texture": "#1"},
+				"down": {"uv": [3, 10, 7, 9], "texture": "#1"}
+			}
+		}
+	],
+	"gui_light": "front",
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [95, 0, -90],
+			"translation": [5, 1, 0],
+			"scale": [0.65, 0.65, 0.66]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [95, 0, 90],
+			"translation": [-4.75, 1, 0],
+			"scale": [0.65, 0.65, 0.65]
+		},
+		"firstperson_righthand": {
+			"rotation": [90, 0, -90],
+			"translation": [1.65, 4.2, 5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [90, 0, 90],
+			"translation": [-5.75, 4.2, 5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"rotation": [90, 0, 0],
+			"translation": [-2.75, 1, 4.75],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [90, 22.4, 0],
+			"translation": [-3.25, -2.25, 0],
+			"scale": [0.7, 0.91, 0.7]
+		},
+		"head": {
+			"translation": [0, 14.75, 0]
+		},
+		"fixed": {
+			"rotation": [90, -45, -180],
+			"translation": [3.75, -3.25, -8.25]
+		}
+	},
+	"groups": [
+		{
+			"name": "shotgun_base",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": false,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+		},
+		{
+			"name": "shotgun_barrel",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"nbt": "{}",
+			"armAnimationEnabled": false,
+			"children": [12, 13, 14, 15]
+		}
+	]
+}

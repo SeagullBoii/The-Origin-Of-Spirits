@@ -21,6 +21,7 @@ import net.seagullboi.originofspirits.registry.ModTileEntities;
 
 @Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModClientRegister {
+
     @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
     public static void registerRenderers(final FMLClientSetupEvent event) {
@@ -41,6 +42,7 @@ public class ModClientRegister {
         //Projectiles
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_LASER.get(), ((IRenderFactory) EmptyRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CLUFF_CLOUD.get(), ((IRenderFactory) CluffCloudRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.BULLET.get(), ((IRenderFactory) BulletRenderer::new));
 
         //Block
         RenderTypeLookup.setRenderLayer(TOOSBlocks.ALCYONEUM_POLYPS.get(), RenderType.getCutout());
@@ -51,7 +53,6 @@ public class ModClientRegister {
     }
 
     public static void registerTileEntities(final FMLClientSetupEvent event) {
-        ScreenManager.registerFactory(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(),
-                GunsmithingTableScreen::new);
+        ScreenManager.registerFactory(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(), GunsmithingTableScreen::new);
     }
 }

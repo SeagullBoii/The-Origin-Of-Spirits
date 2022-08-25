@@ -1,0 +1,38 @@
+{
+  "display": {
+    "title": {
+      "text": "A Classical Weapon"
+    },
+    "description": {
+      "text": "GetYour Classic Pistol"
+    },
+    "icon": {
+      "item": "originofspirits:pistol"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+  },
+  "criteria": {
+    "haspistol": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "originofspirits:pistol",
+            "count": {
+              "min": 1,
+              "max": 36
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "originofspirits:welcome_to_the_origin_of_spirits"
+}

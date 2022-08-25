@@ -139,7 +139,27 @@
     "sounds": [
       {
         "name": "originofspirits:abyss_ambient_song",
+        "stream": true
+      }
+    ]
+  },
+  "cursed_islands_music": {
+    "category": "ambient",
+    "subtitle": "subtitles.cursed_islands_music",
+    "sounds": [
+      {
+        "name": "originofspirits:the_cursed_island",
         "stream": false
+      }
+    ]
+  },
+  "pink_desert_music": {
+    "category": "ambient",
+    "subtitle": "subtitles.pink_desert_music",
+    "sounds": [
+      {
+        "name": "originofspirits:pink_desert_music",
+        "stream": true
       }
     ]
   },
@@ -371,6 +391,30 @@
       },
       {
         "name": "originofspirits:frog_ambient6",
+        "stream": false
+      }
+    ]
+  },
+  "gunshot": {
+    "category": "voice",
+    "subtitle": "subtitles.gunshot",
+    "sounds": [
+      {
+        "name": "originofspirits:gun_sound_1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:gun_sound_2",
+        "stream": false
+      }
+    ]
+  },
+  "shotgun_shot": {
+    "category": "voice",
+    "subtitle": "subtitles.shotgun_shot",
+    "sounds": [
+      {
+        "name": "originofspirits:shotgun_sound",
         "stream": false
       }
     ]

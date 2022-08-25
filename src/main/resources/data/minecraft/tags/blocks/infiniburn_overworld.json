@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "originofspirits:meteorite_block",
+    "originofspirits:meteorite_iron_ore",
+    "originofspirits:pink_sand",
+    "originofspirits:crystalized_pink_sand",
+    "originofspirits:tempest_crystal",
+    "originofspirits:meteorite_gold_ore"
+  ]
+}
