@@ -54,9 +54,9 @@ public class GunsmithingTableTileEntity extends TileEntity {
                 switch (slot) {
                     case 0:
                     case 2:
-                        return stack.getItem() == TOOSItems.EYE_CANNON.get() || stack.getItem() == TOOSItems.SHOTGUN.get() || stack.getItem() == TOOSItems.REDSTONE_HANDGUN.get();
+                        return stack.getItem() == TOOSItems.EYE_CANNON.get();
                     case 1:
-                        return stack.getItem() == TOOSItems.DIAMOND_GUN_UPGRADE_TOKEN.get() || stack.getItem() == TOOSItems.GOLD_GUN_UPGRADE_TOKEN.get() || stack.getItem() == TOOSItems.IRON_GUN_UPGRADE_TOKEN.get();
+                        return stack.getItem() == TOOSItems.DIAMOND_GUN_UPGRADE_TOKEN.get();
                     default:
                         return false;
                 }
@@ -80,37 +80,14 @@ public class GunsmithingTableTileEntity extends TileEntity {
 
     public void upgradeWeapon () {
         boolean hasEyeCanon = this.itemHandler.getStackInSlot(0).getCount() > 0 && this.itemHandler.getStackInSlot(0).getItem() == TOOSItems.EYE_CANNON.get();
-        boolean hasShotgun = this.itemHandler.getStackInSlot(0).getCount() > 0 && this.itemHandler.getStackInSlot(0).getItem() == TOOSItems.SHOTGUN.get();
-        boolean hasRedstoneHandgun = this.itemHandler.getStackInSlot(0).getCount() > 0 && this.itemHandler.getStackInSlot(0).getItem() == TOOSItems.REDSTONE_HANDGUN.get();
-        boolean hasIronToken = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == TOOSItems.IRON_GUN_UPGRADE_TOKEN.get();
-        boolean hasGoldToken = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == TOOSItems.GOLD_GUN_UPGRADE_TOKEN.get();
         boolean hasDiamondToken = this.itemHandler.getStackInSlot(1).getCount() > 0 && this.itemHandler.getStackInSlot(1).getItem() == TOOSItems.DIAMOND_GUN_UPGRADE_TOKEN.get();
         boolean emptyResult = this.itemHandler.getStackInSlot(2).getCount() == 0 ;
+
         int randomMod = (int) Math.ceil(Math.random() * 2);
-
-        //Eye Cannon
         if (hasEyeCanon && hasDiamondToken && emptyResult) {
-
+            this.itemHandler.getStackInSlot(0).shrink(1);
+            this.itemHandler.getStackInSlot(1).shrink(1);
             this.itemHandler.insertItem(2, new ItemStack(TOOSItems.EYE_CANNON.get()), false);
-            this.itemHandler.getStackInSlot(2).getOrCreateTag().putInt("weapon_mod", randomMod);
-            this.itemHandler.getStackInSlot(2).setDamage(this.itemHandler.getStackInSlot(1).getDamage());
-
-            this.itemHandler.getStackInSlot(0).shrink(1);
-            this.itemHandler.getStackInSlot(1).shrink(1);
-
-        //Shotgun
-        } else if (hasShotgun && hasIronToken && emptyResult) {
-            this.itemHandler.getStackInSlot(0).shrink(1);
-            this.itemHandler.getStackInSlot(1).shrink(1);
-            this.itemHandler.insertItem(2, new ItemStack(TOOSItems.SHOTGUN.get()), false);
-
-            this.itemHandler.getStackInSlot(2).getOrCreateTag().putInt("weapon_mod", 1);
-
-        //Redstone Handgun
-        } else if (hasRedstoneHandgun && hasGoldToken && emptyResult) {
-            this.itemHandler.getStackInSlot(0).shrink(1);
-            this.itemHandler.getStackInSlot(1).shrink(1);
-            this.itemHandler.insertItem(2, new ItemStack(TOOSItems.REDSTONE_HANDGUN.get()), false);
 
             this.itemHandler.getStackInSlot(2).getOrCreateTag().putInt("weapon_mod", randomMod);
         }

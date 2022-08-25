@@ -21,12 +21,7 @@ public class TOOSItemModelProvider extends ItemModelProvider {
 
     @Override
     public void registerModels() {
-        simpleItem(TOOSItems.PINK_DESERT_MUSIC_DISC.get());
-        simpleItem(TOOSItems.IRON_BULLET.get());
-        simpleItem(TOOSItems.SHOTGUN_SHELLS.get());
-        simpleItem(TOOSItems.GOLD_GUN_UPGRADE_TOKEN.get());
         simpleItem(TOOSItems.IRON_GUN_UPGRADE_TOKEN.get());
-        simpleItem(TOOSItems.BARLEY_SEEDS.get());
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_SLAB.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_SLAB.get());
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get());
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_WALL.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_WALL.get());

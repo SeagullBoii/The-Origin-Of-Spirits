@@ -20,7 +20,6 @@ import net.minecraft.state.properties.SlabType;
 import net.minecraft.util.IItemProvider;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.RegistryObject;
-import net.seagullboi.originofspirits.block.BarleyBlock;
 import net.seagullboi.originofspirits.block.SweetPotatoBlock;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
 import net.seagullboi.originofspirits.registry.TOOSItems;
@@ -38,8 +37,7 @@ public class TOOSBlockLootTables extends BlockLootTables {
     private static final Set<Item> IMMUNE_TO_EXPLOSIONS = Stream.of(Blocks.DRAGON_EGG, Blocks.BEACON, Blocks.CONDUIT, Blocks.SKELETON_SKULL, Blocks.WITHER_SKELETON_SKULL, Blocks.PLAYER_HEAD, Blocks.ZOMBIE_HEAD, Blocks.CREEPER_HEAD, Blocks.DRAGON_HEAD, Blocks.SHULKER_BOX, Blocks.BLACK_SHULKER_BOX, Blocks.BLUE_SHULKER_BOX, Blocks.BROWN_SHULKER_BOX, Blocks.CYAN_SHULKER_BOX, Blocks.GRAY_SHULKER_BOX, Blocks.GREEN_SHULKER_BOX, Blocks.LIGHT_BLUE_SHULKER_BOX, Blocks.LIGHT_GRAY_SHULKER_BOX, Blocks.LIME_SHULKER_BOX, Blocks.MAGENTA_SHULKER_BOX, Blocks.ORANGE_SHULKER_BOX, Blocks.PINK_SHULKER_BOX, Blocks.PURPLE_SHULKER_BOX, Blocks.RED_SHULKER_BOX, Blocks.WHITE_SHULKER_BOX, Blocks.YELLOW_SHULKER_BOX).map(IItemProvider::asItem).collect(ImmutableSet.toImmutableSet());
     private static final float[] DEFAULT_SAPLING_DROP_RATES = new float[]{0.05F, 0.0625F, 0.083333336F, 0.1F};
     private static final float[] RARE_SAPLING_DROP_RATES = new float[]{0.025F, 0.027777778F, 0.03125F, 0.041666668F, 0.1F};
-    private static final ILootCondition.IBuilder SWEET_POTATOES_COND = BlockStateProperty.builder(TOOSBlocks.SWEET_POTATOES.get()).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(SweetPotatoBlock.AGE, 7));
-    private static final ILootCondition.IBuilder BARLEY_COND = BlockStateProperty.builder(TOOSBlocks.BARLEY.get()).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(BarleyBlock.AGE, 7));
+    private static final ILootCondition.IBuilder sweetPotatoesCondition = BlockStateProperty.builder(TOOSBlocks.SWEET_POTATOES.get()).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(SweetPotatoBlock.AGE, 7));
 
     protected static LootTable.Builder dropping(IItemProvider item) {
         return LootTable.builder().addLootPool(withSurvivesExplosion(item, LootPool.builder().rolls(ConstantRange.of(1)).addEntry(ItemLootEntry.builder(item))));
@@ -99,10 +97,6 @@ public class TOOSBlockLootTables extends BlockLootTables {
 
     protected static LootTable.Builder droppingItemWithFortune(Block block, Item item) {
         return droppingWithSilkTouch(block, withExplosionDecay(block, ItemLootEntry.builder(item).acceptFunction(ApplyBonus.oreDrops(Enchantments.FORTUNE))));
-    }
-
-    public void registerFlowerPot(Block flowerPot) {
-        this.registerLootTable(flowerPot, (pot) -> droppingAndFlowerPot(((FlowerPotBlock)pot).getFlower()));
     }
 
     @Override
@@ -189,21 +183,12 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerLootTable(TOOSBlocks.DEEPSEA_ALGAE.get(), (deepsea_algae) -> droppingWithSilkTouchOrShears(deepsea_algae, withSurvivesExplosion(deepsea_algae, ItemLootEntry.builder(TOOSBlocks.DEEPSEA_ALGAE.get()))));
         this.registerDropping(TOOSBlocks.GLOWKELP_PLANT.get(),TOOSBlocks.GLOWKELP.get());
         this.registerDropSelfLootTable(TOOSBlocks.GLOWKELP.get());
-        this.registerDropSelfLootTable(TOOSBlocks.MAGIC_MAGNOLIA.get());
-
-        //Flower Pots
-        this.registerFlowerPot(TOOSBlocks.POTTED_MAGIC_MAGNOLIA.get());
 
         //Crops
+
         this.registerLootTable(TOOSBlocks.SWEET_POTATOES.get(), withExplosionDecay(TOOSBlocks.SWEET_POTATOES.get(), LootTable.builder()
-                .addLootPool(LootPool.builder().acceptCondition(SWEET_POTATOES_COND).addEntry(ItemLootEntry.builder(TOOSItems.SWEET_POTATO.get()).acceptFunction(ApplyBonus.binomialWithBonusCount(Enchantments.FORTUNE, 0.5714286F, 3))))
+                .addLootPool(LootPool.builder().acceptCondition(sweetPotatoesCondition).addEntry(ItemLootEntry.builder(TOOSItems.SWEET_POTATO.get()).acceptFunction(ApplyBonus.binomialWithBonusCount(Enchantments.FORTUNE, 0.5714286F, 3))))
                 .addLootPool(LootPool.builder().addEntry(ItemLootEntry.builder(TOOSItems.SWEET_POTATO.get())))));
-        this.registerLootTable(TOOSBlocks.BARLEY.get(), withExplosionDecay(TOOSBlocks.BARLEY.get(), LootTable.builder()
-                .addLootPool(LootPool.builder().acceptCondition(BARLEY_COND).addEntry(ItemLootEntry.builder(TOOSItems.BARLEY_SEEDS.get()).acceptFunction(ApplyBonus.binomialWithBonusCount(Enchantments.FORTUNE, 0.5714286F, 3))))
-                .addLootPool(LootPool.builder().addEntry(ItemLootEntry.builder(TOOSItems.BARLEY_SEEDS.get())))
-                .addLootPool(LootPool.builder().acceptCondition(BARLEY_COND).addEntry(ItemLootEntry.builder(TOOSItems.BARLEY_STACK.get())))));
-
-
 
         //WOOD
 

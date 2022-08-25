@@ -16,7 +16,8 @@ public class ManaCheck0Procedure {
 			return false;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if ((entity.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new OriginofspiritsModVariables.PlayerVariables())).Mana >= 0) {
+		if ((entity.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new OriginofspiritsModVariables.PlayerVariables())).Mana >= 0) {
 			return true;
 		}
 		return false;

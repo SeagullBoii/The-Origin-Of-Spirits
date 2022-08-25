@@ -32,9 +32,9 @@ public class GunsmithingTableContainer extends Container {
 
         if(tileEntity != null) {
             tileEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(h -> {
-                addSlot(new SlotItemHandler(h, 0, 27, 34));
-                addSlot(new SlotItemHandler(h, 1, 76, 34));
-                addSlot(new SlotItemHandler(h, 2, 134, 34));
+                addSlot(new SlotItemHandler(h, 0, 27, 32));
+                addSlot(new SlotItemHandler(h, 1, 76, 32));
+                addSlot(new SlotItemHandler(h, 2, 134, 32));
             });
         }
     }

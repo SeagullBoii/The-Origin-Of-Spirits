@@ -17,7 +17,11 @@ import javax.annotation.Nonnull;
 @Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModEventBusEvents {
     @SubscribeEvent
-    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>> event) {
+    public static void registerModifierSerializers(@Nonnull final RegistryEvent.Register<GlobalLootModifierSerializer<?>>
+                                                           event) {
+        event.getRegistry().registerAll(
+                new FishingJunkAdditionModifier.Serializer().setRegistryName
+                        (new ResourceLocation(OriginOfSpirits.MOD_ID,"gel_from_fishing")));
     }
 
     @SubscribeEvent

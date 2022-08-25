@@ -1,5 +1,6 @@
 package net.seagullboi.originofspirits.entity;
 
+import net.seagullboi.originofspirits.item.BarleyStackItem;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
@@ -35,7 +36,6 @@ import net.minecraft.world.IWorldReader;
 import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import javax.annotation.Nullable;
 import java.util.Comparator;
@@ -71,7 +71,7 @@ public class SacFrogEntity extends RabbitEntity {
         this.goalSelector.addGoal(0, new SwimGoal(this));
         this.goalSelector.addGoal(1, new SacFrogEntity.PanicGoal(this, 2.0D));
         this.goalSelector.addGoal(2, new BreedGoal(this, 1.0D));
-        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.fromItems(TOOSItems.BARLEY_STACK.get()), false));
+        this.goalSelector.addGoal(3, new TemptGoal(this, 1.25D, Ingredient.fromItems(BarleyStackItem.block), false));
         this.goalSelector.addGoal(4, new FollowParentGoal(this, 1.25D));
         this.goalSelector.addGoal(1, new RandomWalkingGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new SacFrogEntity.GoToBeachGoal(this, 1.0D));
@@ -145,7 +145,7 @@ public class SacFrogEntity extends RabbitEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.getItem() == TOOSItems.BARLEY_STACK.get();
+        return stack.getItem() == BarleyStackItem.block;
     }
 
 

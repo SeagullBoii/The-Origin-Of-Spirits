@@ -46,9 +46,9 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
+import net.seagullboi.originofspirits.item.BarleyStackItem;
 import net.seagullboi.originofspirits.entity.renderer.SkenelopeRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.registry.TOOSItems;
 
 @OriginofspiritsModElements.ModElement.Tag
 public class SkenelopeEntity extends OriginofspiritsModElements.ModElement {
@@ -125,7 +125,7 @@ public class SkenelopeEntity extends OriginofspiritsModElements.ModElement {
 			this.goalSelector.addGoal(5, new LeapAtTargetGoal(this, (float) 0.5));
 			this.goalSelector.addGoal(6, new PanicGoal(this, 1.2));
 			this.goalSelector.addGoal(7, new FollowMobGoal(this, (float) 1, 10, 5));
-			this.goalSelector.addGoal(8, new TemptGoal(this, 1, Ingredient.fromItems(TOOSItems.BARLEY_STACK.get()), false));
+			this.goalSelector.addGoal(8, new TemptGoal(this, 1, Ingredient.fromItems(BarleyStackItem.block), false));
 			this.goalSelector.addGoal(9, new AvoidEntityGoal(this, CaikleEntity.CustomEntity.class, (float) 6, 1, 1.2));
 		}
 
@@ -168,7 +168,7 @@ public class SkenelopeEntity extends OriginofspiritsModElements.ModElement {
 		public boolean isBreedingItem(ItemStack stack) {
 			if (stack == null)
 				return false;
-			if (TOOSItems.BARLEY_STACK.get() == stack.getItem())
+			if (BarleyStackItem.block == stack.getItem())
 				return true;
 			return false;
 		}

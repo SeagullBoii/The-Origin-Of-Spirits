@@ -1,8 +1,6 @@
 package net.seagullboi.originofspirits.registry;
 
 import net.minecraft.item.ItemGroup;
-import net.minecraft.potion.Effect;
-import net.minecraft.potion.Effects;
 import net.seagullboi.originofspirits.block.ClamBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -17,7 +15,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.block.*;
 import net.seagullboi.originofspirits.potion.CursedPotionEffect;
-import net.seagullboi.originofspirits.potion.ManaHealingPotionEffect;
 import org.lwjgl.system.CallbackI;
 
 import java.util.function.Supplier;
@@ -109,7 +106,6 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> ALCYONEUM_POLYPS = registerBlock("alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEP_ALCYONEUM_POLYPS = registerBlock("deep_alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEPSEA_ALGAE = registerBlock("deepsea_algae", () -> new DeepseaAlgaeBlock(AbstractBlock.Properties.create(Material.SEA_GRASS, MaterialColor.GREEN).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
-	public static final RegistryObject<Block> MAGIC_MAGNOLIA = registerBlock("magic_magnolia", () -> new FlowerBlock(Effects.ABSORPTION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), TOOSItemGroup.PLANT_GROUP);
 
 	//Signs
 	public static final RegistryObject<Block> SACREDWOOD_SIGN = BLOCKS.register("sacredwood_sign", () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.WOOD).sound(SoundType.WOOD).doesNotBlockMovement().hardnessAndResistance(1, 1), ModWoodTypes.SACREDWOOD));
@@ -119,12 +115,7 @@ public class TOOSBlocks {
 
 	//Crops
 	public static final RegistryObject<Block> SWEET_POTATOES = BLOCKS.register("sweet_potatoes", () -> new SweetPotatoBlock(AbstractBlock.Properties.from(Blocks.POTATOES)));
-	public static final RegistryObject<Block> BARLEY = BLOCKS.register("barley", () -> new BarleyBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
-	//Flower Pots
-	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_CORNFLOWER)));
-
-	//Registry
 	public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier, ItemGroup itemGroup) {
 		return registerBlock(name, supplier, itemGroup, true);
 	}

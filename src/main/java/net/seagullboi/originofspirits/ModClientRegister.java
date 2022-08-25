@@ -1,7 +1,6 @@
-package net.seagullboi.originofspirits.events;
+package net.seagullboi.originofspirits;
 
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
@@ -13,10 +12,12 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.block.tile_entities.screen.GunsmithingTableScreen;
 import net.seagullboi.originofspirits.entity.renderer.*;
-import net.seagullboi.originofspirits.registry.*;
+import net.seagullboi.originofspirits.registry.TOOSBlocks;
+import net.seagullboi.originofspirits.registry.TOOSContainers;
+import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.registry.ModTileEntities;
 
 @Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModClientRegister {
@@ -39,7 +40,6 @@ public class ModClientRegister {
 
         //Projectiles
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_LASER.get(), ((IRenderFactory) EmptyRenderer::new));
-        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.BULLET.get(), ((IRenderFactory) BulletRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CLUFF_CLOUD.get(), ((IRenderFactory) CluffCloudRenderer::new));
 
         //Block
@@ -48,16 +48,10 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.DEEPSEA_ALGAE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.GLOWKELP.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.GLOWKELP_PLANT.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.BARLEY.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.MAGIC_MAGNOLIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_MAGIC_MAGNOLIA.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.SWEET_POTATOES.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.DUCKWEED.get(), RenderType.getCutout());
-        RenderTypeLookup.setRenderLayer(TOOSBlocks.ABYSSAL_SPAWNER.get(), RenderType.getCutout());
-
-        //Screens
-        ScreenManager.registerFactory(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(), GunsmithingTableScreen::new);
     }
 
-
+    public static void registerTileEntities(final FMLClientSetupEvent event) {
+        ScreenManager.registerFactory(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(),
+                GunsmithingTableScreen::new);
+    }
 }

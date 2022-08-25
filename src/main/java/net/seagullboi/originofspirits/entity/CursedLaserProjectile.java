@@ -120,7 +120,7 @@ public class CursedLaserProjectile extends AbstractArrowEntity {
         ++lifespan;
         if (lifespan >= 20) {
             this.remove();
-        } else if (this.lifespan == 10 && this.getMarksman()) {
+        } else if (this.lifespan == 10) {
             this.setDamage(this.getDamage() + 2);
         }
 
