@@ -1,14 +1,17 @@
 package net.seagullboi.originofspirits.registry;
 
-import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.seagullboi.originofspirits.block.GlowkelpBlock;
+import net.seagullboi.originofspirits.OriginOfSpirits;
+import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.item.*;
-import net.seagullboi.originofspirits.itemgroup.*;
+import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
+import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
+import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsFoodItemGroup;
+import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsMiscItemGroup;
 
 public class TOOSItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -55,6 +58,8 @@ public class TOOSItems {
     public static final RegistryObject<ModSpawnEggs> CABADOR_SPAWN_EGG = ITEMS.register("cabador_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CABADOR, -6432035, -10186568, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
 
     //MISC
+    public static final RegistryObject<Item> PINK_DESERT_MUSIC_DISC = ITEMS.register("music_disc_pink_desert", () -> new MusicDiscItem(13, TOOSSoundEvents.PINK_DESERT, new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
+
     public static final RegistryObject<Item> RAW_CURSED_STEEL = ITEMS.register("raw_cursed_steel", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
     public static final RegistryObject<Item> CURSED_STEEL = ITEMS.register("cursed_steel_ingot", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
     public static final RegistryObject<Item> IRON_BULLET = ITEMS.register("iron_bullet", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));

@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "progress=0": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine"
+    },
+    "progress=1": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_1"
+    },
+    "progress=2": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_2"
+    },
+    "progress=3": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_3"
+    },
+    "progress=4": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_4"
+    },
+    "progress=5": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_5"
+    },
+    "progress=6": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_6"
+    },
+    "progress=7": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_7"
+    },
+    "progress=8": {
+      "model": "originofspirits:block/pressing_machine/pressing_machine_8"
+    }
+  }
+}

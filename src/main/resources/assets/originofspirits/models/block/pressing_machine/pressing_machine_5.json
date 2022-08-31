@@ -1,0 +1,105 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "pressing_machine",
+	"texture_size": [64, 64],
+	"textures": {
+		"1": "originofspirits:block/pressing_machine",
+		"particle": "minecraft:block/piston_side"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [0, 9.01, 0],
+			"to": [2, 16.01, 2],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [15, 9.75, 14.5, 11.5], "texture": "#1"},
+				"east": {"uv": [15.5, 9.75, 15, 11.5], "texture": "#1"},
+				"south": {"uv": [16, 9.75, 15.5, 11.5], "texture": "#1"},
+				"west": {"uv": [14.5, 9.75, 14, 11.5], "texture": "#1"},
+				"up": {"uv": [14.5, 9.75, 15, 9.25], "texture": "#1"},
+				"down": {"uv": [15, 9.25, 15.5, 9.75], "texture": "#1"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [0, 0, 0],
+			"to": [16, 9, 16],
+			"faces": {
+				"north": {"uv": [4, 4, 8, 6.25], "texture": "#1"},
+				"east": {"uv": [0, 4, 4, 6.25], "texture": "#1"},
+				"south": {"uv": [12, 4, 16, 6.25], "texture": "#1"},
+				"west": {"uv": [8, 4, 12, 6.25], "texture": "#1"},
+				"up": {"uv": [8, 4, 4, 0], "texture": "#1"},
+				"down": {"uv": [12, 0, 8, 4], "texture": "#1"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [14, 9.01, 14],
+			"to": [16, 16.01, 16],
+			"faces": {
+				"north": {"uv": [14.5, 9.75, 15, 11.5], "texture": "#1"},
+				"east": {"uv": [14, 9.75, 14.5, 11.5], "texture": "#1"},
+				"south": {"uv": [15.5, 9.75, 16, 11.5], "texture": "#1"},
+				"west": {"uv": [15, 9.75, 15.5, 11.5], "texture": "#1"},
+				"up": {"uv": [15, 9.75, 14.5, 9.25], "texture": "#1"},
+				"down": {"uv": [15.5, 9.25, 15, 9.75], "texture": "#1"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [0, 9.01, 14],
+			"to": [2, 16.01, 16],
+			"shade": false,
+			"faces": {
+				"north": {"uv": [15, 9.75, 14.5, 11.5], "texture": "#1"},
+				"east": {"uv": [15.5, 9.75, 15, 11.5], "texture": "#1"},
+				"south": {"uv": [16, 9.75, 15.5, 11.5], "texture": "#1"},
+				"west": {"uv": [14.5, 9.75, 14, 11.5], "texture": "#1"},
+				"up": {"uv": [14.5, 9.75, 15, 9.25], "texture": "#1"},
+				"down": {"uv": [15, 9.25, 15.5, 9.75], "texture": "#1"}
+			}
+		},
+		{
+			"name": "base",
+			"from": [14, 9.01, 0],
+			"to": [16, 16.01, 2],
+			"faces": {
+				"north": {"uv": [14.5, 9.75, 15, 11.5], "texture": "#1"},
+				"east": {"uv": [14, 9.75, 14.5, 11.5], "texture": "#1"},
+				"south": {"uv": [15.5, 9.75, 16, 11.5], "texture": "#1"},
+				"west": {"uv": [15, 9.75, 15.5, 11.5], "texture": "#1"},
+				"up": {"uv": [15, 9.75, 14.5, 9.25], "texture": "#1"},
+				"down": {"uv": [15.5, 9.25, 15, 9.75], "texture": "#1"}
+			}
+		},
+		{
+			"name": "press",
+			"from": [1, 10.5, 1],
+			"to": [15, 13.5, 15],
+			"faces": {
+				"north": {"uv": [4.5, 11.75, 8, 12.5], "texture": "#1"},
+				"east": {"uv": [1, 11.75, 4.5, 12.5], "texture": "#1"},
+				"south": {"uv": [11.5, 11.75, 15, 12.5], "texture": "#1"},
+				"west": {"uv": [8, 11.75, 11.5, 12.5], "texture": "#1"},
+				"up": {"uv": [8, 11.75, 4.5, 8.25], "texture": "#1"},
+				"down": {"uv": [11.5, 8.25, 8, 11.75], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "base",
+			"origin": [0, 10.4233, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4]
+		},
+		{
+			"name": "press",
+			"origin": [0, 14.5, 0],
+			"color": 0,
+			"children": [5]
+		}
+	]
+}

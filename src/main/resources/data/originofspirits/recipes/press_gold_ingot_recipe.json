@@ -1,0 +1,11 @@
+{
+  "type": "originofspirits:pressing_machine",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "output": {
+    "item": "originofspirits:gold_gun_upgrade_token"
+  }
+}
