@@ -9,5 +9,5 @@ import net.minecraft.world.gen.feature.Features;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
 
 public class TOOSConfiguredFeatures {
-    //public static final ConfiguredFeature<?, ?> MAGIC_MAGNOLIA_CONFIG = Feature.FLOWER.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(TOOSBlocks.MAGIC_MAGNOLIA.get().getDefaultState()), SimpleBlockPlacer.PLACER)).tries(2).build()).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(2);
+    public static final ConfiguredFeature<?, ?> MAGIC_MAGNOLIA_CONFIG = Feature.FLOWER.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(TOOSBlocks.MAGIC_MAGNOLIA.get().getDefaultState()), SimpleBlockPlacer.PLACER)).tries(2).build()).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(2);
 }

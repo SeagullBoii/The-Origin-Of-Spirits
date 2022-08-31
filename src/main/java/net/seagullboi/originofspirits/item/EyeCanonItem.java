@@ -105,6 +105,7 @@ import java.util.Random;
                 System.out.println(this.isFullyCharged());
                 shootAt(stack, worldIn, entityIn, 1, 0);
                 this.setCharged(false);
+                this.extraDamage = 0;
             }
         }
 

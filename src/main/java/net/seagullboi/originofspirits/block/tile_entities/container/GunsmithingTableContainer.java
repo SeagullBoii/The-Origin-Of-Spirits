@@ -22,8 +22,7 @@ public class GunsmithingTableContainer extends Container {
     private final PlayerEntity playerEntity;
     private final IItemHandler playerInventory;
 
-    public GunsmithingTableContainer(int windowId, World world, BlockPos pos,
-                                     PlayerInventory playerInventory, PlayerEntity player) {
+    public GunsmithingTableContainer(int windowId, World world, BlockPos pos, PlayerInventory playerInventory, PlayerEntity player) {
         super(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(), windowId);
         this.tileEntity = world.getTileEntity(pos);
         playerEntity = player;

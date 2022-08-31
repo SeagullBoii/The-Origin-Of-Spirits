@@ -18,6 +18,7 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.registry.ModStructures;
 import net.seagullboi.originofspirits.world.ModStructureGeneration;
+import net.seagullboi.originofspirits.world.gen.TOOSFlowerGeneration;
 import org.apache.logging.log4j.LogManager;
 
 import java.lang.reflect.Method;
@@ -30,6 +31,8 @@ public class ModWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModStructureGeneration.generateStructures(event);
+        TOOSFlowerGeneration.generateFlowers(event);
+
     }
 
     @SubscribeEvent
@@ -65,4 +68,5 @@ public class ModWorldEvents {
             serverWorld.getChunkProvider().generator.func_235957_b_().field_236193_d_ = tempMap;
         }
     }
+
 }

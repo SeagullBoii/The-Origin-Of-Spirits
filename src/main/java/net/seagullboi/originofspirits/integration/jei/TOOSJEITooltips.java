@@ -1,4 +1,4 @@
-package net.seagullboi.originofspirits;
+package net.seagullboi.originofspirits.integration.jei;
 
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.ingredients.IIngredientType;
@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 @mezz.jei.api.JeiPlugin
-public class JEITooltips implements IModPlugin {
+public class TOOSJEITooltips implements IModPlugin {
 
         @Override
         public ResourceLocation getPluginUid() {

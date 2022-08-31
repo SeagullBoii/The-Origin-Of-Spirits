@@ -28,7 +28,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 import com.mojang.blaze3d.matrix.MatrixStack;
 
-@Mod.EventBusSubscriber(modid = "originofspirits", bus = Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Bus.MOD, value = Dist.CLIENT)
 public class ClientEventBus {
 	private static final ResourceLocation DIM_RENDER_INFO = new ResourceLocation("originofspirits", "the_sky_realms");
 	private static final ResourceLocation SUN_TEXTURES = new ResourceLocation("originofspirits", "textures/sky/sky_sun.png");

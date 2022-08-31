@@ -20,7 +20,7 @@ public class TOOSFlowerGeneration {
         if(types.contains(BiomeDictionary.Type.CONIFEROUS)) {
             List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
 
-         //   base.add(() -> TOOSConfiguredFeatures.MAGIC_MAGNOLIA_CONFIG);
+            base.add(() -> TOOSConfiguredFeatures.MAGIC_MAGNOLIA_CONFIG);
         }
     }
 }

@@ -46,6 +46,7 @@ import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup
 import net.seagullboi.originofspirits.item.BlueBerriesItem;
 import net.seagullboi.originofspirits.entity.renderer.TempestRunnerRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import java.util.stream.Stream;
 import java.util.Map;
@@ -203,7 +204,7 @@ public class TempestRunnerEntity extends OriginofspiritsModElements.ModElement {
 				return true;
 			if (Items.BEETROOT_SEEDS == stack.getItem())
 				return true;
-			if (BarleyBlock.block.asItem() == stack.getItem())
+			if (TOOSItems.BARLEY_SEEDS.get() == stack.getItem())
 				return true;
 			return false;
 		}

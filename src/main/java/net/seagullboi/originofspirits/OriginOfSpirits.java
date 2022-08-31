@@ -1,11 +1,9 @@
 package net.seagullboi.originofspirits;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.block.WoodType;
-import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.renderer.Atlases;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntitySpawnPlacementRegistry;
@@ -14,25 +12,26 @@ import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.gen.Heightmap;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.*;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
-
-import net.seagullboi.originofspirits.block.tile_entities.screen.GunsmithingTableScreen;
-import net.seagullboi.originofspirits.datagen.*;
+import net.seagullboi.originofspirits.datagen.TOOSBlockTagsProvider;
+import net.seagullboi.originofspirits.datagen.TOOSLangProvider;
+import net.seagullboi.originofspirits.datagen.TOOSLootTableProvider;
+import net.seagullboi.originofspirits.datagen.TOOSRecipeProvider;
+import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockStateProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSItemModelProvider;
-import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
 import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.network.TOOSNetwork;
 import net.seagullboi.originofspirits.registry.*;
@@ -58,7 +57,6 @@ public class OriginOfSpirits {
         eventBus.register(this);
         eventBus.addListener(this::init);
         eventBus.addListener(this::clientLoad);
-        eventBus.addListener(this::doClientStuff);
         eventBus.addListener(this::setup);
         eventBus.addListener(this::gatherData);
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
@@ -77,19 +75,6 @@ public class OriginOfSpirits {
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
     }
 
-    @OnlyIn(Dist.CLIENT)
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        Atlases.addWoodType(ModWoodTypes.SACREDWOOD);
-        Atlases.addWoodType(ModWoodTypes.SWIRLWOOD);
-        event.enqueueWork(() -> {
-            RenderTypeLookup.setRenderLayer(net.seagullboi.originofspirits.registry.TOOSBlocks.SWEET_POTATOES.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(net.seagullboi.originofspirits.registry.TOOSBlocks.DUCKWEED.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(net.seagullboi.originofspirits.registry.TOOSBlocks.ABYSSAL_SPAWNER.get(), RenderType.getCutout());
-            ScreenManager.registerFactory(TOOSContainers.GUNSMITHING_TABLE_CONTAINER.get(),
-                    GunsmithingTableScreen::new);
-        });
-    }
-
     private void setup(final FMLCommonSetupEvent event) {
         TOOSNetwork.initializeNetwork();
         event.enqueueWork(() -> {
@@ -98,6 +83,8 @@ public class OriginOfSpirits {
             //Wood Types
             WoodType.register(ModWoodTypes.SACREDWOOD);
             WoodType.register(ModWoodTypes.SWIRLWOOD);
+
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(TOOSBlocks.MAGIC_MAGNOLIA.getId(), TOOSBlocks.POTTED_MAGIC_MAGNOLIA);
 
             ModStructures.setupStructures();
         });

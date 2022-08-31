@@ -15,6 +15,8 @@ public class TOOSItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, OriginOfSpirits.MOD_ID);
 
     //Plants
+    public static final RegistryObject<Item> BARLEY_SEEDS = ITEMS.register("barley_seeds", () -> new BlockItem(TOOSBlocks.BARLEY.get(), new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
+    public static final RegistryObject<Item> BARLEY_STACK = ITEMS.register("barley_stack", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
     public static final RegistryObject<Item> DUCKWEED = ITEMS.register("duckweed", () -> new LilyPadItem(TOOSBlocks.DUCKWEED.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
     public static final RegistryObject<Item> GLOWKELP = ITEMS.register("glowkelp", () -> new BlockItem(TOOSBlocks.GLOWKELP.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
 

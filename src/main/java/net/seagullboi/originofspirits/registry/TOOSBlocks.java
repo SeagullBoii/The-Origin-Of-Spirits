@@ -1,12 +1,12 @@
 package net.seagullboi.originofspirits.registry;
 
-import net.minecraft.item.ItemGroup;
-import net.seagullboi.originofspirits.block.ClamBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.potion.Effects;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -14,8 +14,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.block.*;
+import net.seagullboi.originofspirits.item.BasicDescriptionBlockItem;
 import net.seagullboi.originofspirits.potion.CursedPotionEffect;
-import org.lwjgl.system.CallbackI;
+import net.seagullboi.originofspirits.util.ColorUtil;
 
 import java.util.function.Supplier;
 
@@ -97,6 +98,8 @@ public class TOOSBlocks {
 
 	//Advanced Blocks
 	public static final RegistryObject<Block> GUNSMITHING_TABLE_BLOCK = registerBlock("gunsmithing_table", () -> new GunsmithingTableBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.LIGHT_GRAY).sound(SoundType.METAL).hardnessAndResistance(3.5F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
+	public static final RegistryObject<Block> PRESSING_MACHINE = registerBlock("pressing_machine", () -> new PressingMachineBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.LIGHT_GRAY).sound(SoundType.METAL).hardnessAndResistance(3.5F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool().notSolid()), TOOSItemGroup.BLOCK_GROUP, 64, ColorUtil.GRAY + "Right click to activate");
+
 	public static final RegistryObject<Block> ABYSSAL_SPAWNER = BLOCKS.register("abyssal_spawner", () -> new AbyssalSpawnerBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.GRAY).sound(SoundType.METAL).hardnessAndResistance(5f, 20f).notSolid().harvestTool(ToolType.PICKAXE)));
 
 	//Plants
@@ -106,6 +109,10 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> ALCYONEUM_POLYPS = registerBlock("alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEP_ALCYONEUM_POLYPS = registerBlock("deep_alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEPSEA_ALGAE = registerBlock("deepsea_algae", () -> new DeepseaAlgaeBlock(AbstractBlock.Properties.create(Material.SEA_GRASS, MaterialColor.GREEN).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> MAGIC_MAGNOLIA = registerBlock("magic_magnolia", () -> new FlowerBlock(Effects.ABSORPTION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), TOOSItemGroup.PLANT_GROUP);
+
+	//Flower Pots
+	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_CORNFLOWER)));
 
 	//Signs
 	public static final RegistryObject<Block> SACREDWOOD_SIGN = BLOCKS.register("sacredwood_sign", () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.WOOD).sound(SoundType.WOOD).doesNotBlockMovement().hardnessAndResistance(1, 1), ModWoodTypes.SACREDWOOD));
@@ -115,6 +122,7 @@ public class TOOSBlocks {
 
 	//Crops
 	public static final RegistryObject<Block> SWEET_POTATOES = BLOCKS.register("sweet_potatoes", () -> new SweetPotatoBlock(AbstractBlock.Properties.from(Blocks.POTATOES)));
+	public static final RegistryObject<Block> BARLEY = BLOCKS.register("barley", () -> new BarleyBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 	public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier, ItemGroup itemGroup) {
 		return registerBlock(name, supplier, itemGroup, true);
@@ -131,8 +139,9 @@ public class TOOSBlocks {
 		return block;
 	}
 
-	private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-		TOOSItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-				new Item.Properties().group(TOOSItemGroup.BLOCK_GROUP)));
+	public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier, ItemGroup itemGroup, int stackSize, String description) {
+		RegistryObject<B> block = TOOSBlocks.BLOCKS.register(name, supplier);
+		BLOCK_ITEMS.register(name, () -> new BasicDescriptionBlockItem(description, block.get(), new Item.Properties().group(itemGroup).maxStackSize(stackSize)));
+		return block;
 	}
 }

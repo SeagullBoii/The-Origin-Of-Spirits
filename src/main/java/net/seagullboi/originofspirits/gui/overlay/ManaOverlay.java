@@ -56,7 +56,7 @@ public class ManaOverlay {
                     GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
             RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
             RenderSystem.disableAlphaTest();
-            if (!entity.isSpectator()) {
+            if (!entity.isSpectator() || !entity.isCreative()) {
 
                 int mana = (int) (entity.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new OriginofspiritsModVariables.PlayerVariables())).Mana;
 
