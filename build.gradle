@@ -132,8 +132,12 @@ repositories {
     maven {
         url = "https://maven.theillusivec4.top/"
     }
+    repositories {
+        maven { url 'https://maven.blamejared.com' }
+    }
     mavenCentral()
 }
+
 
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
@@ -146,6 +150,10 @@ dependencies {
         annotationProcessor 'org.spongepowered:mixin:0.8.2:processor'
     }
 
+    //Patchouli
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.3:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.3")
+
     //Just Enough Items (JEI)
     compileOnly fg.deobf("mezz.jei:jei-1.16.5:7.7.1.150:api")
     // at runtime, use the full JEI jar
@@ -156,18 +164,23 @@ dependencies {
     //Critical Lib
     implementation fg.deobf("curse.maven:forge-criticalib-560696:3644558")
 
-    // Rubidium
-   // implementation fg.deobf("curse.maven:rubidium-574856:3769736")
+    //Dummy Mod
+    implementation fg.deobf("curse.maven:forge-mmmmmmmmmmmm-225738:3473005")
+
+
     // Oculus
     implementation fg.deobf("curse.maven:oculus-581495:3821219")
 
     //Mob battle
     implementation fg.deobf("curse.maven:mob-battle-mod-268746:3408702")
 
+    // Rubidium
+    // implementation fg.deobf("curse.maven:rubidium-574856:3769736")
+
     //Just Enough Resources (JER)
     //    implementation fg.deobf("curse.maven:just-enough-resources-jer-240630:${project.jer}")
 
-    //The One Probe
+    //The O
     //implementation fg.deobf("curse.maven:the-one-probe-245211:${project.top}")
 
     //Curios
@@ -179,7 +192,7 @@ dependencies {
     //FTB Chunks
     implementation fg.deobf("curse.maven:ftb-chunks-forge-314906:3603374")
     //Architectury API
-    mplementation fg.deobf("curse.maven:architectury-forge-419699:3705903")
+    implementation fg.deobf("curse.maven:architectury-forge-419699:3705903")
     //FTB Library
     implementation fg.deobf("curse.maven:ftb-library-forge-404465:3553840")
     //FTB Teams
@@ -214,7 +227,6 @@ dependencies {
     implementation 'cpw.mods:modlauncher:8.1.3'
 
 }
-
 mixin {
     add sourceSets.main, "originofspirits.mixin-refmap.json"
 }

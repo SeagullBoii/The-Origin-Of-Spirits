@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/flower_pot_cross",
   "textures": {
-    "plant": "originofspirits:block/magic_magnolia"
+    "plant": "originofspirits:block/peace_lily"
   },
   "ambientocclusion": false
 }

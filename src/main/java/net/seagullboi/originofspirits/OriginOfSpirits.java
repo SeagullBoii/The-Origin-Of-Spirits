@@ -1,17 +1,11 @@
 package net.seagullboi.originofspirits;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.block.WoodType;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.entity.EntitySpawnPlacementRegistry;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -33,7 +27,6 @@ import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSBlockStateProvider;
 import net.seagullboi.originofspirits.datagen.client.TOOSItemModelProvider;
 import net.seagullboi.originofspirits.events.TOOSSoundEvents;
-import net.seagullboi.originofspirits.network.TOOSNetwork;
 import net.seagullboi.originofspirits.registry.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,7 +50,6 @@ public class OriginOfSpirits {
         eventBus.register(this);
         eventBus.addListener(this::init);
         eventBus.addListener(this::clientLoad);
-        eventBus.addListener(this::setup);
         eventBus.addListener(this::gatherData);
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
 
@@ -75,20 +67,6 @@ public class OriginOfSpirits {
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
     }
 
-    private void setup(final FMLCommonSetupEvent event) {
-        TOOSNetwork.initializeNetwork();
-        event.enqueueWork(() -> {
-            //Entity Spawn
-            EntitySpawnPlacementRegistry.register(TOOSEntityTypes.LAZOCULUS.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MonsterEntity::canMonsterSpawn);
-            //Wood Types
-            WoodType.register(ModWoodTypes.SACREDWOOD);
-            WoodType.register(ModWoodTypes.SWIRLWOOD);
-
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(TOOSBlocks.MAGIC_MAGNOLIA.getId(), TOOSBlocks.POTTED_MAGIC_MAGNOLIA);
-
-            ModStructures.setupStructures();
-        });
-    }
 
     private void gatherData(final GatherDataEvent event) {
         DataGenerator dataGenerator = event.getGenerator();

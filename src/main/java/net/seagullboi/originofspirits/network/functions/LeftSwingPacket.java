@@ -1,10 +1,10 @@
 package net.seagullboi.originofspirits.network.functions;
 
-import net.seagullboi.originofspirits.events.ServerWorldEvents;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.util.Hand;
 import net.minecraftforge.fml.network.NetworkEvent;
+import net.seagullboi.originofspirits.events.TOOSServerEvents;
 
 import java.util.function.Supplier;
 
@@ -20,7 +20,7 @@ public class LeftSwingPacket {
         context.get().setPacketHandled(true);
         PlayerEntity player = context.get().getSender();
         if(player != null) {
-            ServerWorldEvents.hitHandler(player, player.getHeldItem(Hand.MAIN_HAND));
+            TOOSServerEvents.hitHandler(player, player.getHeldItem(Hand.MAIN_HAND));
         }
     }
 

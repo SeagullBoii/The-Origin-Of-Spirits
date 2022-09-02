@@ -7,6 +7,8 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
@@ -104,15 +106,29 @@ public class TOOSBlocks {
 
 	//Plants
     public static final RegistryObject<Block> DUCKWEED = BLOCKS.register("duckweed_plant", () -> new DuckweedBlock(AbstractBlock.Properties.create(Material.PLANTS).zeroHardnessAndResistance().sound(SoundType.LILY_PADS).notSolid().doesNotBlockMovement().setLightLevel(s -> 10)));
-	public static final RegistryObject<Block> GLOWKELP = BLOCKS.register("glowkelp", () -> new GlowkelpTopBlock(AbstractBlock.Properties.create(Material.OCEAN_PLANT).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 1)));
-	public static final RegistryObject<Block> GLOWKELP_PLANT = BLOCKS.register("glow_kelp_plant", () -> new GlowkelpBlock(AbstractBlock.Properties.create(Material.OCEAN_PLANT).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 1)));
+	public static final RegistryObject<Block> GLOWKELP = BLOCKS.register("glowkelp", () -> new GlowkelpTopBlock(AbstractBlock.Properties.create(Material.OCEAN_PLANT).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 1).setNeedsPostProcessing(TOOSBlocks::needsPostProcessing).setEmmisiveRendering(TOOSBlocks::needsPostProcessing)));
+	public static final RegistryObject<Block> GLOWKELP_PLANT = BLOCKS.register("glow_kelp_plant", () -> new GlowkelpBlock(AbstractBlock.Properties.create(Material.OCEAN_PLANT).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 1).setNeedsPostProcessing(TOOSBlocks::needsPostProcessing).setEmmisiveRendering(TOOSBlocks::needsPostProcessing)));
 	public static final RegistryObject<Block> ALCYONEUM_POLYPS = registerBlock("alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEP_ALCYONEUM_POLYPS = registerBlock("deep_alcyonium_polyps", () -> new SeaPolypBlock(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.PURPLE_TERRACOTTA).zeroHardnessAndResistance().sound(SoundType.CORAL).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> DEEPSEA_ALGAE = registerBlock("deepsea_algae", () -> new DeepseaAlgaeBlock(AbstractBlock.Properties.create(Material.SEA_GRASS, MaterialColor.GREEN).zeroHardnessAndResistance().sound(SoundType.WET_GRASS).notSolid().doesNotBlockMovement().setLightLevel(s -> 0)), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> MAGIC_MAGNOLIA = registerBlock("magic_magnolia", () -> new FlowerBlock(Effects.ABSORPTION, 6, AbstractBlock.Properties.from(Blocks.CORNFLOWER)), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> BLESSED_ROSE = registerBlock("blessed_rose", () -> new FlowerBlock(Effects.REGENERATION, 10, AbstractBlock.Properties.from(Blocks.POPPY).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> CRYSTAL_LILY = registerBlock("crystal_lily", () -> new FlowerBlock(Effects.SPEED, 10, AbstractBlock.Properties.from(Blocks.BLUE_ORCHID).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> VIOLET_PERIWINKLE = registerBlock("violet_periwinkle", () -> new FlowerBlock(Effects.HASTE, 11, AbstractBlock.Properties.from(Blocks.PINK_TULIP).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> RED_PERIWINKLE = registerBlock("red_periwinkle", () -> new FlowerBlock(Effects.SATURATION, 11, AbstractBlock.Properties.from(Blocks.RED_TULIP).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> ORANGE_PERIWINKLE = registerBlock("orange_periwinkle", () -> new FlowerBlock(Effects.HEALTH_BOOST, 11, AbstractBlock.Properties.from(Blocks.DANDELION).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> PEACE_LILY = registerBlock("peace_lily", () -> new FlowerBlock(Effects.HEALTH_BOOST, 20, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> SACRED_VIOLET = registerBlock("sacret_violet", () -> new FlowerBlock(Effects.SLOWNESS, 5, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
 
 	//Flower Pots
-	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_CORNFLOWER)));
+	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_BLESSED_ROSE = BLOCKS.register("potted_blessed_rose", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), BLESSED_ROSE, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_CRYSTAL_LILY = BLOCKS.register("potted_crystal_lily", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), CRYSTAL_LILY, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_VIOLET_PERIWINKLE = BLOCKS.register("potted_violet_periwinkle", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), VIOLET_PERIWINKLE, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_RED_PERIWINKLE = BLOCKS.register("potted_red_periwinkle", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), RED_PERIWINKLE, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_ORANGE_PERIWINKLE = BLOCKS.register("potted_orange_periwinkle", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), ORANGE_PERIWINKLE, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_PEACE_LILY = BLOCKS.register("potted_peace_lily", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), PEACE_LILY, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
+	public static final RegistryObject<Block> POTTED_SACRED_VIOLET = BLOCKS.register("potted_sacred_violet", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), SACRED_VIOLET, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
 
 	//Signs
 	public static final RegistryObject<Block> SACREDWOOD_SIGN = BLOCKS.register("sacredwood_sign", () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.WOOD).sound(SoundType.WOOD).doesNotBlockMovement().hardnessAndResistance(1, 1), ModWoodTypes.SACREDWOOD));
@@ -123,6 +139,10 @@ public class TOOSBlocks {
 	//Crops
 	public static final RegistryObject<Block> SWEET_POTATOES = BLOCKS.register("sweet_potatoes", () -> new SweetPotatoBlock(AbstractBlock.Properties.from(Blocks.POTATOES)));
 	public static final RegistryObject<Block> BARLEY = BLOCKS.register("barley", () -> new BarleyBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+	private static boolean needsPostProcessing(BlockState state, IBlockReader reader, BlockPos pos) {
+		return true;
+	}
 
 	public static <B extends Block> RegistryObject<B> registerBlock(String name, Supplier<? extends B> supplier, ItemGroup itemGroup) {
 		return registerBlock(name, supplier, itemGroup, true);

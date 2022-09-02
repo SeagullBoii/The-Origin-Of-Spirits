@@ -71,7 +71,7 @@ public class ModStructures {
          * However, while it does propagate the spacing to some correct dimensions from this map,
          * it seems it doesn't always work for code made dimensions as they read from this list beforehand.
          *
-         * Instead, we will use the WorldEvent.Load event in ModWorldEvents to add the structure
+         * Instead, we will use the WorldEvent.Load event in TOOSWorldEvents to add the structure
          * spacing from this list into that dimension or to do dimension blacklisting properly.
          * We also use our entry in DimensionStructuresSettings.DEFAULTS in WorldEvent.Load as well.
          *

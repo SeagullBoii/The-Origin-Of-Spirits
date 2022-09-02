@@ -190,9 +190,23 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerDropping(TOOSBlocks.GLOWKELP_PLANT.get(),TOOSBlocks.GLOWKELP.get());
         this.registerDropSelfLootTable(TOOSBlocks.GLOWKELP.get());
         this.registerDropSelfLootTable(TOOSBlocks.MAGIC_MAGNOLIA.get());
+        this.registerDropSelfLootTable(TOOSBlocks.BLESSED_ROSE.get());
+        this.registerDropSelfLootTable(TOOSBlocks.PEACE_LILY.get());
+        this.registerDropSelfLootTable(TOOSBlocks.CRYSTAL_LILY.get());
+        this.registerDropSelfLootTable(TOOSBlocks.RED_PERIWINKLE.get());
+        this.registerDropSelfLootTable(TOOSBlocks.ORANGE_PERIWINKLE.get());
+        this.registerDropSelfLootTable(TOOSBlocks.VIOLET_PERIWINKLE.get());
+        this.registerDropSelfLootTable(TOOSBlocks.SACRED_VIOLET.get());
 
         //Flower Pots
         this.registerFlowerPot(TOOSBlocks.POTTED_MAGIC_MAGNOLIA.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_BLESSED_ROSE.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_PEACE_LILY.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_CRYSTAL_LILY.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_RED_PERIWINKLE.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_ORANGE_PERIWINKLE.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_VIOLET_PERIWINKLE.get());
+        this.registerFlowerPot(TOOSBlocks.POTTED_SACRED_VIOLET.get());
 
         //Crops
         this.registerLootTable(TOOSBlocks.SWEET_POTATOES.get(), withExplosionDecay(TOOSBlocks.SWEET_POTATOES.get(), LootTable.builder()

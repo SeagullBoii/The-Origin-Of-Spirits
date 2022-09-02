@@ -62,7 +62,7 @@ public class SummonedSoulEntity extends OriginofspiritsModElements.ModElement {
 			ammma = ammma.createMutableAttribute(Attributes.MOVEMENT_SPEED, 0.4);
 			ammma = ammma.createMutableAttribute(Attributes.MAX_HEALTH, 30);
 			ammma = ammma.createMutableAttribute(Attributes.ARMOR, 0);
-			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 3);
+			ammma = ammma.createMutableAttribute(Attributes.ATTACK_DAMAGE, 7);
 			ammma = ammma.createMutableAttribute(Attributes.FLYING_SPEED, 0.4);
 			event.put(entity, ammma.create());
 		}

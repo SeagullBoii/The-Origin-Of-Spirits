@@ -1,6 +1,7 @@
 package net.seagullboi.originofspirits.block.tile_entities;
 
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -17,6 +18,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.seagullboi.originofspirits.api.IInventoryHandlingBlockEntity;
+import net.seagullboi.originofspirits.block.HardSugarCaneBlock;
 import net.seagullboi.originofspirits.block.tile_entities.recipes.PressingMachineRecipe;
 import net.seagullboi.originofspirits.registry.ModTileEntities;
 
@@ -29,7 +31,9 @@ public class PressingMachineTileEntity extends TileEntity implements IInventoryH
 
     public final ItemStackHandler itemHandler = createHandler();
     public final LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
-    public static ArrayList<Item> inputs = new ArrayList<>(Arrays.asList(Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND));
+    public static ArrayList<Item> multipleResultInputs = new ArrayList<>(Arrays.asList(Blocks.GLOWSTONE.asItem()));
+    public static ArrayList<Item> inputs = new ArrayList<>(Arrays.asList(Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND, Items.SUGAR_CANE, HardSugarCaneBlock.block.asItem(),
+                                           Blocks.GLOWSTONE.asItem()));
     public boolean isPowered = false;
     public int progressTimer = 0;
     public boolean progressIncreasing = true;
@@ -95,24 +99,31 @@ public class PressingMachineTileEntity extends TileEntity implements IInventoryH
             }
         } else if (side != Direction.DOWN || side != Direction.UP) {
             if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
-                world.notifyBlockUpdate(pos, this.getBlockState(), this.getBlockState(), 3);
-                return handler.cast();
+                if (multipleResultInputs.contains(itemHandler.getStackInSlot(0).getItem())) {
+                    if (getMultipleResults(16, itemHandler.getStackInSlot(0))) {
+                        world.notifyBlockUpdate(pos, this.getBlockState(), this.getBlockState(), 3);
+                        return handler.cast();
+                    }
+                } else {
+                    world.notifyBlockUpdate(pos, this.getBlockState(), this.getBlockState(), 3);
+                    return handler.cast();
+                }
             }
         }
 
         return super.getCapability(cap, side);
     }
 
+    public boolean getMultipleResults(int count, ItemStack stack) {
+        return multipleResultInputs.contains(stack.getItem()) && stack.getCount() < count;
+    }
+
     public boolean isPowered() {
         return world.isBlockPowered(pos);
     }
 
-    public ItemStack getItem() {
-        return itemHandler.getStackInSlot(0);
-    }
-
     public void craft(BlockPos pos) {
-        PressingMachineRecipe.craftTokens(itemHandler, pos, world, this);
+        PressingMachineRecipe.craft(itemHandler, pos, world, this);
     }
 
     @Override

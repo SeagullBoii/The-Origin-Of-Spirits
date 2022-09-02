@@ -20,5 +20,10 @@
     "welcome_to_the_origin_of_spirits": {
       "trigger": "minecraft:impossible"
     }
+  },
+  "rewards": {
+    "loot": [
+      "originofspirits:toos_book_grant"
+    ]
   }
 }

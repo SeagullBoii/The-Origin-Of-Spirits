@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "originofspirits:items/diamond_gun_upgrade_token"
-  }
-}

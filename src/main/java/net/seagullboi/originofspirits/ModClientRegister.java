@@ -64,6 +64,20 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_MAGIC_MAGNOLIA.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.PRESSING_MACHINE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.SWEET_POTATOES.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.BLESSED_ROSE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_BLESSED_ROSE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.CRYSTAL_LILY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_CRYSTAL_LILY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.VIOLET_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_VIOLET_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.RED_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_RED_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.ORANGE_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_ORANGE_PERIWINKLE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.PEACE_LILY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_PEACE_LILY.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.SACRED_VIOLET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_SACRED_VIOLET.get(), RenderType.getCutout());
     }
 
     @OnlyIn(Dist.CLIENT)
