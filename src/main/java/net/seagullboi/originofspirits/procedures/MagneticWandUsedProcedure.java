@@ -107,7 +107,7 @@ public class MagneticWandUsedProcedure {
 		if (entity instanceof LivingEntity) {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote()) {
-				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, (float) 4, (int) 0);
+				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, 2.5, (int) 0);
 			}
 		}
 		entity.rotationYaw = (float) ((Yaw + 8));
@@ -122,7 +122,7 @@ public class MagneticWandUsedProcedure {
 		if (entity instanceof LivingEntity) {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote()) {
-				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, (float) 4, (int) 0);
+				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, 2.5, (int) 0);
 			}
 		}
 		entity.rotationYaw = (float) ((Yaw - 8));
@@ -137,7 +137,7 @@ public class MagneticWandUsedProcedure {
 		if (entity instanceof LivingEntity) {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote()) {
-				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, (float) 4, (int) 0);
+				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, 2.5, (int) 0);
 			}
 		}
 		entity.rotationYaw = (float) ((Yaw - 4));
@@ -152,7 +152,7 @@ public class MagneticWandUsedProcedure {
 		if (entity instanceof LivingEntity) {
 			Entity _ent = entity;
 			if (!_ent.world.isRemote()) {
-				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, (float) 4, (int) 0);
+				MagneticWandItem.shoot(_ent.world, (LivingEntity) entity, new Random(), (float) 1, 2.5, (int) 0);
 			}
 		}
 		entity.rotationYaw = (float) (Yaw);

@@ -80,7 +80,7 @@ public class MagneticWandItem extends OriginofspiritsModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("\u00A726 \u00A72Magic \u00A72Damage"));
+			list.add(new StringTextComponent("\u00A725-6 \u00A72Magic \u00A72Damage"));
 			list.add(new StringTextComponent("\u00A7b[1 Mana Cost]"));
 		}
 
@@ -107,7 +107,7 @@ public class MagneticWandItem extends OriginofspiritsModElements.ModElement {
 						ManaCountCondition2Procedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
 								.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll))) {
 
-					ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 5, -1);
+					ArrowCustomEntity entityarrow = shoot(world, entity, random, 1f, 3, -1);
 
 					itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 

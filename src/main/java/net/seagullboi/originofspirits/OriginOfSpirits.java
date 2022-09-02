@@ -1,31 +1,21 @@
 package net.seagullboi.originofspirits;
 
 import net.minecraft.block.Block;
-import net.minecraft.data.DataGenerator;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.EntityType;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
-import net.seagullboi.originofspirits.datagen.TOOSBlockTagsProvider;
-import net.seagullboi.originofspirits.datagen.TOOSLangProvider;
-import net.seagullboi.originofspirits.datagen.TOOSLootTableProvider;
-import net.seagullboi.originofspirits.datagen.TOOSRecipeProvider;
-import net.seagullboi.originofspirits.datagen.client.TOOSBlockItemModelProvider;
-import net.seagullboi.originofspirits.datagen.client.TOOSBlockStateProvider;
-import net.seagullboi.originofspirits.datagen.client.TOOSItemModelProvider;
 import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.registry.*;
 import org.apache.logging.log4j.LogManager;
@@ -50,7 +40,6 @@ public class OriginOfSpirits {
         eventBus.register(this);
         eventBus.addListener(this::init);
         eventBus.addListener(this::clientLoad);
-        eventBus.addListener(this::gatherData);
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
 
         TOOSItems.ITEMS.register(eventBus);
@@ -65,21 +54,6 @@ public class OriginOfSpirits {
         //Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-    }
-
-
-    private void gatherData(final GatherDataEvent event) {
-        DataGenerator dataGenerator = event.getGenerator();
-        final ExistingFileHelper efh = event.getExistingFileHelper();
-        if (event.includeServer()) {
-            dataGenerator.addProvider(new TOOSBlockStateProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSBlockItemModelProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSItemModelProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSLootTableProvider(dataGenerator));
-            dataGenerator.addProvider(new TOOSRecipeProvider(dataGenerator));
-            dataGenerator.addProvider(new TOOSBlockTagsProvider(dataGenerator, efh));
-            dataGenerator.addProvider(new TOOSLangProvider(dataGenerator, "en_us_test"));
-        }
     }
 
     private void init(FMLCommonSetupEvent event) {
