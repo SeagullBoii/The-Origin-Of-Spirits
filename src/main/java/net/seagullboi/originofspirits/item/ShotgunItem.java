@@ -32,7 +32,7 @@ public class ShotgunItem extends Item {
     @Override
     public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
         super.addInformation(itemstack, world, list, flag);
-        list.add(new StringTextComponent("\u00A725 \u00A72Ranged \u00A72Damage"));
+        list.add(new StringTextComponent("\u00A722.5 - 12.5 \u00A72Ranged \u00A72Damage"));
         list.add(new StringTextComponent("\u00A77Level: \u00A7fIron"));
         //Weapon Mod
         if (itemstack.getOrCreateTag().getInt("weapon_mod") <= 0) {
@@ -73,8 +73,6 @@ public class ShotgunItem extends Item {
                     entity.inventory.func_234564_a_(stack -> shells.getItem() == stack.getItem(), 1, entity.container.func_234641_j_());
 
                     if (player.getHeldItemMainhand().getItem() == this) {
-
-
                         entity.getHeldItemMainhand().damageItem(1, player, (entityIn) -> entity.sendBreakAnimation(EquipmentSlotType.MAINHAND));
                     } else if (player.getHeldItemOffhand().getItem() == this) {
                         entity.getHeldItemOffhand().damageItem(1, player, (entityIn) -> entity.sendBreakAnimation(EquipmentSlotType.OFFHAND));

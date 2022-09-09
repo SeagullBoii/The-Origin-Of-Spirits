@@ -41,7 +41,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
 import net.seagullboi.originofspirits.item.GiantClamItemItem;
-import net.seagullboi.originofspirits.entity.renderer.GiantClamRenderer;
+import net.seagullboi.originofspirits.client.renderer.GiantClamRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Map;

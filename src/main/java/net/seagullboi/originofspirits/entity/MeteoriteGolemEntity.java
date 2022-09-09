@@ -41,7 +41,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.MeteoriteGolemRenderer;
+import net.seagullboi.originofspirits.client.renderer.MeteoriteGolemRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 @OriginofspiritsModElements.ModElement.Tag

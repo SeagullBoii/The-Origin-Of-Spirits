@@ -1,178 +1,109 @@
 
 package net.seagullboi.originofspirits.block;
 
-import net.minecraft.block.material.MaterialColor;
-import net.minecraftforge.registries.ObjectHolder;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.common.util.ForgeSoundType;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorldReader;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.util.math.vector.Vector3d;
-import net.minecraft.util.math.shapes.VoxelShapes;
-import net.minecraft.util.math.shapes.VoxelShape;
-import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Direction;
-import net.minecraft.state.properties.BlockStateProperties;
-import net.minecraft.state.StateContainer;
-import net.minecraft.state.BooleanProperty;
-import net.minecraft.item.Item;
-import net.minecraft.item.BlockItemUseContext;
-import net.minecraft.item.BlockItem;
-import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.FluidState;
+import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.IWaterLoggable;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.Block;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.fluid.Fluids;
+import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.state.BooleanProperty;
+import net.minecraft.state.StateContainer;
+import net.minecraft.state.properties.BlockStateProperties;
+import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.shapes.ISelectionContext;
+import net.minecraft.util.math.shapes.VoxelShape;
+import net.minecraft.util.math.shapes.VoxelShapes;
+import net.minecraft.util.math.vector.Vector3d;
+import net.minecraft.world.IBlockReader;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.IWorldReader;
+import net.minecraft.world.World;
+import net.seagullboi.originofspirits.potion.CursedPotionEffect;
+import net.seagullboi.originofspirits.world.dimension.TheSkyRealmsDimension;
+public class CursedFireBlock extends Block implements IWaterLoggable {
+	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-import net.seagullboi.originofspirits.procedures.CursedFireEntityCollidesInTheBlockProcedure;
-import net.seagullboi.originofspirits.procedures.CursedFireBlockValidPlacementConditionProcedure;
-import net.seagullboi.originofspirits.procedures.CursedFireBlockAddedProcedure;
-import net.seagullboi.originofspirits.OriginofspiritsModElements;
-
-import java.util.stream.Stream;
-import java.util.Map;
-import java.util.HashMap;
-import java.util.AbstractMap;
-
-@OriginofspiritsModElements.ModElement.Tag
-public class CursedFireBlock extends OriginofspiritsModElements.ModElement {
-	@ObjectHolder("originofspirits:cursed_fire")
-	public static final Block block = null;
-
-	public CursedFireBlock(OriginofspiritsModElements instance) {
-		super(instance, 663);
+	public CursedFireBlock(AbstractBlock.Properties properties) {
+		super(properties);
+		this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
 	}
 
 	@Override
-	public void initElements() {
-		elements.blocks.add(() -> new CustomBlock());
-		elements.items.add(() -> new BlockItem(block, new Item.Properties().group(null)).setRegistryName(block.getRegistryName()));
+	public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
+		return state.getFluidState().isEmpty();
 	}
 
 	@Override
-	@OnlyIn(Dist.CLIENT)
-	public void clientLoad(FMLClientSetupEvent event) {
-		RenderTypeLookup.setRenderLayer(block, RenderType.getCutout());
+	public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
+		return 0;
 	}
 
-	public static class CustomBlock extends Block implements IWaterLoggable {
-		public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	@Override
+	public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
+		Vector3d offset = state.getOffset(world, pos);
+		return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 0.5, 16)).withOffset(offset.x, offset.y, offset.z);
+	}
 
-		public CustomBlock() {
-			super(Block.Properties.create(Material.FIRE, MaterialColor.PURPLE)
-					.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("block.fire.ambient")),
-							() -> new SoundEvent(new ResourceLocation("block.fire.ambient")),
-							() -> new SoundEvent(new ResourceLocation("block.fire.ambient")),
-							() -> new SoundEvent(new ResourceLocation("block.fire.ambient")),
-							() -> new SoundEvent(new ResourceLocation("block.fire.ambient"))))
-					.hardnessAndResistance(0f, 0f).setLightLevel(s -> 0).doesNotBlockMovement().speedFactor(0.9f).jumpFactor(0.9f).notSolid()
-					.setNeedsPostProcessing((bs, br, bp) -> true).setEmmisiveRendering((bs, br, bp) -> true).setOpaque((bs, br, bp) -> false));
-			this.setDefaultState(this.stateContainer.getBaseState().with(WATERLOGGED, false));
-			setRegistryName("cursed_fire");
+	@Override
+	public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
+		if (worldIn instanceof IWorld) {
+			IWorld world = (IWorld) worldIn;
+			return world.getBlockState(pos.down()).isSolidSide(world, pos.down(), Direction.UP);
 		}
+		return super.isValidPosition(blockstate, worldIn, pos);
+	}
 
-		@Override
-		public boolean propagatesSkylightDown(BlockState state, IBlockReader reader, BlockPos pos) {
-			return state.getFluidState().isEmpty();
+	@Override
+	public BlockState getStateForPlacement(BlockItemUseContext context) {
+		boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
+		return this.getDefaultState().with(WATERLOGGED, flag);
+	}
+
+	@Override
+	protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
+		builder.add(WATERLOGGED);
+	}
+
+	@Override
+	public FluidState getFluidState(BlockState state) {
+		return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
+	}
+
+	@Override
+	public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos,
+										  BlockPos facingPos) {
+		if (state.get(WATERLOGGED)) {
+			world.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
 		}
+		return !state.isValidPosition(world, currentPos) ? Blocks.AIR.getDefaultState() : super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
+	}
 
-		@Override
-		public int getOpacity(BlockState state, IBlockReader worldIn, BlockPos pos) {
-			return 0;
+	@Override
+	public boolean isReplaceable(BlockState state, BlockItemUseContext context) {
+		return context.getItem().getItem() != this.asItem();
+	}
+
+	@Override
+	public void onBlockAdded(BlockState blockstate, World world, BlockPos pos, BlockState oldState, boolean moving) {
+		super.onBlockAdded(blockstate, world, pos, oldState, moving);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		if (world instanceof World) {
+			TheSkyRealmsDimension.portal.portalSpawn(world, pos.up());
 		}
+	}
 
-		@Override
-		public VoxelShape getShape(BlockState state, IBlockReader world, BlockPos pos, ISelectionContext context) {
-			Vector3d offset = state.getOffset(world, pos);
-			return VoxelShapes.or(makeCuboidShape(0, 0, 0, 16, 0.5, 16)
-
-			)
-
-					.withOffset(offset.x, offset.y, offset.z);
+	@Override
+	public void onEntityCollision(BlockState blockstate, World world, BlockPos pos, Entity entity) {
+		super.onEntityCollision(blockstate, world, pos, entity);
+		if (entity instanceof LivingEntity) {
+			((LivingEntity) entity).addPotionEffect(new EffectInstance(CursedPotionEffect.potion, 20, 0, false, true));
 		}
-
-		@Override
-		public boolean isValidPosition(BlockState blockstate, IWorldReader worldIn, BlockPos pos) {
-			if (worldIn instanceof IWorld) {
-				IWorld world = (IWorld) worldIn;
-				int x = pos.getX();
-				int y = pos.getY();
-				int z = pos.getZ();
-				return CursedFireBlockValidPlacementConditionProcedure.executeProcedure(Stream
-						.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x),
-								new AbstractMap.SimpleEntry<>("y", y), new AbstractMap.SimpleEntry<>("z", z))
-						.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-			}
-			return super.isValidPosition(blockstate, worldIn, pos);
-		}
-
-		@Override
-		public BlockState getStateForPlacement(BlockItemUseContext context) {
-			boolean flag = context.getWorld().getFluidState(context.getPos()).getFluid() == Fluids.WATER;
-			return this.getDefaultState().with(WATERLOGGED, flag);
-		}
-
-		@Override
-		protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
-			builder.add(WATERLOGGED);
-		}
-
-		@Override
-		public FluidState getFluidState(BlockState state) {
-			return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
-		}
-
-		@Override
-		public BlockState updatePostPlacement(BlockState state, Direction facing, BlockState facingState, IWorld world, BlockPos currentPos,
-				BlockPos facingPos) {
-			if (state.get(WATERLOGGED)) {
-				world.getPendingFluidTicks().scheduleTick(currentPos, Fluids.WATER, Fluids.WATER.getTickRate(world));
-			}
-			return !state.isValidPosition(world, currentPos)
-					? Blocks.AIR.getDefaultState()
-					: super.updatePostPlacement(state, facing, facingState, world, currentPos, facingPos);
-		}
-
-		@Override
-		public boolean isReplaceable(BlockState state, BlockItemUseContext context) {
-			return context.getItem().getItem() != this.asItem();
-		}
-
-		@Override
-		public void onBlockAdded(BlockState blockstate, World world, BlockPos pos, BlockState oldState, boolean moving) {
-			super.onBlockAdded(blockstate, world, pos, oldState, moving);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-
-			CursedFireBlockAddedProcedure.executeProcedure(Stream
-					.of(new AbstractMap.SimpleEntry<>("world", world), new AbstractMap.SimpleEntry<>("x", x), new AbstractMap.SimpleEntry<>("y", y),
-							new AbstractMap.SimpleEntry<>("z", z))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
-
-		@Override
-		public void onEntityCollision(BlockState blockstate, World world, BlockPos pos, Entity entity) {
-			super.onEntityCollision(blockstate, world, pos, entity);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-
-			CursedFireEntityCollidesInTheBlockProcedure.executeProcedure(Stream.of(new AbstractMap.SimpleEntry<>("entity", entity))
-					.collect(HashMap::new, (_m, _e) -> _m.put(_e.getKey(), _e.getValue()), Map::putAll));
-		}
+		entity.setFire(3);
 	}
 }

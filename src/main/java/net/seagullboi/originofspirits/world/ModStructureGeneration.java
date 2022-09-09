@@ -1,7 +1,7 @@
 package net.seagullboi.originofspirits.world;
 
 import net.seagullboi.originofspirits.api.WorldGenUtils;
-import net.seagullboi.originofspirits.registry.ModStructures;
+import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;

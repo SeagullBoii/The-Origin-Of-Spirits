@@ -32,7 +32,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.seagullboi.originofspirits.procedures.EnchanterOnEntityTickUpdateProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.EnchanterRenderer;
+import net.seagullboi.originofspirits.client.renderer.EnchanterRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Collections;

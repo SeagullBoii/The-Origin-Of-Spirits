@@ -36,7 +36,7 @@ import net.seagullboi.originofspirits.procedures.TridacnaStaffUsedProcedure;
 import net.seagullboi.originofspirits.procedures.TridacnaBulletTickProcedure;
 import net.seagullboi.originofspirits.procedures.ElectricHarpoonCanUseRangedItemProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.TridacnaStaffRenderer;
+import net.seagullboi.originofspirits.client.renderer.TridacnaStaffRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

@@ -3,7 +3,7 @@ package net.seagullboi.originofspirits.entity;
 
 import net.seagullboi.originofspirits.Conditions;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.entity.renderer.JellyfishRenderer;
+import net.seagullboi.originofspirits.client.renderer.JellyfishRenderer;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
 import net.minecraft.entity.*;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;

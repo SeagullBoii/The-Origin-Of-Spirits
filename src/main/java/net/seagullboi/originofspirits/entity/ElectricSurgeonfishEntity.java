@@ -38,7 +38,7 @@ import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 
 import net.seagullboi.originofspirits.procedures.ElectricSurgeonfishEntityDiesProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.ElectricSurgeonfishRenderer;
+import net.seagullboi.originofspirits.client.renderer.ElectricSurgeonfishRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

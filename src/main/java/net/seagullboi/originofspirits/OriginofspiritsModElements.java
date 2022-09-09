@@ -94,8 +94,8 @@ public class OriginofspiritsModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "gauntlet_shoot")));
 		sounds.put(new ResourceLocation("originofspirits", "yoyo_swing"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "yoyo_swing")));
-		sounds.put(new ResourceLocation("originofspirits", "magic_staff_use"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "magic_staff_use")));
+		//sounds.put(new ResourceLocation("originofspirits", "magic_staff_use"),
+		//		new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "magic_staff_use")));
 		sounds.put(new ResourceLocation("originofspirits", "frog_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "frog_death")));
 		sounds.put(new ResourceLocation("originofspirits", "frog_hurt"),

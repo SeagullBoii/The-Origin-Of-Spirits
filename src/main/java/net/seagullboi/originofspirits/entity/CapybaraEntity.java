@@ -46,7 +46,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.Blocks;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.CapybaraRenderer;
+import net.seagullboi.originofspirits.client.renderer.CapybaraRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 import net.seagullboi.originofspirits.registry.TOOSItems;
 

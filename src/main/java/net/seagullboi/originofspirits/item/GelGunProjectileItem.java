@@ -34,7 +34,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.client.util.ITooltipFlag;
 
 import net.seagullboi.originofspirits.procedures.GelGunWhileProjectileFlyingTickProcedure;
-import net.seagullboi.originofspirits.entity.renderer.GelGunProjectileRenderer;
+import net.seagullboi.originofspirits.client.renderer.GelGunProjectileRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

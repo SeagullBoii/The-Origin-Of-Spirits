@@ -3,13 +3,19 @@ package net.seagullboi.originofspirits.registry;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.fluid.FlowingFluid;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.potion.Effects;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundEvents;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
+import net.minecraftforge.fluids.FluidAttributes;
+import net.minecraftforge.fluids.ForgeFlowingFluid;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
@@ -25,11 +31,13 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class TOOSBlocks {
+	public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, OriginOfSpirits.MOD_ID);
 	public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, OriginOfSpirits.MOD_ID);
 	public static final DeferredRegister<Item> BLOCK_ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, OriginOfSpirits.MOD_ID);
 
-	//Blocks
+	//Abyssal Stone
 	public static final RegistryObject<Block> ABYSSAL_STONE = registerBlock("abyssal_stone", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.BLACK).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
+
 	//Blessed Stone
 	public static final RegistryObject<Block> BLESSED_STONE = registerBlock("blessed_stone", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> BLESSED_STONE_SLAB = registerBlock("blessed_stone_slab", () -> new SlabBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
@@ -95,8 +103,11 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> CLOUD_BLOCK = registerBlock("cloud_block", () -> new CloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SNOW).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), false), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> RAINY_CLOUD_BLOCK = registerBlock("rainy_cloud_block", () -> new CloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.LIGHT_BLUE_TERRACOTTA).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), true), TOOSItemGroup.BLOCK_GROUP);
     public static final RegistryObject<Block> CURSED_CLOUD_BLOCK = registerBlock("cursed_cloud_block", () -> new CursedCloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SNOW).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), false,CursedPotionEffect.potion), TOOSItemGroup.BLOCK_GROUP);
-    public static final RegistryObject<Block> TEMPEST_CRYSTAL = registerBlock("tempest_crystal", () -> new GlassBlock(AbstractBlock.Properties.create(Material.GLASS, MaterialColor.LIGHT_BLUE).sound(SoundType.GLASS).hardnessAndResistance(1.0F, 3.0f).notSolid().setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
+    public static final RegistryObject<Block> TEMPEST_CRYSTAL = registerBlock("tempest_crystal", () -> new GlassBlock(AbstractBlock.Properties.create(Material.GLASS, MaterialColor.LIGHT_BLUE).sound(SoundType.GLASS).zeroHardnessAndResistance().notSolid().setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
+	public static final RegistryObject<Block> CURSED_FIRE = BLOCKS.register("cursed_fire", () -> new CursedFireBlock(AbstractBlock.Properties.create(Material.FIRE, MaterialColor.PURPLE).speedFactor(0.9f).jumpFactor(0.9f).notSolid().setNeedsPostProcessing(TOOSBlocks::needsPostProcessing).setEmmisiveRendering(TOOSBlocks::needsPostProcessing).setLightLevel((state) -> 10)));
 
+	//Cave Generators
+	public static final RegistryObject<Block> CURSED_CAVE_GENERATOR = BLOCKS.register("cursed_cave_gen", () -> new BasicCaveGenBlock(AbstractBlock.Properties.from(Blocks.BARRIER)));
 
 	//Advanced Blocks
 	public static final RegistryObject<Block> GUNSMITHING_TABLE_BLOCK = registerBlock("gunsmithing_table", () -> new GunsmithingTableBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.LIGHT_GRAY).sound(SoundType.METAL).hardnessAndResistance(3.5F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
@@ -119,6 +130,7 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> ORANGE_PERIWINKLE = registerBlock("orange_periwinkle", () -> new FlowerBlock(Effects.HEALTH_BOOST, 11, AbstractBlock.Properties.from(Blocks.DANDELION).notSolid()), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> PEACE_LILY = registerBlock("peace_lily", () -> new FlowerBlock(Effects.HEALTH_BOOST, 20, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> SACRED_VIOLET = registerBlock("sacret_violet", () -> new FlowerBlock(Effects.SLOWNESS, 5, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
+	public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush", () -> new BlueberryBushBlock(AbstractBlock.Properties.from(Blocks.SWEET_BERRY_BUSH)));
 
 	//Flower Pots
 	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
@@ -139,6 +151,19 @@ public class TOOSBlocks {
 	//Crops
 	public static final RegistryObject<Block> SWEET_POTATOES = BLOCKS.register("sweet_potatoes", () -> new SweetPotatoBlock(AbstractBlock.Properties.from(Blocks.POTATOES)));
 	public static final RegistryObject<Block> BARLEY = BLOCKS.register("barley", () -> new BarleyBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+	//Fluids
+
+	public static final ResourceLocation CURSED_LAVA_STILL_RL = new ResourceLocation(OriginOfSpirits.MOD_ID, "block/cursed_lava_still");
+	public static final ResourceLocation CURSED_LAVA_FLOWING_RL = new ResourceLocation(OriginOfSpirits.MOD_ID, "block/cursed_lava_flow");
+
+	public static final RegistryObject<FlowingFluid> CURSED_LAVA = FLUIDS.register("cursed_lava_still", () -> new ForgeFlowingFluid.Source(TOOSBlocks.CURSED_LAVA_PROPERTIES));
+	public static final RegistryObject<FlowingFluid> CURSED_LAVA_FLOWING = FLUIDS.register("cursed_lava_flowing", () -> new ForgeFlowingFluid.Flowing(TOOSBlocks.CURSED_LAVA_PROPERTIES));
+	public static final RegistryObject<FlowingFluidBlock> CURSED_LAVA_BLOCK = TOOSBlocks.BLOCKS.register("cursed_lava", () -> new CursedLavaFluid(() -> TOOSBlocks.CURSED_LAVA.get(), AbstractBlock.Properties.create(Material.LAVA, MaterialColor.PURPLE_TERRACOTTA).doesNotBlockMovement().hardnessAndResistance(100f).noDrops().setLightLevel(s -> 5)));
+	public static final ForgeFlowingFluid.Properties CURSED_LAVA_PROPERTIES = new ForgeFlowingFluid.Properties(
+			() -> CURSED_LAVA.get(), () -> CURSED_LAVA_FLOWING.get(), FluidAttributes.builder(CURSED_LAVA_STILL_RL, CURSED_LAVA_FLOWING_RL)
+			.luminosity(5).density(1000).viscosity(1000).temperature(1000).sound(SoundEvents.ITEM_BUCKET_EMPTY_LAVA)).slopeFindDistance(10).levelDecreasePerBlock(1).tickRate(10).explosionResistance(100f)
+			.block(() -> TOOSBlocks.CURSED_LAVA_BLOCK.get()).bucket(() -> TOOSItems.CURSED_LAVA_BUCKET.get());
 
 	private static boolean needsPostProcessing(BlockState state, IBlockReader reader, BlockPos pos) {
 		return true;

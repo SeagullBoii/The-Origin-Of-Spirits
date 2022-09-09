@@ -35,7 +35,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.procedures.EnderLightningSpawnOnInitialEntitySpawnProcedure;
-import net.seagullboi.originofspirits.entity.renderer.EnderLightningSpawnRenderer;
+import net.seagullboi.originofspirits.client.renderer.EnderLightningSpawnRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import javax.annotation.Nullable;

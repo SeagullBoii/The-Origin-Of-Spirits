@@ -35,7 +35,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.procedures.ClamFangOnInitialEntitySpawnProcedure;
-import net.seagullboi.originofspirits.entity.renderer.ClamFangRenderer;
+import net.seagullboi.originofspirits.client.renderer.ClamFangRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import javax.annotation.Nullable;

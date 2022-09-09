@@ -18,6 +18,8 @@ import net.minecraftforge.fml.network.NetworkRegistry;
 import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.registry.*;
+import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
+import net.seagullboi.originofspirits.registry.worldgen.TOOSFeatures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -45,11 +47,13 @@ public class OriginOfSpirits {
         TOOSItems.ITEMS.register(eventBus);
         TOOSBlocks.BLOCKS.register(eventBus);
         TOOSBlocks.BLOCK_ITEMS.register(eventBus);
+        TOOSBlocks.FLUIDS.register(eventBus);
         ModTileEntities.register(eventBus);
         TOOSContainers.register(eventBus);
         TOOSEntityTypes.register(eventBus);
         ModStructures.register(eventBus);
         TOOSSoundEvents.register(eventBus);
+        TOOSFeatures.register(eventBus);
 
         //Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));

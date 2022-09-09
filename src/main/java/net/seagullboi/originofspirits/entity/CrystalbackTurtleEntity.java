@@ -37,7 +37,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.CrystalbackTurtleRenderer;
+import net.seagullboi.originofspirits.client.renderer.CrystalbackTurtleRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 @OriginofspiritsModElements.ModElement.Tag

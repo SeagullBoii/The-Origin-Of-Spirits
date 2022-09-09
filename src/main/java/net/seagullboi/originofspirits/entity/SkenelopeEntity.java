@@ -46,7 +46,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.entity.AgeableEntity;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.SkenelopeRenderer;
+import net.seagullboi.originofspirits.client.renderer.SkenelopeRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 import net.seagullboi.originofspirits.registry.TOOSItems;
 

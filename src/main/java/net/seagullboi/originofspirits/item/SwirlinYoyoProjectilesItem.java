@@ -26,7 +26,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.seagullboi.originofspirits.entity.renderer.SwirlinYoyoProjectilesRenderer;
+import net.seagullboi.originofspirits.client.renderer.SwirlinYoyoProjectilesRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.*;

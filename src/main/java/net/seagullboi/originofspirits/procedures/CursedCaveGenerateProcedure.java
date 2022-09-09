@@ -4,7 +4,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.block.CursedFireBlock;
 import net.seagullboi.originofspirits.block.CursedGeyserBlock;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
 
@@ -43,7 +42,7 @@ public class CursedCaveGenerateProcedure {
 				if (0.05 >= Math.random()) {
 					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), CursedGeyserBlock.block.getDefaultState(), 3);
 				} else if (0.1 >= Math.random()) {
-					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), CursedFireBlock.block.getDefaultState(), 3);
+					world.setBlockState(new BlockPos((int) x, (int) y, (int) z), TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 				}
 				if (Math.random() < 0.5) {
 					world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), TOOSBlocks.DECEPTONE.get().getDefaultState(), 3);

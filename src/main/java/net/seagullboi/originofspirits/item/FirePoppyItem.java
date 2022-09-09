@@ -37,7 +37,7 @@ import net.seagullboi.originofspirits.procedures.FirePoppyProjectileHitsLivingEn
 import net.seagullboi.originofspirits.procedures.FirePoppyBulletTickProcedure;
 import net.seagullboi.originofspirits.procedures.ElectricHarpoonCanUseRangedItemProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.FirePoppyRenderer;
+import net.seagullboi.originofspirits.client.renderer.FirePoppyRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

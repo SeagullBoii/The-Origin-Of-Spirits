@@ -2,7 +2,7 @@
 package net.seagullboi.originofspirits.item;
 
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.entity.renderer.ClamSnapperRenderer;
+import net.seagullboi.originofspirits.client.renderer.ClamSnapperRenderer;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
 import net.seagullboi.originofspirits.procedures.ClamSnapperBulletTickProcedure;
 import net.seagullboi.originofspirits.registry.TOOSItems;

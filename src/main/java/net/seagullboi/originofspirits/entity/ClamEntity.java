@@ -39,7 +39,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.seagullboi.originofspirits.procedures.ClamOnEntityTickUpdateProcedure;
 import net.seagullboi.originofspirits.procedures.ClamEntityDiesProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.ClamRenderer;
+import net.seagullboi.originofspirits.client.renderer.ClamRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

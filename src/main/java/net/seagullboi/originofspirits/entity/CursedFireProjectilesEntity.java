@@ -42,7 +42,7 @@ import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.procedures.CursedFireProjectilesOnInitialEntitySpawnProcedure;
 import net.seagullboi.originofspirits.procedures.CursedFireProjectilesOnEntityTickUpdateProcedure;
-import net.seagullboi.originofspirits.entity.renderer.CursedFireProjectilesRenderer;
+import net.seagullboi.originofspirits.client.renderer.CursedFireProjectilesRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import javax.annotation.Nullable;

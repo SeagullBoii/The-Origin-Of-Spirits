@@ -21,6 +21,7 @@ import net.minecraft.util.IItemProvider;
 import net.minecraft.util.IStringSerializable;
 import net.minecraftforge.fml.RegistryObject;
 import net.seagullboi.originofspirits.block.BarleyBlock;
+import net.seagullboi.originofspirits.block.BlueberryBushBlock;
 import net.seagullboi.originofspirits.block.SweetPotatoBlock;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
 import net.seagullboi.originofspirits.registry.TOOSItems;
@@ -197,6 +198,7 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerDropSelfLootTable(TOOSBlocks.ORANGE_PERIWINKLE.get());
         this.registerDropSelfLootTable(TOOSBlocks.VIOLET_PERIWINKLE.get());
         this.registerDropSelfLootTable(TOOSBlocks.SACRED_VIOLET.get());
+        this.registerLootTable(TOOSBlocks.BLUEBERRY_BUSH.get(), (sweetBerry) -> withExplosionDecay(sweetBerry, LootTable.builder().addLootPool(LootPool.builder().acceptCondition(BlockStateProperty.builder(TOOSBlocks.BLUEBERRY_BUSH.get()).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(BlueberryBushBlock.AGE, 3))).addEntry(ItemLootEntry.builder(Items.SWEET_BERRIES)).acceptFunction(SetCount.builder(RandomValueRange.of(2.0F, 3.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE))).addLootPool(LootPool.builder().acceptCondition(BlockStateProperty.builder(Blocks.SWEET_BERRY_BUSH).fromProperties(StatePropertiesPredicate.Builder.newBuilder().withIntProp(SweetBerryBushBlock.AGE, 2))).addEntry(ItemLootEntry.builder(TOOSItems.BLUEBERRIES.get())).acceptFunction(SetCount.builder(RandomValueRange.of(1.0F, 3.0F))).acceptFunction(ApplyBonus.uniformBonusCount(Enchantments.FORTUNE)))));
 
         //Flower Pots
         this.registerFlowerPot(TOOSBlocks.POTTED_MAGIC_MAGNOLIA.get());
@@ -233,6 +235,8 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerDropSelfLootTable(TOOSBlocks.TEMPEST_CRYSTAL.get());
         this.registerDropSelfLootTable(TOOSBlocks.GUNSMITHING_TABLE_BLOCK.get());
         this.registerLootTable(TOOSBlocks.ABYSSAL_SPAWNER.get(), blockNoDrop());
+        this.registerLootTable(TOOSBlocks.CURSED_CAVE_GENERATOR.get(), blockNoDrop());
+        this.registerLootTable(TOOSBlocks.CURSED_FIRE.get(), blockNoDrop());
 
         //Machines
         this.registerDropSelfLootTable(TOOSBlocks.PRESSING_MACHINE.get());

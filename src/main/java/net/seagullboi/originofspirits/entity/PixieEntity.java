@@ -40,7 +40,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.PixieRenderer;
+import net.seagullboi.originofspirits.client.renderer.PixieRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import javax.annotation.Nullable;

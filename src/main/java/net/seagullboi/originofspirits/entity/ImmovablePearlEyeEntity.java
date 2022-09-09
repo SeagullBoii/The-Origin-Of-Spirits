@@ -40,7 +40,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.item.TridacnaStaffItem;
-import net.seagullboi.originofspirits.entity.renderer.ImmovablePearlEyeRenderer;
+import net.seagullboi.originofspirits.client.renderer.ImmovablePearlEyeRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Random;

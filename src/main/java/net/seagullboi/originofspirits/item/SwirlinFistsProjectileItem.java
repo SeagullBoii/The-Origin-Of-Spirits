@@ -29,7 +29,7 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.seagullboi.originofspirits.entity.renderer.SwirlinFistsProjectileRenderer;
+import net.seagullboi.originofspirits.client.renderer.SwirlinFistsProjectileRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Random;

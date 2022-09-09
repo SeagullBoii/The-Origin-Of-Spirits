@@ -38,7 +38,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.BlockState;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.FlyingFishRenderer;
+import net.seagullboi.originofspirits.client.renderer.FlyingFishRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Random;

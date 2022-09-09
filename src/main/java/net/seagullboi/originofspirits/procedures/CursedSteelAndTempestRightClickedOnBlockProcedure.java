@@ -1,37 +1,35 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.world.GameType;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.Hand;
-import net.minecraft.util.Direction;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.client.network.play.NetworkPlayerInfo;
-import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
-import net.minecraft.client.Minecraft;
 import net.minecraft.block.BlockState;
-
-import net.seagullboi.originofspirits.item.TheSkyRealmsItem;
-import net.seagullboi.originofspirits.block.CursedFireBlock;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
+import net.minecraft.client.network.play.NetworkPlayerInfo;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Direction;
+import net.minecraft.util.Hand;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.GameType;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.seagullboi.originofspirits.OriginOfSpirits;
+import net.seagullboi.originofspirits.item.TheSkyRealmsItem;
+import net.seagullboi.originofspirits.registry.TOOSBlocks;
 
-import java.util.Random;
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
 
 public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 	@Mod.EventBusSubscriber
@@ -126,7 +124,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) x, (int) (y + 1), (int) z))
 								&& world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).isSolidSide(world,
 										new BlockPos((int) x, (int) y, (int) z), Direction.UP)) {
-							world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {
@@ -197,7 +195,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) x, (int) (y - 1), (int) z))
 								&& world.getBlockState(new BlockPos((int) x, (int) y, (int) z)).isSolidSide(world,
 										new BlockPos((int) x, (int) y, (int) z), Direction.DOWN)) {
-							world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) (y - 1), (int) z),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {
@@ -268,7 +266,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) x, (int) y, (int) (z - 1)))
 								&& world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z - 1))).isSolidSide(world,
 										new BlockPos((int) x, (int) (y - 1), (int) (z - 1)), Direction.UP)) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z - 1)),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {
@@ -339,7 +337,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) x, (int) y, (int) (z + 1)))
 								&& world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) (z + 1))).isSolidSide(world,
 										new BlockPos((int) x, (int) (y - 1), (int) (z + 1)), Direction.UP)) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) (z + 1)),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {
@@ -410,7 +408,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) (x + 1), (int) y, (int) z))
 								&& world.getBlockState(new BlockPos((int) (x + 1), (int) (y - 1), (int) z)).isSolidSide(world,
 										new BlockPos((int) (x + 1), (int) (y - 1), (int) z), Direction.UP)) {
-							world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) (x + 1), (int) y, (int) z),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {
@@ -481,7 +479,7 @@ public class CursedSteelAndTempestRightClickedOnBlockProcedure {
 						if (world.isAirBlock(new BlockPos((int) (x - 1), (int) y, (int) z))
 								&& world.getBlockState(new BlockPos((int) (x - 1), (int) (y - 1), (int) z)).isSolidSide(world,
 										new BlockPos((int) (x - 1), (int) (y - 1), (int) z), Direction.UP)) {
-							world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z), CursedFireBlock.block.getDefaultState(), 3);
+							world.setBlockState(new BlockPos((int) (x - 1), (int) y, (int) z),  TOOSBlocks.CURSED_FIRE.get().getDefaultState(), 3);
 							if (((entity instanceof LivingEntity) ? ((LivingEntity) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 									.getItem() == TheSkyRealmsItem.block) {
 								if (entity instanceof LivingEntity) {

@@ -3,7 +3,7 @@ package net.seagullboi.originofspirits.entity;
 
 import net.seagullboi.originofspirits.Conditions;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.entity.renderer.BoxJellyfishRenderer;
+import net.seagullboi.originofspirits.client.renderer.BoxJellyfishRenderer;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
 import net.seagullboi.originofspirits.potion.VenomPotionEffect;
 import net.minecraft.entity.*;

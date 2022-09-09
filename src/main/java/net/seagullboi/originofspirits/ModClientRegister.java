@@ -16,7 +16,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.seagullboi.originofspirits.block.tile_entities.screen.GunsmithingTableScreen;
 import net.seagullboi.originofspirits.block.tile_entities.screen.PressingMachineScreen;
 import net.seagullboi.originofspirits.block.tile_entities.screen.PressingMachineTileRenderer;
-import net.seagullboi.originofspirits.entity.renderer.*;
+import net.seagullboi.originofspirits.client.renderer.*;
 import net.seagullboi.originofspirits.registry.*;
 
 @Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -46,6 +46,7 @@ public class ModClientRegister {
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_LASER.get(), ((IRenderFactory) EmptyRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CLUFF_CLOUD.get(), ((IRenderFactory) CluffCloudRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.BULLET.get(), ((IRenderFactory) BulletRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.MAGNETIC_RAY.get(), ((IRenderFactory) EmptyRenderer::new));
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -78,6 +79,12 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_PEACE_LILY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.SACRED_VIOLET.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.POTTED_SACRED_VIOLET.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.BLUEBERRY_BUSH.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_FIRE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA_FLOWING.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA_BLOCK.get(), RenderType.getTranslucent());
+
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -48,7 +48,7 @@ import net.minecraft.block.Blocks;
 import net.seagullboi.originofspirits.procedures.ClamEntityDiesProcedure;
 import net.seagullboi.originofspirits.procedures.BloodyClamOnEntityTickUpdateProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.BloodyClamRenderer;
+import net.seagullboi.originofspirits.client.renderer.BloodyClamRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

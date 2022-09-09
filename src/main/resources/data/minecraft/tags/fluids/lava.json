@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "originofspirits:cursed_lava",
+    "originofspirits:cursed_lava_still",
     "originofspirits:cursed_lava_flowing"
   ]
 }

@@ -33,7 +33,7 @@ import net.minecraft.entity.CreatureAttribute;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
 import net.seagullboi.originofspirits.item.LadleItem;
-import net.seagullboi.originofspirits.entity.renderer.VindicatorChefRenderer;
+import net.seagullboi.originofspirits.client.renderer.VindicatorChefRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 @OriginofspiritsModElements.ModElement.Tag

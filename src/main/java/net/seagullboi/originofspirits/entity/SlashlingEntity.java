@@ -42,7 +42,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.CreatureAttribute;
 
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.SlashlingRenderer;
+import net.seagullboi.originofspirits.client.renderer.SlashlingRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 import net.minecraft.entity.monster.EndermiteEntity;
 

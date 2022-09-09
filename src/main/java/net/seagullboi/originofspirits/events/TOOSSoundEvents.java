@@ -12,6 +12,7 @@ public class TOOSSoundEvents {
     public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, OriginOfSpirits.MOD_ID);
 
     //Weapons
+    public static final RegistryObject<SoundEvent> MAGIC_STAFF_USE = registerSoundEvent("magic_staff_use");
     public static final RegistryObject<SoundEvent> GUN = registerSoundEvent("gunshot");
     public static final RegistryObject<SoundEvent> SHOTGUN = registerSoundEvent("shotgun_shot");
 

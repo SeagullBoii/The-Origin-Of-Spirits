@@ -1,14 +1,12 @@
 
 package net.seagullboi.originofspirits.itemgroup;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
-
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemGroup;
-
-import net.seagullboi.originofspirits.item.BlueBerriesItem;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 @OriginofspiritsModElements.ModElement.Tag
 public class OriginOfSpiritsFoodItemGroup extends OriginofspiritsModElements.ModElement {
@@ -22,7 +20,7 @@ public class OriginOfSpiritsFoodItemGroup extends OriginofspiritsModElements.Mod
 			@OnlyIn(Dist.CLIENT)
 			@Override
 			public ItemStack createIcon() {
-				return new ItemStack(BlueBerriesItem.block);
+				return new ItemStack(TOOSItems.BLUEBERRIES.get());
 			}
 
 			@OnlyIn(Dist.CLIENT)

@@ -29,7 +29,7 @@ import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.ai.attributes.AttributeModifierMap;
 import net.minecraft.block.BlockState;
 
-import net.seagullboi.originofspirits.entity.renderer.SummonedSoulRenderer;
+import net.seagullboi.originofspirits.client.renderer.SummonedSoulRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.Random;

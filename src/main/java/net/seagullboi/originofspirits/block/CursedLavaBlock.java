@@ -2,65 +2,13 @@
 package net.seagullboi.originofspirits.block;
 
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsMiscItemGroup;
-import net.seagullboi.originofspirits.particle.CursedLavaParticleParticle;
-import net.seagullboi.originofspirits.procedures.CursedFireEntityCollidesInTheBlockProcedure;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.FlowingFluidBlock;
-import net.minecraft.block.material.Material;
-import net.minecraft.block.material.MaterialColor;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.entity.Entity;
-import net.minecraft.fluid.FlowingFluid;
-import net.minecraft.fluid.Fluid;
-import net.minecraft.fluid.FluidState;
-import net.minecraft.item.BucketItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.Items;
-import net.minecraft.item.Rarity;
-import net.minecraft.particles.IParticleData;
-import net.minecraft.state.StateContainer;
-import net.minecraft.util.Direction;
-import net.minecraft.util.RegistryKey;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.world.IBlockReader;
-import net.minecraft.world.ISeedReader;
-import net.minecraft.world.World;
-import net.minecraft.world.gen.ChunkGenerator;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.gen.feature.BlockStateFeatureConfig;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.LakesFeature;
-import net.minecraft.world.gen.placement.ChanceConfig;
-import net.minecraft.world.gen.placement.Placement;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fluids.FluidAttributes;
-import net.minecraftforge.fluids.ForgeFlowingFluid;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.ObjectHolder;
 
-import java.util.AbstractMap;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-import java.util.stream.Stream;
-
-@OriginofspiritsModElements.ModElement.Tag
+//@OriginofspiritsModElements.ModElement.Tag
 public class CursedLavaBlock extends OriginofspiritsModElements.ModElement {
-	@ObjectHolder("originofspirits:cursed_lava")
+	public CursedLavaBlock(OriginofspiritsModElements elements, int sortid) {
+		super(elements, sortid);
+	}
+	/*@ObjectHolder("originofspirits:cursed_lava")
 	public static final FlowingFluidBlock block = null;
 	@ObjectHolder("originofspirits:cursed_lava_bucket")
 	public static final Item bucket = null;
@@ -213,5 +161,5 @@ public class CursedLavaBlock extends OriginofspiritsModElements.ModElement {
 		if (!biomeCriteria)
 			return;
 		event.getGeneration().getFeatures(GenerationStage.Decoration.LOCAL_MODIFICATIONS).add(() -> configuredFeature);
-	}
+	}*/
 }

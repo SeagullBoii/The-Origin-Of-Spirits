@@ -28,7 +28,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.CreatureEntity;
 import net.minecraft.entity.CreatureAttribute;
 
-import net.seagullboi.originofspirits.entity.renderer.HorseshoeCrabRenderer;
+import net.seagullboi.originofspirits.client.renderer.HorseshoeCrabRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 @OriginofspiritsModElements.ModElement.Tag

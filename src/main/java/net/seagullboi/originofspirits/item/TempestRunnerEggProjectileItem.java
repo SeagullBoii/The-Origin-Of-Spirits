@@ -31,7 +31,7 @@ import net.minecraft.entity.Entity;
 
 import net.seagullboi.originofspirits.procedures.TempestRunnerEggProjectileRangedItemUsedProcedure;
 import net.seagullboi.originofspirits.procedures.TempestRunnerEggProjectileProjectileHitsBlockProcedure;
-import net.seagullboi.originofspirits.entity.renderer.TempestRunnerEggProjectileRenderer;
+import net.seagullboi.originofspirits.client.renderer.TempestRunnerEggProjectileRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

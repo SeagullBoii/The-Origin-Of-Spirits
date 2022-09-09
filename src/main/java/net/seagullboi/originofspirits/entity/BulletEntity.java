@@ -3,25 +3,17 @@ package net.seagullboi.originofspirits.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.AbstractArrowEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.IPacket;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.seagullboi.originofspirits.events.TOOSSoundEvents;
-import net.seagullboi.originofspirits.item.CursedFlamethrowerProjectileItem;
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 
 import javax.annotation.Nonnull;
@@ -45,12 +37,19 @@ public class BulletEntity extends AbstractArrowEntity {
     protected void onEntityHit(EntityRayTraceResult result) {
         super.onEntityHit(result);
         Entity entity = result.getEntity();
-        entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getOwner()), (float) this.getDamage());
+
+        if(getMaterial() == "shotgun" && entity.hurtResistantTime >=8 && Math.random() < 0.08) {
+            entity.hurtResistantTime = 0;
+        }
+
+        if (getMaterial() != "shotgun") {
+            entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getOwner()), (float) this.getDamage());
+        }
+
         if (!this.world.isRemote) {
             this.world.setEntityState(this, (byte) 3);
             this.remove();
         }
-
     }
 
     @Override
@@ -82,9 +81,6 @@ public class BulletEntity extends AbstractArrowEntity {
         world.addEntity(bullet);
         bullet.setNoGravTimer(noGravTimer);
         bullet.setMaterial(material);
-        double x = entity.getPosX();
-        double y = entity.getPosY();
-        double z = entity.getPosZ();
         return bullet;
     }
 

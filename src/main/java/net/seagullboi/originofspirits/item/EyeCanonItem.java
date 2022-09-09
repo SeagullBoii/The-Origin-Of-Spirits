@@ -1,11 +1,5 @@
 package net.seagullboi.originofspirits.item;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.seagullboi.originofspirits.OriginofspiritsModVariables;
-import net.seagullboi.originofspirits.api.IConsumesMana;
-import net.seagullboi.originofspirits.api.IWeaponMod;
-import net.seagullboi.originofspirits.entity.CursedLaserProjectile;
-import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
@@ -19,9 +13,14 @@ import net.minecraft.util.*;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
+import net.seagullboi.originofspirits.OriginofspiritsModVariables;
+import net.seagullboi.originofspirits.api.IConsumesMana;
+import net.seagullboi.originofspirits.api.IWeaponMod;
+import net.seagullboi.originofspirits.entity.CursedLaserProjectile;
+import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.util.GlobalVarUtil;
 
 import java.util.List;
-import java.util.Random;
 
     public class EyeCanonItem extends Item implements IConsumesMana, IWeaponMod {
 
@@ -99,7 +98,9 @@ import java.util.Random;
                         stack.damageItem(1, entityIn, (entity) -> entity.sendBreakAnimation(EquipmentSlotType.OFFHAND));
                     // Consumes Mana
                     if (entityIn instanceof PlayerEntity) {
-                        consumeMana((PlayerEntity) entityIn, worldIn);
+                        PlayerEntity playerEntity = (PlayerEntity) entityIn;
+                        GlobalVarUtil.setMana(playerEntity, GlobalVarUtil.getMana(playerEntity) - 2);
+                        GlobalVarUtil.setManaCooldown(playerEntity,40);
                     }
                 }
                 System.out.println(this.isFullyCharged());
@@ -209,21 +210,6 @@ import java.util.Random;
         @Override
         public int getManaConsumed() {
             return 2;
-        }
-
-        @Override
-        public void consumeMana(PlayerEntity player, World worldIn) {
-            int mana = (int) (player.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new OriginofspiritsModVariables.PlayerVariables())).Mana;
-
-            player.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-                capability.Mana = mana - getManaConsumed();
-                capability.syncPlayerVariables(player);
-            });
-
-            player.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-                capability.ManaCooldown = 40;
-                capability.syncPlayerVariables(player);
-            });
         }
 
         @Override

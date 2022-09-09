@@ -30,7 +30,7 @@ import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
 import net.seagullboi.originofspirits.procedures.HexedSpearProjectileProjectileHitsLivingEntityProcedure;
-import net.seagullboi.originofspirits.entity.renderer.HexedSpearProjectileRenderer;
+import net.seagullboi.originofspirits.client.renderer.HexedSpearProjectileRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

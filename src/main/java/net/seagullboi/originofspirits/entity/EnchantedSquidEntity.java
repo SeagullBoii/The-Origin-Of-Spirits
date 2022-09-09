@@ -41,7 +41,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.seagullboi.originofspirits.procedures.EnchantedSquidEntityIsHurtProcedure;
 import net.seagullboi.originofspirits.procedures.EnchantedSquidEntityDiesProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.EnchantedSquidRenderer;
+import net.seagullboi.originofspirits.client.renderer.EnchantedSquidRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

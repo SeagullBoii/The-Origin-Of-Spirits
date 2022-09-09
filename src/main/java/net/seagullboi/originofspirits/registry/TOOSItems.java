@@ -24,7 +24,8 @@ public class TOOSItems {
     public static final RegistryObject<Item> GLOWKELP = ITEMS.register("glowkelp", () -> new BlockItem(TOOSBlocks.GLOWKELP.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
 
     //Food
-    public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register("sweet_potato", () -> new BlockItem(net.seagullboi.originofspirits.registry.TOOSBlocks.SWEET_POTATOES.get(), new Item.Properties().food(new Food.Builder().hunger(3).saturation(0.5f).build()).group(OriginOfSpiritsFoodItemGroup.tab)));
+    public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register("sweet_potato", () -> new BlockItem(TOOSBlocks.SWEET_POTATOES.get(), new Item.Properties().food(new Food.Builder().hunger(3).saturation(0.5f).build()).group(OriginOfSpiritsFoodItemGroup.tab)));
+    public static final RegistryObject<Item> BLUEBERRIES = ITEMS.register("blueberries", () -> new BlockItem(TOOSBlocks.BLUEBERRY_BUSH.get(), new Item.Properties().food(new Food.Builder().hunger(2).saturation(0.5f).build()).group(OriginOfSpiritsFoodItemGroup.tab)));
 
     //Weapons
     public static final RegistryObject<Item> TRIDACNA_SPEAR = ITEMS.register("tridacna_spear", () -> new TridacnaSpearItem(ModItemTier.TRIDACNA,-1,-2.6f, new Item.Properties().maxStackSize(1).rarity(ModRarities.SPITE).group(OriginOfSpiritsCombatItemGroup.tab)));
@@ -33,21 +34,18 @@ public class TOOSItems {
     public static final RegistryObject<Item> PISTOL = ITEMS.register("pistol", () -> new PistolItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> SHOTGUN = ITEMS.register("shotgun", () -> new ShotgunItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> REDSTONE_HANDGUN = ITEMS.register("redstone_handgun", () -> new RedstoneHandgunItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
+    public static final RegistryObject<Item> MAGNETIC_WAND = ITEMS.register("magnetic_wand", () -> new MagneticWandItem(-1, 5, ItemTier.IRON, new Item.Properties().maxStackSize(1).maxDamage(550).group(OriginOfSpiritsCombatItemGroup.tab)));
 
+    //Buckets
+    public static final RegistryObject<Item> CURSED_LAVA_BUCKET = ITEMS.register("cursed_lava_bucket", () -> new BucketItem(() -> TOOSBlocks.CURSED_LAVA.get(), new Item.Properties().maxStackSize(1).group(OriginOfSpiritsMiscItemGroup.tab)));
 
     //Signs
-    public static final RegistryObject<Item> SACREDWOOD_SIGN = ITEMS.register("sacredwood_sign",
-            () -> new SignItem(new Item.Properties().maxStackSize(16).group(TOOSItemGroup.BLOCK_GROUP),
-                    net.seagullboi.originofspirits.registry.TOOSBlocks.SACREDWOOD_SIGN.get(), net.seagullboi.originofspirits.registry.TOOSBlocks.SACREDWOOD_WALL_SIGN.get()));
-    public static final RegistryObject<Item> SWIRLWOOD_SIGN = ITEMS.register("swirlwood_sign",
-            () -> new SignItem(new Item.Properties().maxStackSize(16).group(TOOSItemGroup.BLOCK_GROUP),
-                    net.seagullboi.originofspirits.registry.TOOSBlocks.SWIRLWOOD_SIGN.get(), net.seagullboi.originofspirits.registry.TOOSBlocks.SWIRLWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> SACREDWOOD_SIGN = ITEMS.register("sacredwood_sign", () -> new SignItem(new Item.Properties().maxStackSize(16).group(TOOSItemGroup.BLOCK_GROUP), TOOSBlocks.SACREDWOOD_SIGN.get(),TOOSBlocks.SACREDWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> SWIRLWOOD_SIGN = ITEMS.register("swirlwood_sign", () -> new SignItem(new Item.Properties().maxStackSize(16).group(TOOSItemGroup.BLOCK_GROUP), TOOSBlocks.SWIRLWOOD_SIGN.get(),TOOSBlocks.SWIRLWOOD_WALL_SIGN.get()));
 
     //Boats
-    public static final RegistryObject<Item> SACREDWOOD_BOAT = ITEMS.register("sacredwood_boat",
-            () -> new SacredwoodBoatItem(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab), "sacredwood"));
-    public static final RegistryObject<Item> SWIRLWOOD_BOAT = ITEMS.register("swirlwood_boat",
-            () -> new SwirlwoodBoatItem(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab), "swirlwood"));
+    public static final RegistryObject<Item> SACREDWOOD_BOAT = ITEMS.register("sacredwood_boat", () -> new SacredwoodBoatItem(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab), "sacredwood"));
+    public static final RegistryObject<Item> SWIRLWOOD_BOAT = ITEMS.register("swirlwood_boat", () -> new SwirlwoodBoatItem(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab), "swirlwood"));
 
     //Spawn Eggs
     public static final RegistryObject<ModSpawnEggs> CAECANUS_SPAWN_EGG = ITEMS.register("caecanus_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CAECANUS, -4810354, -3484507, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));

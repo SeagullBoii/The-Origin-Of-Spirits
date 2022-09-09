@@ -3,7 +3,7 @@ package net.seagullboi.originofspirits.item;
 
 import com.google.common.collect.ImmutableMap;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.entity.renderer.ElectricHarpoonRenderer;
+import net.seagullboi.originofspirits.client.renderer.ElectricHarpoonRenderer;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.*;

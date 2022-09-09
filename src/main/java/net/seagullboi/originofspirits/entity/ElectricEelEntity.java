@@ -52,7 +52,7 @@ import net.minecraft.entity.CreatureAttribute;
 import net.seagullboi.originofspirits.procedures.ElectricEelOnInitialEntitySpawnProcedure;
 import net.seagullboi.originofspirits.procedures.ElectricEelEntityDiesProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.ElectricEelRenderer;
+import net.seagullboi.originofspirits.client.renderer.ElectricEelRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import javax.annotation.Nullable;

@@ -36,7 +36,7 @@ import net.minecraft.client.util.ITooltipFlag;
 import net.seagullboi.originofspirits.procedures.TridacnaStaffUsedProcedure;
 import net.seagullboi.originofspirits.procedures.ElectricHarpoonCanUseRangedItemProcedure;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsCombatItemGroup;
-import net.seagullboi.originofspirits.entity.renderer.WoodenStaffRenderer;
+import net.seagullboi.originofspirits.client.renderer.WoodenStaffRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;

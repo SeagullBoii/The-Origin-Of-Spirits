@@ -2,7 +2,7 @@
 package net.seagullboi.originofspirits.entity;
 
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
-import net.seagullboi.originofspirits.entity.renderer.HexayoshRenderer;
+import net.seagullboi.originofspirits.client.renderer.HexayoshRenderer;
 import net.seagullboi.originofspirits.itemgroup.OriginOfSpiritsEntitiesItemGroup;
 import net.seagullboi.originofspirits.procedures.HexayoshSpawningConditionProcedure;
 import net.minecraft.block.BlockState;

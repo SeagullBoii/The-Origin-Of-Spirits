@@ -35,7 +35,7 @@ import net.minecraft.client.util.ITooltipFlag;
 
 import net.seagullboi.originofspirits.procedures.CursedFlamethrowerProjectileProjectileHitsLivingEntityProcedure;
 import net.seagullboi.originofspirits.procedures.CursedFlameProjectileTickProcedure;
-import net.seagullboi.originofspirits.entity.renderer.CursedFlamethrowerProjectileRenderer;
+import net.seagullboi.originofspirits.client.renderer.CursedFlamethrowerProjectileRenderer;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
 
 import java.util.stream.Stream;
