@@ -1,11 +1,10 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.IWorld;
 import net.minecraft.entity.Entity;
-
+import net.minecraft.world.IWorld;
+import net.minecraft.world.server.ServerWorld;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
+import net.seagullboi.originofspirits.registry.TOOSParticles;
 
 import java.util.Map;
 
@@ -47,14 +46,20 @@ public class CursedFlameProjectileTickProcedure {
 			if (!imediatesourceentity.world.isRemote())
 				imediatesourceentity.remove();
 		}
-		world.addParticle(CursedFlameParticleParticle.particle, (x + 0.1), y, z, 0, 0, 0);
-		world.addParticle(CursedFlameParticleParticle.particle, (x - 0.1), y, z, 0, 0, 0);
-		world.addParticle(CursedFlameParticleParticle.particle, x, y, (z - 0.1), 0, 0, 0);
-		world.addParticle(CursedFlameParticleParticle.particle, x, y, (z + 0.1), 0, 0, 0);
-		world.addParticle(CursedFlameParticleParticle.particle, x, (y + 0.1), z, 0, 0, 0);
-		world.addParticle(CursedFlameParticleParticle.particle, x, (y - 0.1), z, 0, 0, 0);
-		if (world instanceof ServerWorld) {
-			((ServerWorld) world).spawnParticle(CursedFlameParticleParticle.particle, x, y, z, (int) 10, 0.5, 0.5, 0.5, 0.05);
+
+		if (imediatesourceentity.getPersistentData().getDouble("deathTime") <= 2) {
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, y, z, 0, 0, 0);
+
+		} else {
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), (x + 0.1), y, z, 0, 0, 0);
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), (x - 0.1), y, z, 0, 0, 0);
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, y, (z - 0.1), 0, 0, 0);
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, y, (z + 0.1), 0, 0, 0);
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, (y + 0.1), z, 0, 0, 0);
+			world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, (y - 0.1), z, 0, 0, 0);
+			if (world instanceof ServerWorld) {
+				((ServerWorld) world).spawnParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, y, z, (int) 10, 0.5, 0.5, 0.5, 0.05);
+			}
 		}
 	}
 }

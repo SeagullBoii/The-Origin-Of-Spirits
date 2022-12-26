@@ -1,23 +1,20 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
-
-import net.seagullboi.originofspirits.potion.FairyBloodPotionEffect;
-import net.seagullboi.originofspirits.potion.CursedPotionEffect;
-import net.seagullboi.originofspirits.OriginofspiritsModVariables;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.IWorld;
 import net.seagullboi.originofspirits.OriginOfSpirits;
+import net.seagullboi.originofspirits.potion.CursedPotionEffect;
+import net.seagullboi.originofspirits.potion.FairyBloodPotionEffect;
 
-import java.util.Map;
-import java.util.Iterator;
 import java.util.Collection;
+import java.util.Iterator;
+import java.util.Map;
 
 public class FairyBloodOnEffectActiveTickProcedure {
 
@@ -47,23 +44,39 @@ public class FairyBloodOnEffectActiveTickProcedure {
 			}
 		}.check(entity)) {
 			if (entity instanceof ServerPlayerEntity) {
-				Advancement _adv = ((MinecraftServer) ((ServerPlayerEntity) entity).server).getAdvancementManager()
+				Advancement advancement = ((ServerPlayerEntity) entity).server.getAdvancementManager()
 						.getAdvancement(new ResourceLocation("originofspirits:player_cancels_curse_effect"));
-				AdvancementProgress _ap = ((ServerPlayerEntity) entity).getAdvancements().getProgress(_adv);
-				if (!_ap.isDone()) {
-					Iterator _iterator = _ap.getRemaningCriteria().iterator();
+				AdvancementProgress advancementProgress = ((ServerPlayerEntity) entity).getAdvancements().getProgress(advancement);
+				if (!advancementProgress.isDone()) {
+					Iterator _iterator = advancementProgress.getRemaningCriteria().iterator();
 					while (_iterator.hasNext()) {
 						String _criterion = (String) _iterator.next();
-						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(_adv, _criterion);
+						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(advancement, _criterion);
 					}
 				}
 			}
-			if (entity instanceof LivingEntity) {
-				((LivingEntity) entity).removePotionEffect(CursedPotionEffect.potion);
+		}
+
+		if (entity instanceof LivingEntity) {
+
+
+			LivingEntity livingEntity = (LivingEntity) entity;
+			if (livingEntity.isPotionActive(CursedPotionEffect.potion)) {
+				livingEntity.removePotionEffect(CursedPotionEffect.potion);
 			}
-			if (OriginofspiritsModVariables.MapVariables.get(world).ConsumeFairyBloodEffect) {
-				if (entity instanceof LivingEntity) {
-					((LivingEntity) entity).removePotionEffect(FairyBloodPotionEffect.potion);
+			if (livingEntity.isPotionActive(FairyBloodPotionEffect.potion)) {
+				livingEntity.removePotionEffect(FairyBloodPotionEffect.potion);
+			}
+
+			if (entity instanceof ServerPlayerEntity) {
+				Advancement advancement = ((ServerPlayerEntity) entity).server.getAdvancementManager().getAdvancement(new ResourceLocation("originofspirits:player_cancels_curse_effect"));
+				AdvancementProgress advancementProgress = ((ServerPlayerEntity) entity).getAdvancements().getProgress(advancement);
+				if (!advancementProgress.isDone()) {
+					Iterator _iterator = advancementProgress.getRemaningCriteria().iterator();
+					while (_iterator.hasNext()) {
+						String _criterion = (String) _iterator.next();
+						((ServerPlayerEntity) entity).getAdvancements().grantCriterion(advancement, _criterion);
+					}
 				}
 			}
 		}

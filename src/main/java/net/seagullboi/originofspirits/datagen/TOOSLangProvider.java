@@ -15,5 +15,6 @@ public class TOOSLangProvider extends LanguageProvider {
         addBlock(TOOSBlocks.POLISHED_DECEPTONE_SLAB, "Polished Deceptone Slab");
         addBlock(TOOSBlocks.POLISHED_DECEPTONE_STAIRS, "Polished Deceptone Stairs");
         addBlock(TOOSBlocks.POLISHED_DECEPTONE_WALL, "Polished Deceptone Wall");
+        addBlock(TOOSBlocks.CURSED_GORE, "Cursed Gore Block");
     }
 }

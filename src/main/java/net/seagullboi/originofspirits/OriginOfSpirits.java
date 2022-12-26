@@ -54,6 +54,8 @@ public class OriginOfSpirits {
         ModStructures.register(eventBus);
         TOOSSoundEvents.register(eventBus);
         TOOSFeatures.register(eventBus);
+        TOOSPaintings.PAINTING_TYPES.register(eventBus);
+        TOOSParticles.PARTICLE_TYPES.register(eventBus);
 
         //Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));

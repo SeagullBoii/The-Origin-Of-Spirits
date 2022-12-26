@@ -28,7 +28,7 @@ public class TOOSEntityTypes {
 
     //Hostile
     public static RegistryObject<EntityType<LazoculusEntity>> LAZOCULUS = ENTITY_TYPES.register("lazoculus", () -> EntityType.Builder.create(LazoculusEntity::new, EntityClassification.MONSTER).size(0.85f, 2.1f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "lazoculus").toString()));
-
+    public static RegistryObject<EntityType<CursedEyeEntity>> CURSED_EYE = ENTITY_TYPES.register("cursed_eye", () -> EntityType.Builder.create(CursedEyeEntity::new, EntityClassification.MONSTER).size(0.5f, 0.5f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "cursed_eye").toString()));
 
     //Breedable
     public static final RegistryObject<EntityType<HobayoshEntity>> HOBAYOSH = ENTITY_TYPES.register("hobayosh", () -> EntityType.Builder.create(HobayoshEntity::new, EntityClassification.CREATURE).size(0.8f, 1.4f).build(new ResourceLocation(OriginOfSpirits.MOD_ID, "hobayosh").toString()));

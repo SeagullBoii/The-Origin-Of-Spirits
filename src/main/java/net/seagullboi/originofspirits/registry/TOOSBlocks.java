@@ -23,8 +23,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.block.*;
 import net.seagullboi.originofspirits.item.BasicDescriptionBlockItem;
+import net.seagullboi.originofspirits.item.SpitePedestalItem;
 import net.seagullboi.originofspirits.potion.CursedPotionEffect;
 import net.seagullboi.originofspirits.util.ColorUtil;
+import net.seagullboi.originofspirits.util.TOOSMaterials;
+import net.seagullboi.originofspirits.util.TOOSSoundTypes;
 
 import java.util.function.Supplier;
 
@@ -84,7 +87,16 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> POLISHED_DECEPTONE_SLAB = registerBlock("polished_deceptone_slab", () -> new SlabBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> POLISHED_DECEPTONE_STAIRS = registerBlock("polished_deceptone_stairs", () -> new StairsBlock(() -> POLISHED_DECEPTONE.get().getDefaultState(), AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> POLISHED_DECEPTONE_WALL = registerBlock("polished_deceptone_wall", () -> new WallBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
-	
+
+	//Grass and Dirt
+
+	public static final RegistryObject<Block> SACRED_SOIL = registerBlock("sacred_soil", () -> new Block(AbstractBlock.Properties.from(Blocks.DIRT)), TOOSItemGroup.BLOCK_GROUP);
+	public static final RegistryObject<Block> SACRED_GRASS = registerBlock("sacred_grass_block", () -> new TOOSGrassBlock(AbstractBlock.Properties.from(Blocks.GRASS_BLOCK), SACRED_SOIL.get()), TOOSItemGroup.BLOCK_GROUP);
+
+
+	//Gore
+	public static final RegistryObject<Block> CURSED_GORE = registerBlock("cursed_gore_block", () -> new Block(AbstractBlock.Properties.create(TOOSMaterials.CURSED_GORE).sound(TOOSSoundTypes.GORE).hardnessAndResistance(0.5f, 0.5f).setLightLevel(s -> 0).harvestTool(ToolType.SHOVEL)), TOOSItemGroup.BLOCK_GROUP);
+
 	//Sand
 	public static final RegistryObject<Block> BLACK_SAND = registerBlock("black_sand", () -> new SandBlock(15265262, AbstractBlock.Properties.create(Material.SAND, MaterialColor.BLACK).sound(SoundType.SAND).hardnessAndResistance(0.5F).setLightLevel(s -> 0).harvestTool(ToolType.SHOVEL)), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> WHITE_SAND = registerBlock("white_sand", () -> new SandBlock(2324344, AbstractBlock.Properties.create(Material.SAND, MaterialColor.SNOW).sound(SoundType.SAND).hardnessAndResistance(0.5F).setLightLevel(s -> 0).harvestTool(ToolType.SHOVEL)), TOOSItemGroup.BLOCK_GROUP);
@@ -95,16 +107,23 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> CURSED_STEEL_ORE = registerBlock("cursed_steel_ore", () -> new OreBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.STONE).sound(SoundType.STONE).hardnessAndResistance(1.5F, 100.0f).setLightLevel(s -> 0).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> RAW_CURSED_STEEL_BLOCK = registerBlock("raw_cursed_steel_block", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.PURPLE_TERRACOTTA).sound(SoundType.STONE).hardnessAndResistance(1.5F, 100.0f).setLightLevel(s -> 0).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> CURSED_STEEL_BLOCK = registerBlock("cursed_steel_block", () -> new Block(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.LIGHT_GRAY_TERRACOTTA).sound(SoundType.METAL).hardnessAndResistance(1.5F, 100.0f).setLightLevel(s -> 0).harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
-
+	public static final RegistryObject<Block> SMENEREL_ORE = registerBlock("smenerel_ore", () -> new OreBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.SAND).sound(SoundType.METAL).hardnessAndResistance(1, 10.0f).setLightLevel(s -> 0).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
+	public static final RegistryObject<Block> SMENEREL_BLOCK = registerBlock("smenerel_block", () -> new OreBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.SAND).sound(SoundType.NETHER_BRICK).hardnessAndResistance(1, 10.0f).setLightLevel(s -> 0).harvestLevel(2).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 
 	//MISC
 	public static final RegistryObject<Block> DEEP_ALCYONEUM_TOP = registerBlock("deep_alcyonium_top", () -> new Block(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.GREEN_TERRACOTTA).sound(SoundType.CORAL).hardnessAndResistance(0.6F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE)), TOOSItemGroup.BLOCK_GROUP);
+	public static final RegistryObject<Block> DEEP_ALCYONEUM = registerBlock("green_alcyoneum", () -> new Block(AbstractBlock.Properties.create(Material.CORAL, MaterialColor.GREEN_TERRACOTTA).sound(SoundType.CORAL).hardnessAndResistance(0.6F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE)), TOOSItemGroup.BLOCK_GROUP);
+
 	public static final RegistryObject<Block> CLAM_BLOCK = registerBlock("clam_block", () -> new ClamBlock(AbstractBlock.Properties.create(Material.ROCK, MaterialColor.SAND).sound(SoundType.STONE).hardnessAndResistance(1.5F, 6.0f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> CLOUD_BLOCK = registerBlock("cloud_block", () -> new CloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SNOW).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), false), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> RAINY_CLOUD_BLOCK = registerBlock("rainy_cloud_block", () -> new CloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.LIGHT_BLUE_TERRACOTTA).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), true), TOOSItemGroup.BLOCK_GROUP);
     public static final RegistryObject<Block> CURSED_CLOUD_BLOCK = registerBlock("cursed_cloud_block", () -> new CursedCloudBlock(AbstractBlock.Properties.create(Material.MISCELLANEOUS, MaterialColor.SNOW).sound(SoundType.CLOTH).hardnessAndResistance(0.3f).notSolid().doesNotBlockMovement().speedFactor(0.4f).jumpFactor(0.4f).setLightLevel(s -> 0).harvestLevel(1).harvestTool(ToolType.SHOVEL), false,CursedPotionEffect.potion), TOOSItemGroup.BLOCK_GROUP);
     public static final RegistryObject<Block> TEMPEST_CRYSTAL = registerBlock("tempest_crystal", () -> new GlassBlock(AbstractBlock.Properties.create(Material.GLASS, MaterialColor.LIGHT_BLUE).sound(SoundType.GLASS).zeroHardnessAndResistance().notSolid().setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).setRequiresTool()), TOOSItemGroup.BLOCK_GROUP);
 	public static final RegistryObject<Block> CURSED_FIRE = BLOCKS.register("cursed_fire", () -> new CursedFireBlock(AbstractBlock.Properties.create(Material.FIRE, MaterialColor.PURPLE).speedFactor(0.9f).jumpFactor(0.9f).notSolid().setNeedsPostProcessing(TOOSBlocks::needsPostProcessing).setEmmisiveRendering(TOOSBlocks::needsPostProcessing).setLightLevel((state) -> 10)));
+
+	//Pedestals
+	public static final RegistryObject<Block> SPITE_PEDESTAL = BLOCKS.register("spite_pedestal", () -> new SpitePedestalBlock(AbstractBlock.Properties.create(Material.IRON, MaterialColor.RED).sound(SoundType.METAL).hardnessAndResistance(0.6F).setLightLevel(s -> 0).harvestTool(ToolType.PICKAXE).notSolid().setRequiresTool()));
+	public static final RegistryObject<Item> SPITE_PEDESTAL_ITEM = BLOCK_ITEMS.register("spite_pedestal", () -> new SpitePedestalItem(SPITE_PEDESTAL.get(), new Item.Properties().group(TOOSItemGroup.BLOCK_GROUP)));
 
 	//Cave Generators
 	public static final RegistryObject<Block> CURSED_CAVE_GENERATOR = BLOCKS.register("cursed_cave_gen", () -> new BasicCaveGenBlock(AbstractBlock.Properties.from(Blocks.BARRIER)));
@@ -131,6 +150,8 @@ public class TOOSBlocks {
 	public static final RegistryObject<Block> PEACE_LILY = registerBlock("peace_lily", () -> new FlowerBlock(Effects.HEALTH_BOOST, 20, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> SACRED_VIOLET = registerBlock("sacret_violet", () -> new FlowerBlock(Effects.SLOWNESS, 5, AbstractBlock.Properties.from(Blocks.LILY_OF_THE_VALLEY).notSolid()), TOOSItemGroup.PLANT_GROUP);
 	public static final RegistryObject<Block> BLUEBERRY_BUSH = BLOCKS.register("blueberry_bush", () -> new BlueberryBushBlock(AbstractBlock.Properties.from(Blocks.SWEET_BERRY_BUSH)));
+	public static final RegistryObject<Block> BUDDHAS_HAND_PLANT = BLOCKS.register("buddhas_hand_plant", () -> new BuddhasHandPlantBlock(AbstractBlock.Properties.create(Material.PLANTS).zeroHardnessAndResistance().setLightLevel(s -> 0).doesNotBlockMovement().tickRandomly().sound(SoundType.PLANT).setOpaque((a, b, c) -> false)));
+	public static final RegistryObject<Block> HARD_SUGAR_CANE = registerBlock("hard_sugar_cane", () -> new SugarCaneBlock(AbstractBlock.Properties.create(Material.PLANTS).zeroHardnessAndResistance().setLightLevel(s -> 0).doesNotBlockMovement().tickRandomly().setOpaque((a, b, c) -> false).sound(SoundType.PLANT)), TOOSItemGroup.PLANT_GROUP);
 
 	//Flower Pots
 	public static final RegistryObject<Block> POTTED_MAGIC_MAGNOLIA = BLOCKS.register("potted_magic_magnolia", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), MAGIC_MAGNOLIA, AbstractBlock.Properties.from(Blocks.POTTED_BLUE_ORCHID)));
@@ -151,9 +172,9 @@ public class TOOSBlocks {
 	//Crops
 	public static final RegistryObject<Block> SWEET_POTATOES = BLOCKS.register("sweet_potatoes", () -> new SweetPotatoBlock(AbstractBlock.Properties.from(Blocks.POTATOES)));
 	public static final RegistryObject<Block> BARLEY = BLOCKS.register("barley", () -> new BarleyBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+	public static final RegistryObject<Block> BEAN_PLANT = BLOCKS.register("beans_plant", () -> new BeansPlantBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 	//Fluids
-
 	public static final ResourceLocation CURSED_LAVA_STILL_RL = new ResourceLocation(OriginOfSpirits.MOD_ID, "block/cursed_lava_still");
 	public static final ResourceLocation CURSED_LAVA_FLOWING_RL = new ResourceLocation(OriginOfSpirits.MOD_ID, "block/cursed_lava_flow");
 

@@ -1,10 +1,9 @@
 package net.seagullboi.originofspirits.registry;
 
-import net.seagullboi.originofspirits.registry.TOOSBlocks;
-import net.seagullboi.originofspirits.item.TridacnaShardItem;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyValue;
+import net.seagullboi.originofspirits.item.TridacnaShardItem;
 
 import java.util.function.Supplier;
 
@@ -14,7 +13,8 @@ public enum ModItemTier implements IItemTier {
             () -> Ingredient.fromItems(TOOSItems.CURSED_STEEL.get())),
     TRIDACNA(3, 1000, 4,7,10,
             () -> Ingredient.fromItems(TridacnaShardItem.block)),
-    SAC(4, 1800, 10,5,25, null);
+    SAC(4, 1800, 10,5,25, null),
+    CURSED_GORE(4, 1800, 10,8,25, () -> Ingredient.fromItems(TOOSBlocks.CURSED_GORE.get()));
 
     private final int harvestLevel;
     private final int maxUses;

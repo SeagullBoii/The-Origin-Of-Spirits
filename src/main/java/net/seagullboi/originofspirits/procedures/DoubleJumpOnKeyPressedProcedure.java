@@ -74,17 +74,17 @@ public class DoubleJumpOnKeyPressedProcedure {
 					}
 					entity.setMotion((entity.getMotion().getX()), 0.5, (entity.getMotion().getZ()));
 					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ParticleTypes.CLOUD, x, y, z, (int) 10, 0.2, 0.2, 0.2, 0);
+						((ServerWorld) world).spawnParticle(ParticleTypes.CLOUD, x, y, z, 10, 0.2, 0.2, 0.2, 0);
 					}
 					if (world instanceof World && !world.isRemote()) {
-						((World) world)
+						world
 								.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-										(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+										ForgeRegistries.SOUND_EVENTS
 												.getValue(new ResourceLocation("entity.player.attack.sweep")),
 										SoundCategory.PLAYERS, (float) 1, (float) 0);
 					} else {
 						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+								ForgeRegistries.SOUND_EVENTS
 										.getValue(new ResourceLocation("entity.player.attack.sweep")),
 								SoundCategory.PLAYERS, (float) 1, (float) 0, false);
 					}

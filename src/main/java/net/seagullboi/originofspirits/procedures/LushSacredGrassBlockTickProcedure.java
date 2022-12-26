@@ -1,13 +1,12 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.Direction;
-import net.minecraft.state.Property;
 import net.minecraft.block.BlockState;
-
+import net.minecraft.state.Property;
+import net.minecraft.util.Direction;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorld;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.block.SacredSoilBlock;
+import net.seagullboi.originofspirits.registry.TOOSBlocks;
 
 import java.util.Map;
 
@@ -42,7 +41,7 @@ public class LushSacredGrassBlockTickProcedure {
 				Direction.DOWN) || (world.getBlockState(new BlockPos((int) x, (int) (y + 1), (int) z))).getFluidState().isSource()) {
 			{
 				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-				BlockState _bs = SacredSoilBlock.block.getDefaultState();
+				BlockState _bs = TOOSBlocks.SACRED_SOIL.get().getDefaultState();
 				BlockState _bso = world.getBlockState(_bp);
 				for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
 					Property _property = _bs.getBlock().getStateContainer().getProperty(entry.getKey().getName());

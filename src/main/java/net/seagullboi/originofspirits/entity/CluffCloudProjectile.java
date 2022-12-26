@@ -1,8 +1,5 @@
 package net.seagullboi.originofspirits.entity;
 
-import net.seagullboi.originofspirits.particle.CluffParticleParticle;
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
-import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -18,6 +15,9 @@ import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
+import net.seagullboi.originofspirits.particle.CluffParticleParticle;
+import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.registry.TOOSParticles;
 
 import javax.annotation.Nonnull;
 
@@ -97,7 +97,7 @@ public class CluffCloudProjectile extends AbstractArrowEntity {
     }
 
     protected IParticleData getParticle() {
-        return CursedFlameParticleParticle.particle;
+        return TOOSParticles.CURSED_FLAME_PARTICLE.get();
     }
 
     public boolean hurt(DamageSource damageSource, float v) {

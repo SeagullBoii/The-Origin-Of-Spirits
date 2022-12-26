@@ -1,0 +1,6 @@
+{
+  "parent": "originofspirits:block/cursed_gore_block",
+  "textures": {
+    "layer0": "originofspirits:items/cursed_gore_block"
+  }
+}

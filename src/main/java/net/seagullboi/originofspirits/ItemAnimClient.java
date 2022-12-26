@@ -26,7 +26,6 @@ public class ItemAnimClient {
 		//Guns
 		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("charged"), (itemstack, world, entity) -> entity != null && entity.isHandActive() && entity.getActiveItemStack() == itemstack && ((itemstack.getUseDuration() - entity.getItemInUseCount()) >= 30)  ? 1.0F : 0.0F);
 		ItemModelsProperties.registerProperty((TOOSItems.EYE_CANNON.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
-		ItemModelsProperties.registerProperty((TOOSItems.REDSTONE_HANDGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
-		ItemModelsProperties.registerProperty((TOOSItems.SHOTGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
+		ItemModelsProperties.registerProperty((TOOSItems.REDSTONE_HANDGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));		ItemModelsProperties.registerProperty((TOOSItems.SHOTGUN.get()), new ResourceLocation("weapon_mod"), (itemstack, world, entity) -> itemstack.getOrCreateTag().getInt("weapon_mod"));
 	}
 }

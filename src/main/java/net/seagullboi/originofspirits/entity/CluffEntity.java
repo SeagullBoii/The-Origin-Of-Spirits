@@ -126,7 +126,6 @@ public class CluffEntity extends CreatureEntity implements IAngerable, IRangedAt
         return this.boundOrigin;
     }
 
-    @OnlyIn(Dist.CLIENT)
     public int getAttackTimer() {
         return this.attackTimer;
     }

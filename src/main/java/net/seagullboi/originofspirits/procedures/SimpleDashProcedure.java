@@ -1,13 +1,12 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraft.world.IWorld;
-import net.minecraft.util.Hand;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
-
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.MobEntity;
+import net.minecraft.util.Hand;
+import net.minecraft.world.IWorld;
 import net.seagullboi.originofspirits.OriginOfSpirits;
+import net.seagullboi.originofspirits.registry.TOOSParticles;
 
 import java.util.Map;
 
@@ -47,7 +46,7 @@ public class SimpleDashProcedure {
 		double Pitch = 0;
 		double speed = 0;
 		double Yaw = 0;
-		world.addParticle(CursedFlameParticleParticle.particle, x, (y + 0.5), z, 0, 0, 0);
+		world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, (y + 0.5), z, 0, 0, 0);
 		if (!(((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) == null)) {
 			entity.getPersistentData().putDouble("dashtimer", (entity.getPersistentData().getDouble("dashtimer") + 1));
 		}

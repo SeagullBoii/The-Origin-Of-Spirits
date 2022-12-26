@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+      "model": "originofspirits:block/cursed_gore_block",
+        "weight": 100
+      },
+
+      {
+        "model": "originofspirits:block/cursed_gore_block_rare",
+        "weight": 20
+      }
+    ]
+  }
+}

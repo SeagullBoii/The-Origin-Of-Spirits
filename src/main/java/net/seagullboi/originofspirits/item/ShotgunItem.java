@@ -79,7 +79,7 @@ public class ShotgunItem extends Item {
                     }
 
                     for (int i = 0; i < this.getBulletCount(); i++ ) {
-                        BulletEntity.shoot(world, entity, rand, 2, 2.5, 0, 5, this.getInaccurassy(), "shotgun");
+                        BulletEntity.shoot(world, entity, rand, 2, 1.25, 0, 5, this.getInaccurassy(), "shotgun");
                     }
 
                     world.playSound(entity.getPosX(), entity.getPosY(), entity.getPosZ(), TOOSSoundEvents.SHOTGUN.get(), SoundCategory.PLAYERS, 2, 1f, true);
@@ -90,7 +90,7 @@ public class ShotgunItem extends Item {
             if (player.abilities.isCreativeMode) {
 
                 for (int i = 0; i < this.getBulletCount(); i++ ) {
-                    BulletEntity.shoot(world, entity, rand, 2, 2.5, 0, 5, this.getInaccurassy(), "shotgun");
+                    BulletEntity.shoot(world, entity, rand, 2, 1.25, 0, 5, this.getInaccurassy(), "shotgun");
                 }
 
                 world.playSound(entity.getPosX(), entity.getPosY(), entity.getPosZ(), TOOSSoundEvents.SHOTGUN.get(), SoundCategory.PLAYERS, 2, 1f, true);

@@ -18,9 +18,10 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.seagullboi.originofspirits.api.IInventoryHandlingBlockEntity;
-import net.seagullboi.originofspirits.block.HardSugarCaneBlock;
 import net.seagullboi.originofspirits.block.tile_entities.recipes.PressingMachineRecipe;
 import net.seagullboi.originofspirits.registry.ModTileEntities;
+import net.seagullboi.originofspirits.registry.TOOSBlocks;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public class PressingMachineTileEntity extends TileEntity implements IInventoryH
     public final ItemStackHandler itemHandler = createHandler();
     public final LazyOptional<IItemHandler> handler = LazyOptional.of(() -> itemHandler);
     public static ArrayList<Item> multipleResultInputs = new ArrayList<>(Arrays.asList(Blocks.GLOWSTONE.asItem()));
-    public static ArrayList<Item> inputs = new ArrayList<>(Arrays.asList(Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND, Items.SUGAR_CANE, HardSugarCaneBlock.block.asItem(),
+    public static ArrayList<Item> inputs = new ArrayList<>(Arrays.asList(Items.IRON_INGOT, Items.GOLD_INGOT, Items.DIAMOND, Items.SUGAR_CANE, TOOSBlocks.HARD_SUGAR_CANE.get().asItem(), TOOSItems.SMENEREL.get(),
                                            Blocks.GLOWSTONE.asItem()));
     public boolean isPowered = false;
     public int progressTimer = 0;

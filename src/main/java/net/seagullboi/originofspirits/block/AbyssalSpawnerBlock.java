@@ -200,12 +200,10 @@ public class AbyssalSpawnerBlock extends Block implements IWaterLoggable {
         int y = pos.getY();
         int z = pos.getZ();
         if (blockstate.get(ACTIVE)) {
-            if (true)
                 for (int l = 0; l < 4; ++l) {
                     double d0 = (x + random.nextFloat());
                     double d1 = (y + random.nextFloat());
                     double d2 = (z + random.nextFloat());
-                    int i1 = random.nextInt(2) * 2 - 1;
                     double d3 = (random.nextFloat() - 0.5D) * 0.5D;
                     double d4 = (random.nextFloat() - 0.5D) * 0.5D;
                     double d5 = (random.nextFloat() - 0.5D) * 0.5D;

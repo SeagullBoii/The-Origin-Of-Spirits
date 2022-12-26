@@ -23,8 +23,8 @@ import net.minecraft.world.World;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.fml.network.NetworkHooks;
 import net.seagullboi.originofspirits.particle.CursedExplosionParticle;
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.registry.TOOSParticles;
 
 import javax.annotation.Nonnull;
 
@@ -134,9 +134,9 @@ public class CursedLaserProjectile extends AbstractArrowEntity {
 
         double i = Math.random() / 2 ;
 
-        world.addParticle(CursedFlameParticleParticle.particle, this.getPosX(), this.getPosY(), this.getPosZ() , 0, 0, 0);
+        world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), this.getPosX(), this.getPosY(), this.getPosZ() , 0, 0, 0);
         for (int index0 = 0; index0 < 5; index0++) {
-            world.addParticle(CursedFlameParticleParticle.particle, this.getPosX() + i, this.getPosY() + i, this.getPosZ() + i, 0, 0, 0);
+            world.addParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), this.getPosX() + i, this.getPosY() + i, this.getPosZ() + i, 0, 0, 0);
         }
     }
 
@@ -149,7 +149,7 @@ public class CursedLaserProjectile extends AbstractArrowEntity {
     }
 
     protected IParticleData getParticle() {
-        return CursedFlameParticleParticle.particle;
+        return TOOSParticles.CURSED_FLAME_PARTICLE.get();
     }
 
     public boolean hurt(DamageSource damageSource, float v) {

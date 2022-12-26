@@ -10,7 +10,6 @@ import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.monster.MonsterEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.network.IPacket;
-import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
@@ -72,12 +71,6 @@ public class LazoculusEntity extends TOOSMonsterEntity implements IRangedAttackM
             return false;
         if (source == DamageSource.FALL)
             return false;
-
-        if (Math.random() < 0.3) {
-            world.playSound(getPosX(), getPosY(), getPosZ(), SoundEvents.ENTITY_PLAYER_ATTACK_SWEEP, SoundCategory.HOSTILE, 1, 1, true);
-            world.addParticle(ParticleTypes.SWEEP_ATTACK, false, getPosX(), getPosY() + 1, getPosZ(), 0, 0, 0);
-            return false;
-        }
 
         return super.attackEntityFrom(source, amount);
     }

@@ -187,7 +187,6 @@ dependencies {
     //runtimeOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios}")
     //compileOnly fg.deobf("top.theillusivec4.curios:curios-forge:${project.curios}:api")
 
-
     /*
     //FTB Chunks
     implementation fg.deobf("curse.maven:ftb-chunks-forge-314906:3603374")

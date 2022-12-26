@@ -1,19 +1,11 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.fml.loading.FMLPaths;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-import java.util.Map;
 import java.util.Collections;
-
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.File;
-
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
+import java.util.Map;
 
 public class ConfigFileProcedure {
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,7 +17,7 @@ public class ConfigFileProcedure {
 	}
 
 	public static void executeProcedure(Map<String, Object> dependencies) {
-		com.google.gson.JsonObject configobject = new com.google.gson.JsonObject();
+		/*com.google.gson.JsonObject configobject = new com.google.gson.JsonObject();
 		File config = new File("");
 		config = (File) new File((FMLPaths.GAMEDIR.get().toString() + "/config/originfospirits"), File.separator + "config.json");
 		if (!config.exists()) {
@@ -48,6 +40,6 @@ public class ConfigFileProcedure {
 					exception.printStackTrace();
 				}
 			}
-		}
+		}*/
 	}
 }

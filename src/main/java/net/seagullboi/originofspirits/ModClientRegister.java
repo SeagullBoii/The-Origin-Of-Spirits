@@ -32,7 +32,7 @@ public class ModClientRegister {
         //Boats
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SACREDWOOD_BOAT.get(), SacredwoodBoatRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SWIRLWOOD_BOAT.get(), SwirlwoodBoatRenderer::new);
-        
+
         //Entities
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CABADOR.get(), ((IRenderFactory) CabadorRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CAECANUS.get(), ((IRenderFactory) CaecanusEntityRenderer::new));
@@ -41,6 +41,7 @@ public class ModClientRegister {
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.LAZOCULUS.get(), ((IRenderFactory) LazoculusEntityRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SAC_FROG.get(), ((IRenderFactory) SacFrogEntityRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SAC_FROG_EGGS.get(), ((IRenderFactory) SacFrogEggsRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_EYE.get(), ((IRenderFactory) CursedEyeRenderer::new));
 
         //Projectiles
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_LASER.get(), ((IRenderFactory) EmptyRenderer::new));
@@ -84,6 +85,9 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA_FLOWING.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.CURSED_LAVA_BLOCK.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.BUDDHAS_HAND_PLANT.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.HARD_SUGAR_CANE.get(), RenderType.getTranslucent());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.BEAN_PLANT.get(), RenderType.getCutout());
 
     }
 
@@ -99,5 +103,12 @@ public class ModClientRegister {
     public static void registerWoodTypes(final FMLClientSetupEvent event) {
         Atlases.addWoodType(ModWoodTypes.SACREDWOOD);
         Atlases.addWoodType(ModWoodTypes.SWIRLWOOD);
+    }
+
+
+    @OnlyIn(Dist.CLIENT)
+    @SubscribeEvent
+    public static void registerKeybindings(final FMLClientSetupEvent event) {
+        TOOSKeybinds.register(event);
     }
 }

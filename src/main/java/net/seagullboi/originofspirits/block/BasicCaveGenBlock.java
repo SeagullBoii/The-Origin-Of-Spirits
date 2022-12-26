@@ -57,7 +57,6 @@ public class BasicCaveGenBlock extends FlowerBlock {
     }
 
     public void generateCave(int x, int y, int z, World worldIn, BlockPos pos) {
-
         int xSurface;
         int ySurface;
         int zSurface;

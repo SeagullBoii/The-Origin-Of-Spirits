@@ -5,8 +5,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
-import net.seagullboi.originofspirits.item.BarleyBreadItem;
-import net.seagullboi.originofspirits.item.SmenerelCoinItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.Enchantment;
@@ -28,6 +26,8 @@ import net.minecraft.world.gen.feature.structure.Structure;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.storage.MapData;
 import net.minecraft.world.storage.MapDecoration;
+import net.seagullboi.originofspirits.item.BarleyBreadItem;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -76,7 +76,7 @@ public class CaecanusTrade {
         }
 
         public MerchantOffer getOffer(Entity trader, Random rand) {
-            ItemStack itemstack = new ItemStack(SmenerelCoinItem.block, this.price);
+            ItemStack itemstack = new ItemStack(TOOSItems.SMENEREL_COIN.get(), this.price);
             ItemStack itemstack1 = new ItemStack(this.tradeItem);
             if (this.tradeItem instanceof DyeableArmorItem) {
                 List<DyeItem> list = Lists.newArrayList();
@@ -117,7 +117,7 @@ public class CaecanusTrade {
 
         public MerchantOffer getOffer(Entity trader, Random rand) {
             ItemStack itemstack = new ItemStack(this.tradeItem, this.count);
-            return new MerchantOffer(itemstack, new ItemStack(SmenerelCoinItem.block), maxUseIn, this.xpValue, this.priceMultiplier);
+            return new MerchantOffer(itemstack, new ItemStack(TOOSItems.SMENEREL_COIN.get()), maxUseIn, this.xpValue, this.priceMultiplier);
         }
     }
 
@@ -148,7 +148,7 @@ public class CaecanusTrade {
                     FilledMapItem.func_226642_a_(serverworld, itemstack);
                     MapData.addTargetDecoration(itemstack, blockpos, "+", this.mapDecorationType);
                     itemstack.setDisplayName(new TranslationTextComponent("filled_map." + this.structureName.getStructureName().toLowerCase(Locale.ROOT)));
-                    return new MerchantOffer(new ItemStack(SmenerelCoinItem.block, this.count), new ItemStack(Items.COMPASS), itemstack, maxUseIn, this.xpValue, 0.2F);
+                    return new MerchantOffer(new ItemStack(TOOSItems.SMENEREL_COIN.get(), this.count), new ItemStack(Items.COMPASS), itemstack, maxUseIn, this.xpValue, 0.2F);
                 } else {
                     return null;
                 }
@@ -178,7 +178,7 @@ public class CaecanusTrade {
         public MerchantOffer getOffer(Entity trader, Random rand) {
             if (trader instanceof IVillagerDataHolder) {
                 ItemStack itemstack = new ItemStack(this.villagerTypeItems.get(((IVillagerDataHolder)trader).getVillagerData().getType()), this.count);
-                return new MerchantOffer(itemstack, new ItemStack(SmenerelCoinItem.block), maxUseIn, this.xpValue, 0.05F);
+                return new MerchantOffer(itemstack, new ItemStack(TOOSItems.SMENEREL_COIN.get()), maxUseIn, this.xpValue, 0.05F);
             } else {
                 return null;
             }
@@ -206,7 +206,7 @@ public class CaecanusTrade {
                 j = 64;
             }
 
-            return new MerchantOffer(new ItemStack(SmenerelCoinItem.block, j), new ItemStack(Items.BOOK), itemstack, maxUseIn, this.xpValue, 0.2F);
+            return new MerchantOffer(new ItemStack(TOOSItems.SMENEREL_COIN.get(), j), new ItemStack(Items.BOOK), itemstack, maxUseIn, this.xpValue, 0.2F);
         }
     }
 
@@ -233,7 +233,7 @@ public class CaecanusTrade {
             int i = 5 + rand.nextInt(15);
             ItemStack itemstack = EnchantmentHelper.addRandomEnchantment(rand, new ItemStack(this.sellingStack.getItem()), i, false);
             int j = Math.min(this.emeraldCount + i, 64);
-            ItemStack itemstack1 = new ItemStack(SmenerelCoinItem.block, j);
+            ItemStack itemstack1 = new ItemStack(TOOSItems.SMENEREL_COIN.get(), j);
             return new MerchantOffer(itemstack1, itemstack, maxUseIn, this.xpValue, this.priceMultiplier);
         }
     }
@@ -266,7 +266,7 @@ public class CaecanusTrade {
         }
 
         public MerchantOffer getOffer(Entity trader, Random rand) {
-            ItemStack itemstack = new ItemStack(SmenerelCoinItem.block, this.emeraldCount);
+            ItemStack itemstack = new ItemStack(TOOSItems.SMENEREL_COIN.get(), this.emeraldCount);
             List<Potion> list = Registry.POTION.stream().filter((potion) -> {
                 return !potion.getEffects().isEmpty() && PotionBrewing.isBrewablePotion(potion);
             }).collect(Collectors.toList());
@@ -303,7 +303,7 @@ public class CaecanusTrade {
 
         @Nullable
         public MerchantOffer getOffer(Entity trader, Random rand) {
-            return new MerchantOffer(new ItemStack(SmenerelCoinItem.block, this.emeraldCount), new ItemStack(this.buyingItem.getItem(), this.buyingItemCount), new ItemStack(this.sellingItem.getItem(), this.sellingItemCount), maxUseIn, this.xpValue, this.priceMultiplier);
+            return new MerchantOffer(new ItemStack(TOOSItems.SMENEREL_COIN.get(), this.emeraldCount), new ItemStack(this.buyingItem.getItem(), this.buyingItemCount), new ItemStack(this.sellingItem.getItem(), this.sellingItemCount), maxUseIn, this.xpValue, this.priceMultiplier);
         }
     }
 
@@ -341,7 +341,7 @@ public class CaecanusTrade {
         }
 
         public MerchantOffer getOffer(Entity trader, Random rand) {
-            return new MerchantOffer(new ItemStack(SmenerelCoinItem.block, this.emeraldCount), new ItemStack(this.sellingItem.getItem(), this.sellingItemCount), maxUseIn, this.xpValue, this.priceMultiplier);
+            return new MerchantOffer(new ItemStack(TOOSItems.SMENEREL_COIN.get(), this.emeraldCount), new ItemStack(this.sellingItem.getItem(), this.sellingItemCount), maxUseIn, this.xpValue, this.priceMultiplier);
         }
     }
 
@@ -362,7 +362,7 @@ public class CaecanusTrade {
         public MerchantOffer getOffer(Entity trader, Random rand) {
             ItemStack itemstack = new ItemStack(Items.SUSPICIOUS_STEW, 1);
             SuspiciousStewItem.addEffect(itemstack, this.effect, this.duration);
-            return new MerchantOffer(new ItemStack(SmenerelCoinItem.block, 1), itemstack, maxUseIn, this.xpValue, this.priceMultiplier);
+            return new MerchantOffer(new ItemStack(TOOSItems.SMENEREL_COIN.get(), 1), itemstack, maxUseIn, this.xpValue, this.priceMultiplier);
         }
     }
 }

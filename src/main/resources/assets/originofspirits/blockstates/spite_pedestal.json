@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "originofspirits:block/spite_pedestal"
+    },
+    "facing=east": {
+      "model": "originofspirits:block/spite_pedestal",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "originofspirits:block/spite_pedestal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "originofspirits:block/spite_pedestal",
+      "y": 270
+    }
+  }
+}

@@ -1,21 +1,19 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-
-import net.minecraft.world.IWorld;
-import net.minecraft.item.ItemStack;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
-
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.IWorld;
+import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.items.ItemHandlerHelper;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.item.StartedBagItem;
 import net.seagullboi.originofspirits.OriginofspiritsModVariables;
+import net.seagullboi.originofspirits.registry.TOOSItems;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 public class PlayerGetStarterBagProcedure {
 	@Mod.EventBusSubscriber
@@ -30,7 +28,7 @@ public class PlayerGetStarterBagProcedure {
 			dependencies.put("world", entity.world);
 			dependencies.put("entity", entity);
 			dependencies.put("event", event);
-			executeProcedure(dependencies);
+		//	executeProcedure(dependencies);
 		}
 	}
 
@@ -51,7 +49,7 @@ public class PlayerGetStarterBagProcedure {
 			if (!(entity.getCapability(OriginofspiritsModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new OriginofspiritsModVariables.PlayerVariables())).gotBag) {
 				if (entity instanceof PlayerEntity) {
-					ItemStack _setstack = new ItemStack(StartedBagItem.block);
+					ItemStack _setstack = new ItemStack(TOOSItems.STARTER_BAG.get());
 					_setstack.setCount((int) 1);
 					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) entity), _setstack);
 				}

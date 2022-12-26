@@ -16,7 +16,6 @@ import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.item.BeansItem;
 import net.seagullboi.originofspirits.item.YeastItem;
 
 import java.util.List;
@@ -29,8 +28,8 @@ public class TOOSVillagerTrades {
         Int2ObjectMap<List<VillagerTrades.ITrade>> trades = event.getTrades();
 
         if (event.getType() == VillagerProfession.FARMER) {
-            trades.get(3).add(new BasicTrade(new ItemStack(Items.EMERALD, 5), new ItemStack(BeansItem.block, 2), 16, 20, 2));
-            trades.get(3).add(new BasicTrade(new ItemStack(BeansItem.block, 3), new ItemStack(Items.EMERALD, 1), 16, 20, 2));
+            trades.get(3).add(new BasicTrade(new ItemStack(Items.EMERALD, 5), new ItemStack(TOOSItems.BEANS.get(), 2), 16, 20, 2));
+            trades.get(3).add(new BasicTrade(new ItemStack(TOOSItems.BEANS.get(), 3), new ItemStack(Items.EMERALD, 1), 16, 20, 2));
             trades.get(3).add(new BasicTrade(new ItemStack(Items.EMERALD, 7), new ItemStack(YeastItem.block, 3), 16, 20, 2));
         }
     }

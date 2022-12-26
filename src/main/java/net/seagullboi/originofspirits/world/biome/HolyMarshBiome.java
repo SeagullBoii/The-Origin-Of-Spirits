@@ -1,30 +1,24 @@
 
 package net.seagullboi.originofspirits.world.biome;
 
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.common.BiomeDictionary;
-
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
-import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
-import net.minecraft.world.gen.feature.ProbabilityConfig;
-import net.minecraft.world.gen.feature.Features;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.GenerationStage;
-import net.minecraft.world.biome.MobSpawnInfo;
-import net.minecraft.world.biome.DefaultBiomeFeatures;
-import net.minecraft.world.biome.BiomeGenerationSettings;
-import net.minecraft.world.biome.BiomeAmbience;
-import net.minecraft.world.biome.Biome;
-import net.minecraft.util.registry.WorldGenRegistries;
-import net.minecraft.util.registry.Registry;
 import net.minecraft.util.RegistryKey;
-
-import net.seagullboi.originofspirits.block.SacredSoilBlock;
-import net.seagullboi.originofspirits.block.LushSacredGrassBlockBlock;
+import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
+import net.minecraft.world.biome.*;
+import net.minecraft.world.gen.GenerationStage;
+import net.minecraft.world.gen.feature.Feature;
+import net.minecraft.world.gen.feature.Features;
+import net.minecraft.world.gen.feature.ProbabilityConfig;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilder;
+import net.minecraft.world.gen.surfacebuilders.SurfaceBuilderConfig;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.seagullboi.originofspirits.OriginofspiritsModElements;
+import net.seagullboi.originofspirits.block.LushSacredGrassBlockBlock;
+import net.seagullboi.originofspirits.registry.TOOSBlocks;
 
 @OriginofspiritsModElements.ModElement.Tag
 public class HolyMarshBiome extends OriginofspiritsModElements.ModElement {
@@ -43,7 +37,7 @@ public class HolyMarshBiome extends OriginofspiritsModElements.ModElement {
 						.withSkyColor(7972607).withFoliageColor(-6684724).withGrassColor(-6684724).build();
 				BiomeGenerationSettings.Builder biomeGenerationSettings = new BiomeGenerationSettings.Builder().withSurfaceBuilder(
 						SurfaceBuilder.SWAMP.func_242929_a(new SurfaceBuilderConfig(LushSacredGrassBlockBlock.block.getDefaultState(),
-								SacredSoilBlock.block.getDefaultState(), SacredSoilBlock.block.getDefaultState())));
+								TOOSBlocks.SACRED_SOIL.get().getDefaultState(), TOOSBlocks.SACRED_SOIL.get().getDefaultState())));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION, Feature.SEAGRASS
 						.withConfiguration(new ProbabilityConfig(0.3F)).func_242731_b(6).withPlacement(Features.Placements.SEAGRASS_DISK_PLACEMENT));
 				biomeGenerationSettings.withFeature(GenerationStage.Decoration.VEGETAL_DECORATION,

@@ -59,7 +59,7 @@ public class MagneticWandItem extends AbstractMagicStaffItem{
 					player.swing(Hand.OFF_HAND, true);
 				}
 
-				player.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 20);
+				player.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 30);
 				player.stopActiveHand();
 			}
 		} else {

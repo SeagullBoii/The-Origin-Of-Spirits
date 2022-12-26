@@ -220,7 +220,7 @@ public class ClamSnapperItem extends OriginofspiritsModElements.ModElement {
 		double d3 = target.getPosZ() - entity.getPosZ();
 		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(3.5);
+		entityarrow.setDamage(3);
 		entityarrow.setKnockbackStrength(0);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);

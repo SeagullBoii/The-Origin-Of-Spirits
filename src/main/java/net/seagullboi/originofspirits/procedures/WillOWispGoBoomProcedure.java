@@ -1,35 +1,29 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.potion.EffectInstance;
+import net.minecraft.entity.*;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.entity.SpawnReason;
-import net.minecraft.entity.MobEntity;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ILivingEntityData;
-import net.minecraft.entity.Entity;
-
+import net.minecraft.potion.EffectInstance;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IWorld;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.potion.CursedPotionEffect;
-import net.seagullboi.originofspirits.particle.CursedLavaParticleParticle;
-import net.seagullboi.originofspirits.particle.CursedFlameParticleParticle;
-import net.seagullboi.originofspirits.entity.WillOWispEntity;
 import net.seagullboi.originofspirits.entity.CursedFireProjectilesEntity;
+import net.seagullboi.originofspirits.entity.WillOWispEntity;
+import net.seagullboi.originofspirits.particle.CursedLavaParticleParticle;
+import net.seagullboi.originofspirits.potion.CursedPotionEffect;
+import net.seagullboi.originofspirits.registry.TOOSParticles;
 
-import java.util.Map;
 import java.util.HashMap;
+import java.util.Map;
 
 public class WillOWispGoBoomProcedure {
 	@Mod.EventBusSubscriber
@@ -129,7 +123,7 @@ public class WillOWispGoBoomProcedure {
 
 				private void run() {
 					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(CursedFlameParticleParticle.particle, x, (y + 0.6), z, (int) 10, 0.2, 0.2, 0.2, 0);
+						((ServerWorld) world).spawnParticle(TOOSParticles.CURSED_FLAME_PARTICLE.get(), x, (y + 0.6), z, (int) 10, 0.2, 0.2, 0.2, 0);
 					}
 					if (world instanceof ServerWorld) {
 						((ServerWorld) world).spawnParticle(CursedLavaParticleParticle.particle, x, (y + 0.6), z, (int) 10, 0.2, 0.2, 0.2, 0);
@@ -146,7 +140,7 @@ public class WillOWispGoBoomProcedure {
 							if (entityToSpawn instanceof MobEntity)
 								((MobEntity) entityToSpawn).onInitialSpawn((ServerWorld) world,
 										world.getDifficultyForLocation(entityToSpawn.getPosition()), SpawnReason.MOB_SUMMONED,
-										(ILivingEntityData) null, (CompoundNBT) null);
+										null, (CompoundNBT) null);
 							world.addEntity(entityToSpawn);
 						}
 					}

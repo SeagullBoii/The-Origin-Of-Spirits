@@ -10,7 +10,6 @@ import net.minecraft.network.IPacket;
 import net.minecraft.network.datasync.DataParameter;
 import net.minecraft.network.datasync.DataSerializers;
 import net.minecraft.network.datasync.EntityDataManager;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkHooks;
@@ -38,12 +37,8 @@ public class BulletEntity extends AbstractArrowEntity {
         super.onEntityHit(result);
         Entity entity = result.getEntity();
 
-        if(getMaterial() == "shotgun" && entity.hurtResistantTime >=8 && Math.random() < 0.08) {
+        if(getMaterial() == "shotgun" && entity.hurtResistantTime >= 8 && Math.random() < 0.2) {
             entity.hurtResistantTime = 0;
-        }
-
-        if (getMaterial() != "shotgun") {
-            entity.attackEntityFrom(DamageSource.causeThrownDamage(this, this.getOwner()), (float) this.getDamage());
         }
 
         if (!this.world.isRemote) {

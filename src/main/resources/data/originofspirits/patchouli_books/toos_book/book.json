@@ -1,7 +1,8 @@
 {
-  "name": "The Origin Of Spirits",
+  "name": "The Spirit Log Book",
   "landing_text": "This is a Guide Book for The Origin of Spirits",
   "book_texture": "originofspirits:textures/gui/patchouli/toos_book.png",
+  "filler_texture": "originofspirits:textures/gui/patchouli/empty.png" ,
   "model": "originofspirits:toos_book",
   "creative_tab": "taborigin_of_spirits_misc"
 }

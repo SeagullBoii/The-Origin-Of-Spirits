@@ -42,6 +42,8 @@ public class ModOreGeneration {
         if(WorldGenUtils.isSkyRealm(event)) {
             generateOre(event.getGeneration(), TOOSOreFeatureConfig.FillerBlockType.AIR, TOOSBlocks.CLOUD_BLOCK.get().getDefaultState(), 32, 5, 40, 1);
             generateOre(event.getGeneration(), TOOSOreFeatureConfig.FillerBlockType.AIR, TOOSBlocks.RAINY_CLOUD_BLOCK.get().getDefaultState(), 32, 5, 40, 1);
+            generateOre(event.getGeneration(), TOOSOreFeatureConfig.FillerBlockType.BLESSED_STONE, TOOSBlocks.SMENEREL_ORE.get().getDefaultState(), 9, 5, 255, 13);
+
         }
         if ((WorldGenUtils.getBiomeFromEvent(event, WorldGenUtils.DECEPTIVE_ISLANDS))) {
             generateOre(event.getGeneration(), TOOSOreFeatureConfig.FillerBlockType.AIR, TOOSBlocks.CURSED_CLOUD_BLOCK.get().getDefaultState(), 32, 5, 40, 1);

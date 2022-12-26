@@ -38,7 +38,7 @@
   "block.originofspirits.abyssal_stone": "Abyssal Stone",
   "block.originofspirits.alcyonium_polyps": "Alcyonium Polyps",
   "block.originofspirits.barley": "Barley Seeds",
-  "block.originofspirits.beans_plant": "Blueberry Bush",
+  "block.originofspirits.beans_plant": "Beans",
   "block.originofspirits.black_sand": "Black Sand",
   "block.originofspirits.blessed_rose": "Blessed Rose",
   "block.originofspirits.blessed_stone": "Blessed Stone",
@@ -58,7 +58,7 @@
   "block.originofspirits.blessed_stone_tiles_wall": "Blessed Stone Tiles Wall",
   "block.originofspirits.blessed_stone_wall": "Blessed Stone Wall",
   "block.originofspirits.blueberry_bush": "Blueberry Bush",
-  "block.originofspirits.buddhas_hand_plant": "Buddhas Hand Plant",
+  "block.originofspirits.buddhas_hand_plant": "Buddha's Hand",
   "block.originofspirits.cattail": "Cattail",
   "block.originofspirits.cattail_top": "Cattail",
   "block.originofspirits.chiseled_blessed_stone": "Chiseled Blessed Stone",
@@ -513,5 +513,10 @@
   "item.originofspirits.shotgun_shells": "Shotgun Shells",
   "item.originofspirits.shotgun": "Shotgun",
   "item.originofspirits.redstone_handgun": "Redstone Handgun",
-  "block.originofspirits.pressing_machine": "Pressing Machine"
+  "block.originofspirits.pressing_machine": "Pressing Machine",
+  "block.originofspirits.spite_pedestal": "Spite Pedestal",
+  "item.originofspirits.ocular_piercer": "Ocular Piercer",
+  "item.originofspirits.cursed_eye_spawn_egg": "Cursed Eye Spawn Egg",
+  "entity.originofspirits.cursed_eye": "Cursed Eye",
+  "block.originofspirits.cursed_gore_block": "Cursed Gore Block"
 }

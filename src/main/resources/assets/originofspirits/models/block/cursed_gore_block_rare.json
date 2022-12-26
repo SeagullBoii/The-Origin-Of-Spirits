@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "originofspirits:block/cursed_gore_block_rare",
+    "particle": "originofspirits:block/cursed_gore_block_rare"
+  }
+}

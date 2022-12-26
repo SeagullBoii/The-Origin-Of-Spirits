@@ -80,14 +80,15 @@ public class PressingMachineBlock extends Block implements IWaterLoggable {
             if (worldIn.isBlockPowered(pos) && pressingMachine.inputs.contains(pressingMachine.itemHandler.getStackInSlot(0).getItem())) {
                 if (pressingMachine.progressTimer <= 0) {
                     pressingMachine.progressIncreasing = true;
-                } else if (pressingMachine.progressTimer >= 10) {
-                    worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_PISTON_EXTEND, SoundCategory.BLOCKS, 1, 1.4f, true);
-                    worldIn.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.BLOCKS, 1, 0.4f, true);
+                } else if (pressingMachine.progressTimer >= 9) {
+                    worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_ANVIL_USE, SoundCategory.BLOCKS, 0.5f, 2f);
+                    worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_FIRE_AMBIENT, SoundCategory.BLOCKS, 0.5f, 0.4f);
                     pressingMachine.craft(pos);
                     pressingMachine.progressIncreasing = false;
                     }
                 if (pressingMachine.progressIncreasing) {
                     pressingMachine.progressTimer++;
+                    worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_PISTON_EXTEND, SoundCategory.BLOCKS, 0.2f, 2f);
                 }
             }
             if (pressingMachine.progressTimer <= 0) {
@@ -98,6 +99,7 @@ public class PressingMachineBlock extends Block implements IWaterLoggable {
             }
             if (!pressingMachine.progressIncreasing) {
                 pressingMachine.progressTimer--;
+                worldIn.playSound(null, pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_PISTON_EXTEND, SoundCategory.BLOCKS, 0.2f, 2f);
             }
             if (pressingMachine.progressTimer <= 8) {
                 worldIn.setBlockState(pos, state.with(PROGRESS, pressingMachine.progressTimer));

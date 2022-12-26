@@ -6,7 +6,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "originofspirits:pressing_machine",
-      "text": "The Pressing Machine is a Block that is Powered by Redstone, which is used to Press Items into a Other Ones, such as Ingots into Weapon Mod Tokens. The Items can be Added to the Block via Hopper. Placing one Ynderneath It will Withdraw non-input Items. You must right-click the Block Once every Time the World is Loaded to Activate it."
+      "text": "The Pressing Machine is a Block that is Powered by Redstone, which is used to Press Items into a Other Ones, such as Ingots into Weapon Mod Tokens. The Items can be Added to the Block via Hopper. Placing one underneath It will Withdraw non-input Items. You must right-click the Block Once every Time the World is Loaded to Activate it."
     },
     {
       "type": "patchouli:crafting",
@@ -16,7 +16,8 @@
     {
       "type": "patchouli:image",
       "title": "Recipes",
-      "images": ["originofspirits:textures/gui/pressing_machine/patchouli_recipe_paper.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_carton.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_iron_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_gold_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_diamond_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_glowstone_dust.png"]
+      "images": ["originofspirits:textures/gui/pressing_machine/patchouli_recipe_paper.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_carton.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_iron_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_gold_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_diamond_token.png", "originofspirits:textures/gui/pressing_machine/patchouli_recipe_smenerel_coin.png","originofspirits:textures/gui/pressing_machine/patchouli_recipe_glowstone_dust.png"]
     }
+
   ]
 }
