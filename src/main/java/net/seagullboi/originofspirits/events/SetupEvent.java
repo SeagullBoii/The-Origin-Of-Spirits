@@ -11,10 +11,11 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.network.TOOSNetwork;
-import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
 import net.seagullboi.originofspirits.registry.ModWoodTypes;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
+import net.seagullboi.originofspirits.world.gen.TOOSBiomeEvent;
 import net.seagullboi.originofspirits.world.gen.features.TOOSConfiguredFeatures;
 
 @Mod.EventBusSubscriber(modid = OriginOfSpirits.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -40,6 +41,10 @@ public class SetupEvent {
             pot.addPlant(TOOSBlocks.VIOLET_PERIWINKLE.getId(), TOOSBlocks.POTTED_VIOLET_PERIWINKLE);
             pot.addPlant(TOOSBlocks.PEACE_LILY.getId(), TOOSBlocks.POTTED_PEACE_LILY);
             pot.addPlant(TOOSBlocks.SACRED_VIOLET.getId(), TOOSBlocks.POTTED_SACRED_VIOLET);
+
+            //Biomes
+            TOOSBiomeEvent.generateBiomes();
+            TOOSBiomeEvent.registerBiomeDictionaries();
 
             TOOSConfiguredFeatures.registerConfigs();
             ModStructures.setupStructures();

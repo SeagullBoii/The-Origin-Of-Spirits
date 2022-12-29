@@ -35,6 +35,7 @@ public class TOOSConfiguredFeatures {
         public static final ConfiguredFeature<?, ?> BLUEBERRY_BUSH_PATCH = Feature.FLOWER.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(TOOSBlocks.BLUEBERRY_BUSH.get().getDefaultState().with(BlueberryBushBlock.AGE, 3)), SimpleBlockPlacer.PLACER)).tries(5).build()).withPlacement(Features.Placements.HEIGHTMAP_PLACEMENT).func_242731_b(1);
         public static final ConfiguredFeature<?, ?> CURSED_CAVE_GEN = Feature.RANDOM_PATCH.withConfiguration((new BlockClusterFeatureConfig.Builder(new SimpleBlockStateProvider(TOOSBlocks.CURSED_CAVE_GENERATOR.get().getDefaultState()), SimpleBlockPlacer.PLACER)).tries(6).build()).withPlacement(Placement.COUNT_NOISE.configure(new NoiseDependant(-0.8, 0, 5)));
         public static final ConfiguredFeature<?, ?> CURSED_LAVA_LAKE = Feature.LAKE.withConfiguration(new BlockStateFeatureConfig(States.CURSED_LAVA)).withPlacement(Placement.LAVA_LAKE.configure(new ChanceConfig(80)));
+
     }
 
   //  public static ConfiguredFeature<?, ?> TEST_FEATURE;
@@ -44,6 +45,7 @@ public class TOOSConfiguredFeatures {
         register("blueberry_bush_patch", TOOSConfiguredFeatures.Configs.BLUEBERRY_BUSH_PATCH.range(256).square().chance(100));
         register("cursed_cave_generation", TOOSConfiguredFeatures.Configs.CURSED_CAVE_GEN);
         register("cursed_lava_lake", TOOSConfiguredFeatures.Configs.CURSED_LAVA_LAKE);
+
     }
 
     private static <FC extends IFeatureConfig> void register(String name, ConfiguredFeature<FC, ?> feature) {
