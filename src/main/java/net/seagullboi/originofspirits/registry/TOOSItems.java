@@ -49,7 +49,6 @@ public class TOOSItems {
 
     //MISC
     public static final RegistryObject<Item> PINK_DESERT_MUSIC_DISC = ITEMS.register("music_disc_pink_desert", () -> new MusicDiscItem(13, TOOSSoundEvents.PINK_DESERT, new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
-    public static final RegistryObject<Item> BOID_MUSIC_DISC = ITEMS.register("archie_the_abyss", () -> new MusicDiscItem(13, TOOSSoundEvents.VOID, new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
 
     public static final RegistryObject<Item> RAW_CURSED_STEEL = ITEMS.register("raw_cursed_steel", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
     public static final RegistryObject<Item> CURSED_STEEL = ITEMS.register("cursed_steel_ingot", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));

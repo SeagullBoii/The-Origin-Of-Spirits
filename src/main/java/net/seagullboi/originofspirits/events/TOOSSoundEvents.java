@@ -19,7 +19,6 @@ public class TOOSSoundEvents {
     //Music
     public static final RegistryObject<SoundEvent> CURSED_ISLANDS_MUSIC = registerSoundEvent("cursed_islands_music");
     public static final RegistryObject<SoundEvent> PINK_DESERT = registerSoundEvent("pink_desert_music");
-    public static final RegistryObject<SoundEvent> VOID = registerSoundEvent("archie_the_abyss");
 
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(OriginOfSpirits.MOD_ID, name)));

@@ -19,7 +19,6 @@ import net.minecraftforge.fml.network.simple.SimpleChannel;
 import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.registry.*;
 import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
-import net.seagullboi.originofspirits.registry.worldgen.TOOSBiomes;
 import net.seagullboi.originofspirits.registry.worldgen.TOOSFeatures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,7 +56,7 @@ public class OriginOfSpirits {
         TOOSFeatures.register(eventBus);
         TOOSPaintings.PAINTING_TYPES.register(eventBus);
         TOOSParticles.PARTICLE_TYPES.register(eventBus);
-        TOOSBiomes.BIOMES.register(eventBus);
+
         //Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(new OriginofspiritsModFMLBusEvents(this));
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
