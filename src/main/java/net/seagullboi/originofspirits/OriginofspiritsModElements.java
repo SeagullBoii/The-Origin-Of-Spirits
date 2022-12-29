@@ -68,8 +68,8 @@ public class OriginofspiritsModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "skenelope_hurt")));
 		sounds.put(new ResourceLocation("originofspirits", "skenelope_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "skenelope_death")));
-		sounds.put(new ResourceLocation("originofspirits", "archie_the_abyss"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "archie_the_abyss")));
+		//sounds.put(new ResourceLocation("originofspirits", "archie_the_abyss"),
+		//		new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "archie_the_abyss")));
 		sounds.put(new ResourceLocation("originofspirits", "flamethrower"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "flamethrower")));
 		sounds.put(new ResourceLocation("originofspirits", "wisp_explode"),
