@@ -150,6 +150,9 @@ dependencies {
         annotationProcessor 'org.spongepowered:mixin:0.8.2:processor'
     }
 
+    //Blueprint
+    implementation fg.deobf("com.minecraftabnormals:abnormals-core:1.16.5-3.3.0")
+
     //Patchouli
     compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.3:api")
     runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.16.4-53.3")
@@ -173,6 +176,9 @@ dependencies {
 
     //Mob battle
     implementation fg.deobf("curse.maven:mob-battle-mod-268746:3408702")
+
+    //Upgrade Aquatic
+  //  implementation fg.deobf("curse.maven:upgrade-aquatic-326895:3561148")
 
     // Rubidium
     // implementation fg.deobf("curse.maven:rubidium-574856:3769736")
