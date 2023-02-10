@@ -30,9 +30,13 @@ public class TOOSItemModelProvider extends ItemModelProvider {
         simpleItem(TOOSItems.SHOTGUN_SHELLS.get());
         simpleItem(TOOSItems.IRON_BULLET.get());
 
+        handheldItem(TOOSItems.CREPTI_STAFF.get());
+
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_SLAB.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_SLAB.get());
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get());
         blockItem(TOOSBlocks.POLISHED_DECEPTONE_WALL.get().asItem(), TOOSBlocks.POLISHED_DECEPTONE_WALL.get());
+
+        spawnEggItem(TOOSItems.CREPTIPISCES_SPAWN_EGG.get().asItem());
     }
 
     @Nonnull
@@ -45,6 +49,10 @@ public class TOOSItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getRegistryName().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(OriginOfSpirits.MOD_ID,"items/" + item.getRegistryName().getPath()));
+    }
+
+    private ItemModelBuilder spawnEggItem(Item item) {
+        return withExistingParent(item.getRegistryName().getPath(), new ResourceLocation("item/template_spawn_egg"));
     }
 
     private ItemModelBuilder handheldItem(Item item) {

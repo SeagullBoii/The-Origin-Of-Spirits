@@ -418,5 +418,47 @@
         "stream": false
       }
     ]
+  },
+  "manatee_ambient": {
+    "category": "voice",
+    "subtitle": "subtitles.manatee_ambient",
+    "sounds": [
+      {
+        "name": "originofspirits:manatee_ambient",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:manatee_ambient1",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:manatee_ambient2",
+        "stream": false
+      }
+    ]
+  },
+  "manatee_hurt": {
+    "category": "voice",
+    "subtitle": "subtitles.manatee_hurt",
+    "sounds": [
+      {
+        "name": "originofspirits:manatee_hurt",
+        "stream": false
+      },
+      {
+        "name": "originofspirits:manatee_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "manatee_death": {
+    "category": "voice",
+    "subtitle": "subtitles.manatee_death",
+    "sounds": [
+      {
+        "name": "originofspirits:manatee_death",
+        "stream": false
+      }
+    ]
   }
 }

@@ -119,11 +119,11 @@ public class SlashlingRenderer {
 		public void setRotationAngles(SlashlingEntity.CustomEntity e, float f, float f1, float f2, float f3, float f4) {
 			this.head.rotateAngleY = f3 / (180F / (float) Math.PI);
 			this.head.rotateAngleX = f4 / (180F / (float) Math.PI);
-			this.right_arm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
-			this.left_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1;
-			this.left_arm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1;
-			this.right_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1;
-			this.body.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1;
+			this.right_arm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1 / 4;
+			this.left_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * -1.0F * f1 / 4;
+			this.left_arm.rotateAngleX = MathHelper.cos(f * 0.6662F) * f1 / 4;
+			this.right_leg.rotateAngleX = MathHelper.cos(f * 1.0F) * 1.0F * f1 / 4;
+			this.body.rotateAngleX = MathHelper.cos(f * 0.6662F + (float) Math.PI) * f1 / 4;
 			int i = e.getAttackTimer();
 			if (i > 0) {
 				this.right_arm.rotateAngleX = -2.0F + 1.5F * MathHelper.func_233021_e_((float) i - 1.5f, 10.5F);

@@ -1,20 +1,7 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
-
-import net.minecraft.world.World;
-import net.minecraft.entity.Entity;
-
-import net.seagullboi.originofspirits.entity.ElectricEelEntity;
-import net.seagullboi.originofspirits.OriginOfSpirits;
-
-import java.util.Map;
-import java.util.HashMap;
-
 public class ElectricEelVariantsProcedure {
-	@Mod.EventBusSubscriber
+	/*@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
 		public static void onEntitySpawned(EntityJoinWorldEvent event) {
@@ -51,5 +38,5 @@ public class ElectricEelVariantsProcedure {
 		if (Variant > 4) {
 			Variant = 0;
 		}
-	}
+	}*/
 }

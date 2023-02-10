@@ -135,6 +135,11 @@ public class SkenelopeEntity extends OriginofspiritsModElements.ModElement {
 		}
 
 		@Override
+		public int getTalkInterval() {
+			return 600;
+		}
+
+		@Override
 		public net.minecraft.util.SoundEvent getAmbientSound() {
 			return (net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("originofspirits:skenelope_ambient"));
 		}

@@ -18,11 +18,12 @@ import net.seagullboi.originofspirits.api.IConsumesMana;
 import net.seagullboi.originofspirits.api.IWeaponMod;
 import net.seagullboi.originofspirits.entity.CursedLaserProjectile;
 import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
+import net.seagullboi.originofspirits.util.ColorUtil;
 import net.seagullboi.originofspirits.util.GlobalVarUtil;
 
 import java.util.List;
 
-    public class EyeCanonItem extends Item implements IConsumesMana, IWeaponMod {
+    public class EyeCannonItem extends Item implements IConsumesMana, IWeaponMod {
 
         ItemStack canonStack = new ItemStack(this);
         int extraDamage;
@@ -31,7 +32,7 @@ import java.util.List;
         boolean charged;
         boolean marksman;
 
-        public EyeCanonItem(Properties properties) {
+        public EyeCannonItem(Properties properties) {
             super(properties);
         }
 
@@ -115,8 +116,8 @@ import java.util.List;
             super.inventoryTick(itemstack, world, entity, slot, selected);
             Item mainHand = ((LivingEntity) entity).getHeldItemMainhand().getItem();
             if (selected) {
-                if (mainHand instanceof EyeCanonItem) {
-                    EyeCanonItem cannon = (EyeCanonItem) mainHand;
+                if (mainHand instanceof EyeCannonItem) {
+                    EyeCannonItem cannon = (EyeCannonItem) mainHand;
                     if(itemstack.getOrCreateTag().getInt("weapon_mod") > 2) {
                         itemstack.getOrCreateTag().putInt("weapon_mod", 0);
                     }
@@ -164,9 +165,9 @@ import java.util.List;
             projectile.setSilent(true);
 
             projectile.setPosition(entity.getPosX(), entity.getPosY() + 1.3, entity.getPosZ());
-            if (((EyeCanonItem) stack.getItem()).isFullyCharged()) {
+            if (((EyeCannonItem) stack.getItem()).isFullyCharged()) {
                 projectile.setExplodes(true);
-            } else if (((EyeCanonItem) stack.getItem()).isMarksman()) {
+            } else if (((EyeCannonItem) stack.getItem()).isMarksman()) {
                 projectile.setMarksman(true);
             }
 
@@ -217,36 +218,36 @@ import java.util.List;
             super.addInformation(itemstack, world, list, flag);
 
             //Base Info
-            list.add(new StringTextComponent("\u00A729-11 \u00A72Magic \u00A72Damage"));
+            list.add(new StringTextComponent(ColorUtil.AQUA + "9-11 \u00A72Magic \u00A72Damage"));
             list.add(new StringTextComponent(""));
-            list.add(new StringTextComponent("\u00A7b[2 Mana Cost]"));
-            list.add(new StringTextComponent("\u00A7c" + "Must Be Charged"));
+            list.add(new StringTextComponent(ColorUtil.AQUA + "[2 Mana Cost]"));
+            list.add(new StringTextComponent(ColorUtil.RED + "Must Be Charged"));
 
             //Weapon Mod
             if (itemstack.getOrCreateTag().getInt("weapon_mod") <= 0) {
-                list.add(new StringTextComponent("\u00A77" + "Weapon Mod : Null"));
+                list.add(new StringTextComponent(ColorUtil.GRAY + "Weapon Mod : Null"));
             } else if (itemstack.getOrCreateTag().getInt("weapon_mod") == 1) {
-                list.add(new StringTextComponent("\u00A77" + "Weapon Mod : Scope"));
+                list.add(new StringTextComponent(ColorUtil.GRAY + "Weapon Mod : Scope"));
                 if (Screen.hasShiftDown() || Screen.hasControlDown()) {
                     list.add(new StringTextComponent(""));
-                    list.add(new StringTextComponent("\u00A77" + "Crouch to zoom in"));
-                    list.add(new StringTextComponent("\u00A7c" + "Immobile while zoomed in"));
-                    list.add(new StringTextComponent("\u00A72" + "Damage scales with distance"));
+                    list.add(new StringTextComponent(ColorUtil.GRAY + "Crouch to zoom in"));
+                    list.add(new StringTextComponent(ColorUtil.RED + "Immobile while zoomed in"));
+                    list.add(new StringTextComponent(ColorUtil.DARK_GREEN + "Damage scales with distance"));
 
                 } else {
                     list.add(new StringTextComponent(""));
-                    list.add(new StringTextComponent("\u00A77" + "Press [Shift] or [Ctrl] to view mod descriptions"));
+                    list.add(new StringTextComponent(ColorUtil.GRAY + "Press [Shift] or [Ctrl] to view mod descriptions"));
                 }
             } else if (itemstack.getOrCreateTag().getInt("weapon_mod") == 2) {
-                list.add(new StringTextComponent("\u00A77" + "Weapon Mod : Explosive Charge"));
+                list.add(new StringTextComponent(ColorUtil.GRAY + "Weapon Mod : Explosive Charge"));
                 if (Screen.hasShiftDown() || Screen.hasControlDown()) {
                     list.add(new StringTextComponent(""));
-                    list.add(new StringTextComponent("\u00A77" + "Charge to cause an Explosive Blast"));
-                    list.add(new StringTextComponent("\u00A7c" + "Takes 3.5 seconds to fully charge"));
+                    list.add(new StringTextComponent(ColorUtil.GRAY + "Charge to cause an Explosive Blast"));
+                    list.add(new StringTextComponent(ColorUtil.RED + "Takes 3.5 seconds to fully charge"));
 
                 } else {
                     list.add(new StringTextComponent(""));
-                    list.add(new StringTextComponent("\u00A77" + "Press [Shift] or [Ctrl] to view mod descriptions"));
+                    list.add(new StringTextComponent(ColorUtil.GRAY + "Press [Shift] or [Ctrl] to view mod descriptions"));
                 }
             }
         }

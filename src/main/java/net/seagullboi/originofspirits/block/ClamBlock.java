@@ -34,7 +34,6 @@ public class ClamBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockItemUseContext context) {
-        ;
         return this.getDefaultState().with(FACING, context.getNearestLookingDirection().getOpposite());
     }
 

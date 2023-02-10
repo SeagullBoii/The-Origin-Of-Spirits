@@ -46,10 +46,10 @@ public class OriginofspiritsModElements {
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
 
 	public OriginofspiritsModElements() {
-		sounds.put(new ResourceLocation("originofspirits", "electrical_shock"),
+		/*sounds.put(new ResourceLocation("originofspirits", "electrical_shock"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "electrical_shock")));
 		sounds.put(new ResourceLocation("originofspirits", "electric_shock_explosion"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "electric_shock_explosion")));
+				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "electric_shock_explosion")));*/
 		sounds.put(new ResourceLocation("originofspirits", "clam_snap"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "clam_snap")));
 		sounds.put(new ResourceLocation("originofspirits", "clam_snap_middle"),
@@ -68,8 +68,6 @@ public class OriginofspiritsModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "skenelope_hurt")));
 		sounds.put(new ResourceLocation("originofspirits", "skenelope_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "skenelope_death")));
-		sounds.put(new ResourceLocation("originofspirits", "archie_the_abyss"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "archie_the_abyss")));
 		sounds.put(new ResourceLocation("originofspirits", "flamethrower"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "flamethrower")));
 		sounds.put(new ResourceLocation("originofspirits", "wisp_explode"),
@@ -80,22 +78,20 @@ public class OriginofspiritsModElements {
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "wisp_hurt")));
 		sounds.put(new ResourceLocation("originofspirits", "wisp_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "wisp_death")));
-		sounds.put(new ResourceLocation("originofspirits", "hexayosh_charge"),
+		/*sounds.put(new ResourceLocation("originofspirits", "hexayosh_charge"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "hexayosh_charge")));
 		sounds.put(new ResourceLocation("originofspirits", "hexayosh_ambient"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "hexayosh_ambient")));
 		sounds.put(new ResourceLocation("originofspirits", "hexayosh_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "hexayosh_death")));
 		sounds.put(new ResourceLocation("originofspirits", "hexayosh_hurt"),
-				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "hexayosh_hurt")));
+				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "hexayosh_hurt")));*/
 		sounds.put(new ResourceLocation("originofspirits", "blessed_symphony"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "blessed_symphony")));
 		sounds.put(new ResourceLocation("originofspirits", "gauntlet_shoot"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "gauntlet_shoot")));
 		sounds.put(new ResourceLocation("originofspirits", "yoyo_swing"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "yoyo_swing")));
-		//sounds.put(new ResourceLocation("originofspirits", "magic_staff_use"),
-		//		new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "magic_staff_use")));
 		sounds.put(new ResourceLocation("originofspirits", "frog_death"),
 				new net.minecraft.util.SoundEvent(new ResourceLocation("originofspirits", "frog_death")));
 		sounds.put(new ResourceLocation("originofspirits", "frog_hurt"),

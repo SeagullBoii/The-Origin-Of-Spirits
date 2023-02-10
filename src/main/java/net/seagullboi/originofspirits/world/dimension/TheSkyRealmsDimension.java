@@ -43,6 +43,7 @@ import net.seagullboi.originofspirits.OriginofspiritsModElements;
 import net.seagullboi.originofspirits.item.TheSkyRealmsItem;
 import net.seagullboi.originofspirits.procedures.TheSkyRealmsCanTravelThroughPortalProcedure;
 import net.seagullboi.originofspirits.registry.TOOSBlocks;
+import net.seagullboi.originofspirits.registry.worldgen.TOOSBiomes;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -72,10 +73,9 @@ public class TheSkyRealmsDimension extends OriginofspiritsModElements.ModElement
 				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("originofspirits:holy_marsh")).getGenerationSettings()
 				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
-		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("originofspirits:sacred_plains")).getGenerationSettings()
-				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
-		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("originofspirits:sacred_plains")).getGenerationSettings()
-				.getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+		replaceableBlocks.add(TOOSBiomes.SACRED_PLAINS.get().getGenerationSettings().getSurfaceBuilder().get().getConfig().getTop().getBlock());
+		replaceableBlocks.add(TOOSBiomes.SACRED_PLAINS.get().getGenerationSettings().getSurfaceBuilder().get().getConfig().getUnder().getBlock());
+
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("originofspirits:deceptive_islands")).getGenerationSettings()
 				.getSurfaceBuilder().get().getConfig().getTop().getBlock());
 		replaceableBlocks.add(ForgeRegistries.BIOMES.getValue(new ResourceLocation("originofspirits:deceptive_islands")).getGenerationSettings()

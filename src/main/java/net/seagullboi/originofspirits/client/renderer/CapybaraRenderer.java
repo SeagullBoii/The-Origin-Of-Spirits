@@ -263,8 +263,7 @@ public class CapybaraRenderer {
 		}
 
 		@Override
-		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue,
-				float alpha) {
+		public void render(MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 				float f = 1;
 				if (this.isChild) {
 					f = (float) ((double) f * 0.5D);

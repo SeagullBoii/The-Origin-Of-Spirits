@@ -25,7 +25,7 @@ public class BloodyClamOnEntityTickUpdateProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (entity.isOnGround()) {
-			if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof ElectricEelEntity.CustomEntity
+			if (((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof ElectricEelEntity
 					|| ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof CreatureEntity
 					|| ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof AgeableEntity
 					|| ((entity instanceof MobEntity) ? ((MobEntity) entity).getAttackTarget() : null) instanceof AmbientEntity

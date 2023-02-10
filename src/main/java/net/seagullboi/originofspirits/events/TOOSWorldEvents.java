@@ -18,7 +18,7 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.seagullboi.originofspirits.OriginOfSpirits;
 import net.seagullboi.originofspirits.registry.worldgen.ModStructures;
 import net.seagullboi.originofspirits.world.ModStructureGeneration;
-import net.seagullboi.originofspirits.world.gen.features.TOOSFeatureGeneration;
+import net.seagullboi.originofspirits.registry.worldgen.TOOSFeatureGeneration;
 import org.apache.logging.log4j.LogManager;
 
 import java.lang.reflect.Method;
@@ -31,7 +31,7 @@ public class TOOSWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         ModStructureGeneration.generateStructures(event);
-        TOOSFeatureGeneration.generateFlowers(event);
+        TOOSFeatureGeneration.generateFeatures(event);
     }
 
     @SubscribeEvent

@@ -3,7 +3,7 @@
   "textures": {
     "down": "originofspirits:blocks/clam_block",
     "up": "originofspirits:blocks/clam_block",
-    "north": "originofspirits:blocks/clam_block_mouth",
+    "north": "originofspirits:blocks/clam_block_top",
     "east": "originofspirits:blocks/clam_block",
     "south": "originofspirits:blocks/clam_block",
     "west": "originofspirits:blocks/clam_block",

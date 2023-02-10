@@ -6,6 +6,8 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.ToolItem;
+import net.minecraft.util.SoundEvent;
+import net.seagullboi.originofspirits.events.TOOSSoundEvents;
 import net.seagullboi.originofspirits.util.GlobalVarUtil;
 
 import java.util.Set;
@@ -24,4 +26,9 @@ public abstract class AbstractMagicStaffItem extends ToolItem {
                 GlobalVarUtil.setManaCooldown(entity, manaCooldown);
         }
     }
+
+    SoundEvent shootSound() {
+        return TOOSSoundEvents.MAGIC_STAFF_USE.get();
+    }
+
 }

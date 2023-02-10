@@ -6,6 +6,7 @@ import net.seagullboi.originofspirits.entity.ElectricEelEntity;
 import net.seagullboi.originofspirits.entity.ElectricSurgeonfishEntity;
 import net.seagullboi.originofspirits.entity.JellyfishEntity;
 import net.seagullboi.originofspirits.particle.ImmovablePearlSparkParticle;
+import net.seagullboi.originofspirits.registry.TOOSEntityTypes;
 import net.seagullboi.originofspirits.util.AbyssalSpawnerEntities;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -107,10 +108,10 @@ public class AbyssalSpawnerBlock extends Block implements IWaterLoggable {
             BlockPos pos3 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() + 1);
             BlockPos pos4 = new BlockPos(pos.getX(), pos.getY(), pos.getZ() - 1);
 
-            Entity electricEel = new ElectricEelEntity.CustomEntity(ElectricEelEntity.entity, worldIn);
-            Entity electricSurgeonfish = new ElectricSurgeonfishEntity.CustomEntity(ElectricSurgeonfishEntity.entity, worldIn);
-            Entity jellyfish = new JellyfishEntity.CustomEntity(JellyfishEntity.entity, worldIn);
-            Entity boxJellyfish = new BoxJellyfishEntity.CustomEntity(BoxJellyfishEntity.entity, worldIn);
+            Entity electricEel = new ElectricEelEntity(TOOSEntityTypes.ELECTRIC_EEL.get(), worldIn);
+            Entity electricSurgeonfish = new ElectricSurgeonfishEntity(TOOSEntityTypes.ELECTRIC_SURGEONFISH.get(), worldIn);
+            Entity jellyfish = new JellyfishEntity(TOOSEntityTypes.JELLYFISH.get(), worldIn);
+            Entity boxJellyfish = new BoxJellyfishEntity(TOOSEntityTypes.BOX_JELLYFISH.get(), worldIn);
 
             if (state.get(ENTITY_SPAWN) == AbyssalSpawnerEntities.ELECTRIC_EEL) {
                 if (Math.random() < 0.16 && worldIn.getFluidState(pos.up()).isSource()) {

@@ -17,11 +17,11 @@ public class DataGenerators {
         DataGenerator dataGenerator = event.getGenerator();
         final ExistingFileHelper efh = event.getExistingFileHelper();
         if (event.includeServer()) {
+            dataGenerator.addProvider(new TOOSRecipeProvider(dataGenerator));
             dataGenerator.addProvider(new TOOSBlockStateProvider(dataGenerator, efh));
             dataGenerator.addProvider(new TOOSBlockItemModelProvider(dataGenerator, efh));
             dataGenerator.addProvider(new TOOSItemModelProvider(dataGenerator, efh));
             dataGenerator.addProvider(new TOOSLootTableProvider(dataGenerator));
-            dataGenerator.addProvider(new TOOSRecipeProvider(dataGenerator));
             dataGenerator.addProvider(new TOOSBlockTagsProvider(dataGenerator, efh));
             dataGenerator.addProvider(new TOOSLangProvider(dataGenerator, "en_us_test"));
         }

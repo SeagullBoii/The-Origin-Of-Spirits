@@ -243,6 +243,7 @@
   "entity.originofspirits.caecanus.toolsmith": "Toolsmith",
   "entity.originofspirits.caecanus.weaponsmith": "Weaponsmith",
   "entity.originofspirits.caikle": "Caikle",
+  "entity.originofspirits.manatee": "Manatee",
   "entity.originofspirits.capybara": "Capybara",
   "entity.originofspirits.clam": "Clam",
   "entity.originofspirits.clam_empty": "Clam",
@@ -306,6 +307,7 @@
   "item.originofspirits.blessed_symphony": "Music Disc",
   "item.originofspirits.blessed_symphony.desc": "Blessed Symphony",
   "item.originofspirits.bloody_clam_spawn_egg": "Bloody Clam Spawn Egg",
+  "item.originofspirits.manatee_spawn_egg": "Manatee Spawn Egg",
   "item.originofspirits.blue_pixie": "Blue Pixie",
   "item.originofspirits.blueberries": "Blueberries",
   "item.originofspirits.blueberry_pie": "Blueberry Pie",
@@ -504,6 +506,9 @@
   "subtitles.wisp_hurt": "Wisp Hurt",
   "subtitles.wisp_idle": "Wisp",
   "subtitles.yoyo_swing": "Yoyo Swung",
+  "subtitles.manatee_ambient": "Manatee",
+  "subtitles.manatee_death": "Dead Manatee",
+  "subtitles.manatee_hurt": "Hurt Manatee",
   "block.originofspirits.polished_deceptone_slab": "Polished Deceptone Slab",
   "block.originofspirits.polished_deceptone_stairs": "Polished Deceptone Stairs",
   "block.originofspirits.polished_deceptone_wall": "Polished Deceptone Wall",
@@ -518,5 +523,9 @@
   "item.originofspirits.ocular_piercer": "Ocular Piercer",
   "item.originofspirits.cursed_eye_spawn_egg": "Cursed Eye Spawn Egg",
   "entity.originofspirits.cursed_eye": "Cursed Eye",
-  "block.originofspirits.cursed_gore_block": "Cursed Gore Block"
+  "block.originofspirits.cursed_gore_block": "Cursed Gore Block",
+  "item.originofspirits.crepti_staff": "Creptistaff",
+  "entity.originofspirits.creptipisces": "Creptipisces",
+  "entity.originofspirits.creptipisces_spike": "Creptipisces Spike",
+  "item.originofspirits.creptipisces_spawn_egg": "Creptipisces Spawn Egg"
 }

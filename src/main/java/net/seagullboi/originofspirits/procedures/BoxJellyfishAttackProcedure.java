@@ -58,7 +58,7 @@ public class BoxJellyfishAttackProcedure {
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		if (sourceentity instanceof BoxJellyfishEntity.CustomEntity) {
+		if (sourceentity instanceof BoxJellyfishEntity) {
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(VenomPotionEffect.potion, (int) 10, (int) 0, (false), (false)));
 		}

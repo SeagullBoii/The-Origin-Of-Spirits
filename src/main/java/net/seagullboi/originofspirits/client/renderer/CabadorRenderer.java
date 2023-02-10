@@ -8,8 +8,8 @@ import net.minecraft.util.ResourceLocation;
 import net.seagullboi.originofspirits.client.model.CabadorModel;
 
 public class CabadorRenderer extends MobRenderer<CabadorEntity, CabadorModel<CabadorEntity>> {
-    protected static final ResourceLocation TEXTURE = new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/cabador.png");
-    protected static final ResourceLocation SADDLE_TEXTURE = new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/cabador_saddle.png");
+    protected static final ResourceLocation TEXTURE = new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/entity/cabador/cabador.png");
+    protected static final ResourceLocation SADDLE_TEXTURE = new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/entity/cabador/cabador_saddle.png");
 
     public CabadorRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new CabadorModel<>(), 0.7F);

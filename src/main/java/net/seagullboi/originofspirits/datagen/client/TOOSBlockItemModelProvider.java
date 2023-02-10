@@ -26,4 +26,5 @@ public class TOOSBlockItemModelProvider extends BlockModelProvider {
     protected BlockModelBuilder fenceItem(Block block, ResourceLocation texture) {
         return fenceInventory(block.toString(), texture);
     }
+
 }

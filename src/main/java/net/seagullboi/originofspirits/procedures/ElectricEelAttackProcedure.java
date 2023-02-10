@@ -1,39 +1,7 @@
 package net.seagullboi.originofspirits.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.living.LivingAttackEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-
-import net.minecraft.world.server.ServerWorld;
-import net.minecraft.world.World;
-import net.minecraft.world.IWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.AxisAlignedBB;
-import net.minecraft.util.SoundCategory;
-import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.DamageSource;
-import net.minecraft.potion.Effects;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.Entity;
-
-import net.seagullboi.originofspirits.OriginOfSpirits;
-import net.seagullboi.originofspirits.particle.ElectricityParticleParticle;
-import net.seagullboi.originofspirits.particle.ElectricSparksParticle;
-import net.seagullboi.originofspirits.entity.ElectricEelEntity;
-
-import java.util.stream.Collectors;
-import java.util.function.Function;
-import java.util.Map;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Comparator;
-
 public class ElectricEelAttackProcedure {
-	@Mod.EventBusSubscriber
+	/*@Mod.EventBusSubscriber
 	private static class GlobalTrigger {
 		@SubscribeEvent
 		public static void onEntityAttacked(LivingAttackEvent event) {
@@ -94,16 +62,13 @@ public class ElectricEelAttackProcedure {
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
 		if (sourceentity instanceof ElectricEelEntity.CustomEntity) {
 			if (sourceentity instanceof LivingEntity)
-				((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, (int) 1000, (int) 100, (false), (false)));
+				((LivingEntity) sourceentity).addPotionEffect(new EffectInstance(Effects.SLOWNESS, 1000, 100, (false), (false)));
 			if (world instanceof World && !world.isRemote()) {
-				((World) world)
-						.playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-										.getValue(new ResourceLocation("originofspirits:electrical_shock")),
+				world.playSound(null, new BlockPos((int) x, (int) y, (int) z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("originofspirits:electrical_shock")),
 								SoundCategory.HOSTILE, (float) 1, (float) 1);
 			} else {
 				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+						ForgeRegistries.SOUND_EVENTS
 								.getValue(new ResourceLocation("originofspirits:electrical_shock")),
 						SoundCategory.HOSTILE, (float) 1, (float) 1, false);
 			}
@@ -129,7 +94,7 @@ public class ElectricEelAttackProcedure {
 
 				private void run() {
 					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ElectricSparksParticle.particle, x, y, z, (int) 20, 0.1, 0.1, 0.1, 0.5);
+						((ServerWorld) world).spawnParticle(ElectricSparksParticle.particle, x, y, z, 20, 0.1, 0.1, 0.1, 0.5);
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
@@ -156,7 +121,7 @@ public class ElectricEelAttackProcedure {
 
 				private void run() {
 					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ElectricSparksParticle.particle, x, y, z, (int) 20, 0.1, 0.1, 0.1, 0.5);
+						((ServerWorld) world).spawnParticle(ElectricSparksParticle.particle, x, y, z, 20, 0.1, 0.1, 0.1, 0.5);
 					}
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
@@ -183,7 +148,7 @@ public class ElectricEelAttackProcedure {
 
 				private void run() {
 					if (world instanceof ServerWorld) {
-						((ServerWorld) world).spawnParticle(ElectricityParticleParticle.particle, x, y, z, (int) 40, 0.2, 0.2, 0.2, 0.5);
+						((ServerWorld) world).spawnParticle(ElectricityParticleParticle.particle, x, y, z, 40, 0.2, 0.2, 0.2, 0.5);
 					}
 					{
 						List<Entity> _entfound = world
@@ -191,13 +156,13 @@ public class ElectricEelAttackProcedure {
 										new AxisAlignedBB(x - (8 / 2d), y - (8 / 2d), z - (8 / 2d), x + (8 / 2d), y + (8 / 2d), z + (8 / 2d)), null)
 								.stream().sorted(new Object() {
 									Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-										return Comparator.comparing((Function<Entity, Double>) (_entcnd -> _entcnd.getDistanceSq(_x, _y, _z)));
+										return Comparator.comparing(_entcnd -> _entcnd.getDistanceSq(_x, _y, _z));
 									}
 								}.compareDistOf(x, y, z)).collect(Collectors.toList());
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator instanceof ElectricEelEntity.CustomEntity)) {
 								if (entityiterator instanceof LivingEntity) {
-									((LivingEntity) entityiterator).attackEntityFrom(new DamageSource("electric_shock").setDamageBypassesArmor(),
+									entityiterator.attackEntityFrom(new DamageSource("electric_shock").setDamageBypassesArmor(),
 											(float) (15 - ((entityiterator instanceof LivingEntity)
 													? ((LivingEntity) entityiterator).getTotalArmorValue()
 													: 0) / 2));
@@ -208,13 +173,13 @@ public class ElectricEelAttackProcedure {
 					if (!sourceentity.world.isRemote())
 						sourceentity.remove();
 					if (world instanceof World && !world.isRemote()) {
-						((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+						world.playSound(null, new BlockPos((int) x, (int) y, (int) z),
+								ForgeRegistries.SOUND_EVENTS
 										.getValue(new ResourceLocation("originofspirits:electric_shock_explosion")),
 								SoundCategory.HOSTILE, (float) 1, (float) 1);
 					} else {
 						((World) world).playSound(x, y, z,
-								(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+								ForgeRegistries.SOUND_EVENTS
 										.getValue(new ResourceLocation("originofspirits:electric_shock_explosion")),
 								SoundCategory.HOSTILE, (float) 1, (float) 1, false);
 					}
@@ -222,5 +187,5 @@ public class ElectricEelAttackProcedure {
 				}
 			}.start(world, (int) 19);
 		}
-	}
+	}*/
 }

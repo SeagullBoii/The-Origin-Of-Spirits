@@ -192,8 +192,12 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerDropSelfLootTable(TOOSBlocks.CURSED_CLOUD_BLOCK.get());
 
         //Plants
+        this.registerDropSelfLootTable(TOOSBlocks.LEAF_CORAL_SHELF.get());
+        this.registerDropSelfLootTable(TOOSBlocks.LEAF_CORAL_FAN.get());
+        this.registerDropSelfLootTable(TOOSBlocks.LEAF_CORAL_FAN_SIDE.get());
         this.registerDropSelfLootTable(TOOSBlocks.ALCYONEUM_POLYPS.get());
         this.registerDropSelfLootTable(TOOSBlocks.DEEP_ALCYONEUM_POLYPS.get());
+        this.registerDropSelfLootTable(TOOSBlocks.SHORE_ALCYONEUM_POLYPS.get());
         this.registerLootTable(TOOSBlocks.DUCKWEED.get(), (duckweed) -> droppingWithSilkTouchOrShears(duckweed, withSurvivesExplosion(duckweed, ItemLootEntry.builder(TOOSBlocks.DUCKWEED.get()))));
         this.registerLootTable(TOOSBlocks.DEEPSEA_ALGAE.get(), (deepsea_algae) -> droppingWithSilkTouchOrShears(deepsea_algae, withSurvivesExplosion(deepsea_algae, ItemLootEntry.builder(TOOSBlocks.DEEPSEA_ALGAE.get()))));
         this.registerDropping(TOOSBlocks.GLOWKELP_PLANT.get(),TOOSBlocks.GLOWKELP.get());
@@ -242,8 +246,14 @@ public class TOOSBlockLootTables extends BlockLootTables {
         this.registerDropSelfLootTable(TOOSBlocks.SWIRLWOOD_WALL_SIGN.get());
 
         //MISC
+        this.registerDropSelfLootTable(TOOSBlocks.SACRED_SOIL.get());
+        this.registerLootTable(TOOSBlocks.SACRED_GRASS.get(), (grass) -> droppingWithSilkTouch(grass, TOOSBlocks.SACRED_SOIL.get()));
         this.registerDropSelfLootTable(TOOSBlocks.DEEP_ALCYONEUM_TOP.get());
         this.registerDropSelfLootTable(TOOSBlocks.DEEP_ALCYONEUM.get());
+        this.registerDropSelfLootTable(TOOSBlocks.ALCYONEUM.get());
+        this.registerDropSelfLootTable(TOOSBlocks.ALCYONEUM_TOP.get());
+        this.registerDropSelfLootTable(TOOSBlocks.SHORE_ALCYONEUM.get());
+        this.registerDropSelfLootTable(TOOSBlocks.SHORE_ALCYONEUM_TOP.get());
         this.registerDropSelfLootTable(TOOSBlocks.CLAM_BLOCK.get());
         this.registerDropSelfLootTable(TOOSBlocks.TEMPEST_CRYSTAL.get());
         this.registerDropSelfLootTable(TOOSBlocks.GUNSMITHING_TABLE_BLOCK.get());

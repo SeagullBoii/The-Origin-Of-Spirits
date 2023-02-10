@@ -130,12 +130,12 @@ public class CluffEntityModel <T extends CluffEntity> extends EntityModel<T> {
 
         this.cloud.rotateAngleX = headPitch * ((float)Math.PI / 180F);
         this.cloud.rotateAngleY = netHeadYaw * ((float)Math.PI / 180F);
-        this.tail.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount / 4;
-        this.tail1.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount / 4;
-        this.tail1_5.rotateAngleY = f;
-        this.tail2_5.rotateAngleY = -f;
-        this.tail3_5.rotateAngleY = f;
-        this.tail4_5.rotateAngleY = -f;
+        this.tail.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount / 4 + cloud.rotateAngleY / 2;
+        this.tail1.rotateAngleY = MathHelper.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount / 4 + cloud.rotateAngleY / 2;
+        this.tail1_5.rotateAngleY = f + cloud.rotateAngleY/ 4;
+        this.tail2_5.rotateAngleY = -f + cloud.rotateAngleY/ 4;
+        this.tail3_5.rotateAngleY = f + cloud.rotateAngleY / 6;
+        this.tail4_5.rotateAngleY = -f + cloud.rotateAngleY / 6;
         this.tail.rotateAngleX = MathHelper.cos(limbSwing * 0.6662F) * 1.4F * limbSwingAmount / 10 + 1.4399F;
     }
 

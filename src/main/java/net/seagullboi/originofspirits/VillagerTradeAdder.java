@@ -6,34 +6,16 @@ import net.minecraft.entity.merchant.villager.VillagerTrades;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraftforge.common.BasicTrade;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.seagullboi.originofspirits.item.YeastItem;
 import net.seagullboi.originofspirits.registry.TOOSItems;
 
 import java.util.List;
 
-@OriginofspiritsModElements.ModElement.Tag
-public class VillagerTradeAdder extends OriginofspiritsModElements.ModElement {
-	public VillagerTradeAdder(OriginofspiritsModElements instance) {
-		super(instance, 9);
-	}
-
-	@Override
-	public void initElements() {
-		MinecraftForge.EVENT_BUS.register(this);
-	}
-
-	@Override
-	public void init(FMLCommonSetupEvent event) {
-	}
-
-	@Override
-	public void serverLoad(FMLServerStartingEvent event) {
-	}
+@Mod.EventBusSubscriber
+public class VillagerTradeAdder{
 
 	@SubscribeEvent
 	public void addNewTrade(VillagerTradesEvent event) {

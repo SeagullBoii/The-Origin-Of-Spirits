@@ -9,7 +9,7 @@ import net.seagullboi.originofspirits.client.model.HobayoshModel;
 
 public class HobayoshRenderer extends MobRenderer<HobayoshEntity, HobayoshModel<HobayoshEntity>> {
     protected static final ResourceLocation TEXTURE =
-            new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/hobayosh.png");
+            new ResourceLocation(OriginOfSpirits.MOD_ID, "textures/entity/hobayosh.png");
 
     public HobayoshRenderer(EntityRendererManager renderManagerIn) {
         super(renderManagerIn, new HobayoshModel<>(), 0.7F);

@@ -1,4 +1,4 @@
-package net.seagullboi.originofspirits.world.gen.features;
+package net.seagullboi.originofspirits.registry.worldgen;
 
 import net.minecraft.util.RegistryKey;
 import net.minecraft.util.registry.Registry;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.function.Supplier;
 
 public class TOOSFeatureGeneration {
-    public static void generateFlowers(final BiomeLoadingEvent event) {
+    public static void generateFeatures(final BiomeLoadingEvent event) {
         RegistryKey<Biome> key = RegistryKey.getOrCreateKey(Registry.BIOME_KEY, event.getName());
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
         List<Supplier<ConfiguredFeature<?, ?>>> base = event.getGeneration().getFeatures(GenerationStage.Decoration.VEGETAL_DECORATION);
@@ -41,5 +41,17 @@ public class TOOSFeatureGeneration {
             base.add(() -> TOOSConfiguredFeatures.Configs.CURSED_CAVE_GEN);
             base.add(() -> TOOSConfiguredFeatures.Configs.CURSED_LAVA_LAKE);
         }
+
+        if (WorldGenUtils.getBiomeFromEvent(event, WorldGenUtils.ABYSS) || WorldGenUtils.getBiomeFromEvent(event, WorldGenUtils.COLORFUL_ABYSS)) {
+            base.add(() -> TOOSConfiguredFeatures.Configs.ALCYONEUM_BUSH);
+            base.add(() -> TOOSConfiguredFeatures.Configs.BIG_ALCYONEUM);
+            base.add(() -> TOOSConfiguredFeatures.Configs.DEEP_ALCYONEUM_BUSH);
+            base.add(() -> TOOSConfiguredFeatures.Configs.DEEP_ALCYONEUM_CROWN);
+            base.add(() -> TOOSConfiguredFeatures.Configs.DEEP_ALCYONEUM_CUP);
+            base.add(() -> TOOSConfiguredFeatures.Configs.ABYSS_ALGAE_PATCH);
+            base.add(() -> TOOSConfiguredFeatures.Configs.ABYSS_ALGAE_PATCH_2);
+
+        }
+
     }
 }

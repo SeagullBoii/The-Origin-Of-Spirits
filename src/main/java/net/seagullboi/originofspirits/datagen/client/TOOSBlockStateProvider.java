@@ -23,11 +23,13 @@ public class TOOSBlockStateProvider extends BlockStateProvider {
         return new ResourceLocation(name.getNamespace(), "blocks" + "/" + name.getPath());
     }
 
+
+
     @Override
     protected void registerStatesAndModels() {
-        stairsBlock((StairsBlock) TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get(), blockTexture(TOOSBlocks.POLISHED_DECEPTONE.get()));
-        slabBlock((SlabBlock) TOOSBlocks.POLISHED_DECEPTONE_SLAB.get(), blockTexture(TOOSBlocks.POLISHED_DECEPTONE.get()), blockTexture(TOOSBlocks.POLISHED_DECEPTONE.get()));
-        wallBlock((WallBlock) TOOSBlocks.POLISHED_DECEPTONE_WALL.get(), blockTexture(TOOSBlocks.POLISHED_DECEPTONE.get()));
+        stairsBlock((StairsBlock) TOOSBlocks.POLISHED_DECEPTONE_STAIRS.get(), blockFolder(TOOSBlocks.POLISHED_DECEPTONE.get()));
+        slabBlock((SlabBlock) TOOSBlocks.POLISHED_DECEPTONE_SLAB.get(), blockFolder(TOOSBlocks.POLISHED_DECEPTONE.get()), blockFolder(TOOSBlocks.POLISHED_DECEPTONE.get()));
+        wallBlock((WallBlock) TOOSBlocks.POLISHED_DECEPTONE_WALL.get(), blockFolder(TOOSBlocks.POLISHED_DECEPTONE.get()));
     }
 
 

@@ -42,12 +42,21 @@ public class ModClientRegister {
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SAC_FROG.get(), ((IRenderFactory) SacFrogEntityRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.SAC_FROG_EGGS.get(), ((IRenderFactory) SacFrogEggsRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_EYE.get(), ((IRenderFactory) CursedEyeRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CREPTIPISCES.get(), ((IRenderFactory) CreptipiscesEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.JELLYFISH.get(), ((IRenderFactory) JellyfishEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.BOX_JELLYFISH.get(), ((IRenderFactory) BoxJellyfishEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.MANATEE.get(), ((IRenderFactory) ManateeEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.ELECTRIC_EEL.get(), ((IRenderFactory) ElectricEelEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.ELECTRIC_SURGEONFISH.get(), ((IRenderFactory) ElectricSurgeonfishEntityRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CLAM.get(), ((IRenderFactory) ClamEntityRenderer::new));
 
         //Projectiles
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CURSED_LASER.get(), ((IRenderFactory) EmptyRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CLUFF_CLOUD.get(), ((IRenderFactory) CluffCloudRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.BULLET.get(), ((IRenderFactory) BulletRenderer::new));
         RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.MAGNETIC_RAY.get(), ((IRenderFactory) EmptyRenderer::new));
+        RenderingRegistry.registerEntityRenderingHandler(TOOSEntityTypes.CREPTIPISCES_SPIKE.get(), ((IRenderFactory) CreptipiscesSpikeRenderer::new));
+
     }
 
     @OnlyIn(Dist.CLIENT)
@@ -59,6 +68,7 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.BARLEY.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.DEEPSEA_ALGAE.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.DEEP_ALCYONEUM_POLYPS.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.SHORE_ALCYONEUM_POLYPS.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.DUCKWEED.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.GLOWKELP.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.GLOWKELP_PLANT.get(), RenderType.getCutout());
@@ -88,6 +98,9 @@ public class ModClientRegister {
         RenderTypeLookup.setRenderLayer(TOOSBlocks.BUDDHAS_HAND_PLANT.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.HARD_SUGAR_CANE.get(), RenderType.getTranslucent());
         RenderTypeLookup.setRenderLayer(TOOSBlocks.BEAN_PLANT.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.LEAF_CORAL_FAN.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.LEAF_CORAL_FAN_SIDE.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(TOOSBlocks.LEAF_CORAL_SHELF.get(), RenderType.getCutout());
 
     }
 

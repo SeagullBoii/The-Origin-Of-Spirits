@@ -19,6 +19,9 @@ public class WorldGenUtils {
     public static final String ABYSS = getCustomBiome("abyss");
     public static final String COLORFUL_ABYSS = getCustomBiome("colorful_abyss");
     public static final String DARK_OAK_FOREST = getCustomBiome("dark_forest");
+    public static final String WARM_OCEAN = getVanillaBiome("warm_ocean");
+    public static final String DEEP_WARM_OCEAN = getVanillaBiome("deep_warm_ocean");
+    public static final String SWAMP = getVanillaBiome("swamp");
 
     public static String getVanillaBiome(String biomeId) {
         return "minecraft:" + biomeId;

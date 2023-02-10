@@ -49,7 +49,7 @@ public class HolyMarshBiome extends OriginofspiritsModElements.ModElement {
 				DefaultBiomeFeatures.withLavaAndWaterSprings(biomeGenerationSettings);
 				DefaultBiomeFeatures.withSimpleSeagrass(biomeGenerationSettings);
 				MobSpawnInfo.Builder mobSpawnInfo = new MobSpawnInfo.Builder().isValidSpawnBiomeForPlayer();
-				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(0.1f).scale(0f).temperature(0.5f)
+				biome = new Biome.Builder().precipitation(Biome.RainType.RAIN).category(Biome.Category.PLAINS).depth(-0.1f).scale(0f).temperature(0.5f)
 						.downfall(0.5f).setEffects(effects).withMobSpawnSettings(mobSpawnInfo.copy())
 						.withGenerationSettings(biomeGenerationSettings.build()).build();
 				event.getRegistry().register(biome.setRegistryName("originofspirits:holy_marsh"));

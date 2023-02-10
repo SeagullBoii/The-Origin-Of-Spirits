@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 
-version = '1.16.5-beta-1.1.0'
+version = '1.16.5-beta-1.1.1'
 group = 'net.seagullboi.originofspirits' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'originofspirits'
 
@@ -178,7 +178,7 @@ dependencies {
     implementation fg.deobf("curse.maven:mob-battle-mod-268746:3408702")
 
     //Upgrade Aquatic
-  //  implementation fg.deobf("curse.maven:upgrade-aquatic-326895:3561148")
+    //  implementation fg.deobf("curse.maven:upgrade-aquatic-326895:3561148")
 
     // Rubidium
     // implementation fg.deobf("curse.maven:rubidium-574856:3769736")

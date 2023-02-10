@@ -394,7 +394,7 @@ public class SacFrogEntity extends RabbitEntity {
      */
 
     static class GoToWaterGoal extends Goal {
-        private final CreatureEntity field_204730_a;
+        private final CreatureEntity entity;
         private double field_204731_b;
         private double field_204732_c;
         private double field_204733_d;
@@ -402,7 +402,7 @@ public class SacFrogEntity extends RabbitEntity {
         private final World field_204735_f;
 
         public GoToWaterGoal(CreatureEntity p_i48910_1_, double p_i48910_2_) {
-            this.field_204730_a = p_i48910_1_;
+            this.entity = p_i48910_1_;
             this.field_204734_e = p_i48910_2_;
             this.field_204735_f = p_i48910_1_.world;
             this.setMutexFlags(EnumSet.of(Goal.Flag.MOVE));
@@ -415,7 +415,7 @@ public class SacFrogEntity extends RabbitEntity {
         public boolean shouldExecute() {
             if (!this.field_204735_f.isDaytime()) {
                 return false;
-            } else if (this.field_204730_a.isInWater()) {
+            } else if (this.entity.isInWater()) {
                 return false;
             } else {
                 Vector3d vector3d = this.func_204729_f();
@@ -434,20 +434,20 @@ public class SacFrogEntity extends RabbitEntity {
          * Returns whether an in-progress EntityAIBase should continue executing
          */
         public boolean shouldContinueExecuting() {
-            return !this.field_204730_a.getNavigator().noPath();
+            return !this.entity.getNavigator().noPath();
         }
 
         /**
          * Execute a one shot task or start executing a continuous task
          */
         public void startExecuting() {
-            this.field_204730_a.getNavigator().tryMoveToXYZ(this.field_204731_b, this.field_204732_c, this.field_204733_d, this.field_204734_e);
+            this.entity.getNavigator().tryMoveToXYZ(this.field_204731_b, this.field_204732_c, this.field_204733_d, this.field_204734_e);
         }
 
         @Nullable
         private Vector3d func_204729_f() {
-            Random random = this.field_204730_a.getRNG();
-            BlockPos blockpos = this.field_204730_a.getPosition();
+            Random random = this.entity.getRNG();
+            BlockPos blockpos = this.entity.getPosition();
 
             for(int i = 0; i < 10; ++i) {
                 BlockPos blockpos1 = blockpos.add(random.nextInt(20) - 10, 2 - random.nextInt(8), random.nextInt(20) - 10);

@@ -20,7 +20,7 @@ import net.seagullboi.originofspirits.util.GlobalVarUtil;
 
 import java.util.List;
 
-public class MagneticWandItem extends AbstractMagicStaffItem{
+public class MagneticWandItem extends AbstractMagicStaffItem {
 
 	public MagneticWandItem(float attackDamageIn, float attackSpeedIn, IItemTier tier, Properties builderIn) {
 		super(attackDamageIn, attackSpeedIn, tier, builderIn);
@@ -43,41 +43,44 @@ public class MagneticWandItem extends AbstractMagicStaffItem{
 		return super.onItemRightClick(world, entityIn, hand);
 	}
 
-	public void shootRays(PlayerEntity player, World world) {
-		if (!player.isCreative()) {
-			if (1 <= GlobalVarUtil.getMana(player)) {
-				GlobalVarUtil.setMana(player, GlobalVarUtil.getMana(player) - 1);
-				GlobalVarUtil.setManaCooldown(player, 40);
-				MagneticRayProjectile.spreadProjectiles(player, 5, 5, 6);
-				world.playSound(player.getPosX(), player.getPosY(), player.getPosZ(), TOOSSoundEvents.MAGIC_STAFF_USE.get(), SoundCategory.PLAYERS, 2, 1, true);
+	public void shootRays(PlayerEntity playerIn, World world) {
+		if (!playerIn.isCreative()) {
+			if (1 <= GlobalVarUtil.getMana(playerIn)) {
+				GlobalVarUtil.setMana(playerIn, GlobalVarUtil.getMana(playerIn) - 1);
+				GlobalVarUtil.setManaCooldown(playerIn, 40);
+				MagneticRayProjectile.spreadProjectiles(playerIn, 5, 5, 6);
+				world.playSound(playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), TOOSSoundEvents.MAGIC_STAFF_USE.get(), SoundCategory.PLAYERS, 2, 1, true);
 
-				if (player.getHeldItemMainhand().getItem() == this) {
-					player.getHeldItemMainhand().damageItem(1, player, (entityIn) -> player.sendBreakAnimation(EquipmentSlotType.MAINHAND));
-					player.swing(Hand.MAIN_HAND, true);
-				} else if (player.getHeldItemOffhand().getItem() == this) {
-					player.getHeldItemOffhand().damageItem(1, player, (entityIn) -> player.sendBreakAnimation(EquipmentSlotType.OFFHAND));
-					player.swing(Hand.OFF_HAND, true);
+				if (playerIn.getHeldItemMainhand().getItem() == this) {
+					playerIn.getHeldItemMainhand().damageItem(1, playerIn, (entityIn) -> playerIn.sendBreakAnimation(EquipmentSlotType.MAINHAND));
+					playerIn.swing(Hand.MAIN_HAND, true);
+				} else if (playerIn.getHeldItemOffhand().getItem() == this) {
+					playerIn.getHeldItemOffhand().damageItem(1, playerIn, (entityIn) -> playerIn.sendBreakAnimation(EquipmentSlotType.OFFHAND));
+					playerIn.swing(Hand.OFF_HAND, true);
 				}
 
-				player.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 30);
-				player.stopActiveHand();
+				playerIn.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 40);
+
+				playerIn.stopActiveHand();
 			}
 		} else {
-			MagneticRayProjectile.spreadProjectiles(player, 5, 5, 6);
-			world.playSound(player.getPosX(), player.getPosY(), player.getPosZ(), TOOSSoundEvents.MAGIC_STAFF_USE.get(), SoundCategory.PLAYERS, 2, 1, true);
-			player.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 30);
-			if (player.getHeldItemMainhand().getItem() == this) {
-				player.swing(Hand.MAIN_HAND, true);
-			} else if (player.getHeldItemOffhand().getItem() == this) {
-				player.swing(Hand.OFF_HAND, true);
+			MagneticRayProjectile.spreadProjectiles(playerIn, 5, 5, 6);
+			world.playSound(playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), TOOSSoundEvents.MAGIC_STAFF_USE.get(), SoundCategory.PLAYERS, 2, 1, true);
+			playerIn.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 30);
+			if (playerIn.getHeldItemMainhand().getItem() == this) {
+				playerIn.swing(Hand.MAIN_HAND, true);
+			} else if (playerIn.getHeldItemOffhand().getItem() == this) {
+				playerIn.swing(Hand.OFF_HAND, true);
 			}
-			player.stopActiveHand();
+			playerIn.stopActiveHand();
+			playerIn.getCooldownTracker().setCooldown(TOOSItems.MAGNETIC_WAND.get(), 40);
+
 		}
 	}
 
-	public void swing(PlayerEntity player) {
-		if (player.getHeldItemMainhand().getItem() == TOOSItems.MAGNETIC_WAND.get()) {
-			player.stopActiveHand();
+	public void swing(PlayerEntity playerIn) {
+		if (playerIn.getHeldItemMainhand().getItem() == TOOSItems.MAGNETIC_WAND.get()) {
+			playerIn.stopActiveHand();
 		}
 	}
 }

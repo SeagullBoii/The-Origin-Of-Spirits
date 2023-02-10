@@ -1,7 +1,8 @@
 package net.seagullboi.originofspirits.datagen;
 
-import net.minecraft.data.*;
-import net.minecraft.util.IItemProvider;
+import net.minecraft.data.DataGenerator;
+import net.minecraft.data.IFinishedRecipe;
+import net.minecraft.data.RecipeProvider;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.seagullboi.originofspirits.OriginOfSpirits;
@@ -13,21 +14,9 @@ public class TOOSRecipeProvider extends RecipeProvider implements IConditionBuil
             super(pGenerator);
         }
 
-        @Override
-        protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-
-        }
-
-    public static void ingotToBlock(Consumer<IFinishedRecipe> consumer, IItemProvider providedItem, IItemProvider requiredItem) {
-        ShapedRecipeBuilder.shapedRecipe(providedItem, 1).key('#', requiredItem).patternLine("###").patternLine("###").patternLine("###")
-                .addCriterion("has_item", hasItem(requiredItem)).build(consumer);
+    @Override
+    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
     }
-
-    public static void blockToIngot(Consumer<IFinishedRecipe> consumer, IItemProvider providedItem, IItemProvider requiredItem) {
-        ShapelessRecipeBuilder.shapelessRecipe(providedItem, 9).addIngredient(requiredItem)
-                .addCriterion("has_item", hasItem(requiredItem)).build(consumer);
-    }
-
 
     @Override
     public String getName() {

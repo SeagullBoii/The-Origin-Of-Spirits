@@ -20,12 +20,13 @@ public class TOOSItems {
     //Weapons
     public static final RegistryObject<Item> TRIDACNA_SPEAR = ITEMS.register("tridacna_spear", () -> new TridacnaSpearItem(ModItemTier.TRIDACNA,-1,-2.6f, new Item.Properties().maxStackSize(1).rarity(ModRarities.SPITE).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> HEXED_SPEAR = ITEMS.register("hexed_spear", () -> new HexedSpearItem(ModItemTier.CURSED_STEEL,-1,-2.6f, new Item.Properties().maxStackSize(1).group(OriginOfSpiritsCombatItemGroup.tab)));
-    public static final RegistryObject<Item> EYE_CANNON = ITEMS.register("eye_cannon", () -> new EyeCanonItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
+    public static final RegistryObject<Item> EYE_CANNON = ITEMS.register("eye_cannon", () -> new EyeCannonItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> OCULAR_PIERCER = ITEMS.register("ocular_piercer", () -> new OcularPiercerItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> PISTOL = ITEMS.register("pistol", () -> new PistolItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> SHOTGUN = ITEMS.register("shotgun", () -> new ShotgunItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> REDSTONE_HANDGUN = ITEMS.register("redstone_handgun", () -> new RedstoneHandgunItem(new Item.Properties().maxStackSize(1).maxDamage(1200).group(OriginOfSpiritsCombatItemGroup.tab)));
     public static final RegistryObject<Item> MAGNETIC_WAND = ITEMS.register("magnetic_wand", () -> new MagneticWandItem(-1, 5, ItemTier.IRON, new Item.Properties().maxStackSize(1).maxDamage(550).group(OriginOfSpiritsCombatItemGroup.tab)));
+    public static final RegistryObject<Item> CREPTI_STAFF = ITEMS.register("crepti_staff", () -> new CreptiStaffItem(-2, 5, 7.5f, ItemTier.DIAMOND, new Item.Properties().maxStackSize(1).maxDamage(550).group(OriginOfSpiritsCombatItemGroup.tab)));
 
     //Buckets
     public static final RegistryObject<Item> CURSED_LAVA_BUCKET = ITEMS.register("cursed_lava_bucket", () -> new BucketItem(() -> TOOSBlocks.CURSED_LAVA.get(), new Item.Properties().maxStackSize(1).group(OriginOfSpiritsMiscItemGroup.tab)));
@@ -46,6 +47,13 @@ public class TOOSItems {
     public static final RegistryObject<ModSpawnEggs> CURSED_EYE_SPAWN_EGG = ITEMS.register("cursed_eye_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CURSED_EYE, -7575154, -2829347, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
     public static final RegistryObject<ModSpawnEggs> CLUFF_SPAWN_EGG = ITEMS.register("cluff_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CLUFF, -1051919, -4337715, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
     public static final RegistryObject<ModSpawnEggs> CABADOR_SPAWN_EGG = ITEMS.register("cabador_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CABADOR, -6432035, -10186568, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> CREPTIPISCES_SPAWN_EGG = ITEMS.register("creptipisces_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CREPTIPISCES, 0x394553, 0x68B1A9, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> JELLYFISH_SPAWN_EGG = ITEMS.register("jellyfish_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.JELLYFISH, 0xFFD3B4DD, 0xFFAA70AC, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> BOX_JELLYFISH_SPAWN_EGG = ITEMS.register("box_jellyfish_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.BOX_JELLYFISH, 0xFF93B7CE, 0xFF5C789F, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> MANATEE_SPAWN_EGG = ITEMS.register("manatee_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.MANATEE, 0xFF54626F, 0xFF328406, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> ELECTRIC_EEL_SPAWN_EGG = ITEMS.register("electric_eel_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.ELECTRIC_EEL, -13160886, -12591370, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> ELECTRIC_SURGEONFISH_SPAWN_EGG = ITEMS.register("electric_surgeonfish_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.ELECTRIC_SURGEONFISH, -12430935, -12591370, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
+    public static final RegistryObject<ModSpawnEggs> CLAM_SPAWN_EGG = ITEMS.register("clam_spawn_egg", () -> new ModSpawnEggs(TOOSEntityTypes.CLAM, 0xFFC9BC98, 0xFFFCFEE3, new Item.Properties().group(OriginOfSpiritsEntitiesItemGroup.tab)));
 
     //MISC
     public static final RegistryObject<Item> PINK_DESERT_MUSIC_DISC = ITEMS.register("music_disc_pink_desert", () -> new MusicDiscItem(13, TOOSSoundEvents.PINK_DESERT, new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
@@ -71,6 +79,7 @@ public class TOOSItems {
     public static final RegistryObject<Item> BARLEY_STACK = ITEMS.register("barley_stack", () -> new Item(new Item.Properties().group(OriginOfSpiritsMiscItemGroup.tab)));
     public static final RegistryObject<Item> DUCKWEED = ITEMS.register("duckweed", () -> new LilyPadItem(TOOSBlocks.DUCKWEED.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
     public static final RegistryObject<Item> GLOWKELP = ITEMS.register("glowkelp", () -> new BlockItem(TOOSBlocks.GLOWKELP.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
+    public static final RegistryObject<Item> LEAF_CORAL_FAN = ITEMS.register("leaf_coral_fan", () -> new WallOrFloorItem(TOOSBlocks.LEAF_CORAL_FAN.get(), TOOSBlocks.LEAF_CORAL_FAN_SIDE.get(), new Item.Properties().group(TOOSItemGroup.PLANT_GROUP)));
 
     //Food
     public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register("sweet_potato", () -> new BlockItem(TOOSBlocks.SWEET_POTATOES.get(), new Item.Properties().food(new Food.Builder().hunger(3).saturation(0.5f).build()).group(OriginOfSpiritsFoodItemGroup.tab)));
